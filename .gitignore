@@ -11,10 +11,10 @@
 **/.vs/
 
 # Node.js
-node_modules/
+**/node_modules/
 
 # Logs
-*.log
+**/*.log
 
 # Archivos del sistema
 .DS_Store
