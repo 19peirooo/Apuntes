@@ -1,0 +1,56 @@
+@baseUrl = http://localhost:3000
+@noteId = 69b2a5b2c1eb905d3c70f3e8
+
+### Obtener todas las notas
+GET {{baseUrl}}/api/notes
+Content-Type: application/json
+
+
+### Obtener notas en la papelera
+GET {{baseUrl}}/api/notes/trash
+Content-Type: application/json
+
+
+### Obtener una nota por ID
+GET {{baseUrl}}/api/notes/{{noteId}}
+Content-Type: application/json
+
+
+### Crear una nota
+POST {{baseUrl}}/api/notes
+Content-Type: application/json
+
+{
+  "title": "Segunda nota",
+  "content": "Contenido de prueba"
+}
+
+
+### Actualizar una nota
+PATCH {{baseUrl}}/api/notes/{{noteId}}
+Content-Type: application/json
+
+{
+  "title": "Nota actualizada",
+  "content": "Nuevo contenido"
+}
+
+
+### Enviar nota a la papelera (soft delete)
+DELETE {{baseUrl}}/api/notes/{{noteId}}
+Content-Type: application/json
+
+
+### Restaurar nota desde la papelera
+POST {{baseUrl}}/api/notes/{{noteId}}/restore
+Content-Type: application/json
+
+
+### Eliminar nota permanentemente
+DELETE {{baseUrl}}/api/notes/{{noteId}}/permanent
+Content-Type: application/json
+
+
+### Vaciar toda la papelera
+DELETE {{baseUrl}}/api/notes/trash/empty
+Content-Type: application/json

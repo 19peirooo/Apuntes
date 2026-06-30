@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat con Socket.IO</title>
+  <!-- Cargar cliente Socket.IO -->
+  <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+</head>
+<body>
+  <div id="messages"></div>
+  <input id="input" type="text" placeholder="Mensaje...">
+  <button id="send">Enviar</button>
+
+  <script>
+    // Conectar al servidor
+    const socket = io('http://localhost:3000');
+
+    // Eventos de conexión
+    socket.on('connect', () => {
+      console.log('Conectado con ID:', socket.id);
+    });
+
+    socket.on('disconnect', () => {
+      console.log('Desconectado');
+    });
+
+    // Recibir mensajes
+    socket.on('chat:message', (data) => {
+      addMessage(data.user, data.text);
+    });
+
+    // Enviar mensaje
+    document.getElementById('send').onclick = () => {
+      const input = document.getElementById('input');
+      if (input.value) {
+        socket.emit('chat:message', {
+          user: 'Usuario',
+          text: input.value
+        });
+        addMessage('Tú', input.value);
+        input.value = '';
+      }
+    };
+
+    // Enviar con acknowledgment
+    function sendPrivate(to, message) {
+      socket.emit('chat:private', { to, message }, (response) => {
+        console.log('Confirmado:', response);
+      });
+    }
+
+    function addMessage(user, text) {
+      const div = document.getElementById('messages');
+      div.innerHTML += `<p><b>${user}:</b> ${text}</p>`;
+    }
+  </script>
+</body>
+</html>

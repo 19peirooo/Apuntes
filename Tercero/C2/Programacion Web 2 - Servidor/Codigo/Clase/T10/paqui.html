@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cliente WebSocket</title>
+</head>
+<body>
+  <input id="message" type="text" placeholder="Escribe un mensaje">
+  <button id="send">Enviar</button>
+  <div id="messages"></div>
+
+  <script>
+    // Conectar al servidor WebSocket
+    const socket = new WebSocket('ws://localhost:4444');
+
+    // Evento: conexión establecida
+    socket.addEventListener('open', (event) => {
+      console.log('Conectado al servidor');
+      addMessage('Sistema', 'Conectado');
+    });
+
+    // Evento: mensaje recibido
+    socket.addEventListener('message', (event) => {
+      console.log('Mensaje:', event.data);
+      addMessage('Servidor', event.data);
+    });
+
+    // Evento: conexión cerrada
+    socket.addEventListener('close', (event) => {
+      console.log('Desconectado');
+      addMessage('Sistema', 'Desconectado');
+    });
+
+    // Evento: error
+    socket.addEventListener('error', (error) => {
+      console.error('Error:', error);
+    });
+
+    // Enviar mensaje
+    document.getElementById('send').onclick = () => {
+      const input = document.getElementById('message');
+      if (input.value && socket.readyState === WebSocket.OPEN) {
+        socket.send(input.value);
+        addMessage('Tú', input.value);
+        input.value = '';
+      }
+    };
+
+    function addMessage(from, text) {
+      const div = document.getElementById('messages');
+      div.innerHTML += `<p><strong>${from}:</strong> ${text}</p>`;
+    }
+  </script>
+</body>
+</html>

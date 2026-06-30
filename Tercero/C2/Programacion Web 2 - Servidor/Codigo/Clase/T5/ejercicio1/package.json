@@ -1,0 +1,21 @@
+{
+  "name": "ejercicio1",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/app.js",
+    "start": "node --env-file=.env src/app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "mongodb": "^7.1.0",
+    "mongoose": "^9.2.2",
+    "zod": "^4.3.6"
+  }
+}

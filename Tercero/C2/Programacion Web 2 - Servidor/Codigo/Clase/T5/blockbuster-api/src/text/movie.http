@@ -1,0 +1,89 @@
+### ========================================
+### VARIABLES
+### ========================================
+
+@baseUrl = http://localhost:3000/api
+@movieId = 69a577fc541534777422f969
+
+
+### ========================================
+### GET ALL MOVIES
+### ========================================
+
+GET {{baseUrl}}/movie
+Content-Type: application/json
+
+
+### ========================================
+### GET MOVIES BY GENRE
+### ========================================
+
+GET {{baseUrl}}/movie?genre=comedy
+Content-Type: application/json
+
+
+### ========================================
+### GET MOVIE BY ID
+### ========================================
+
+GET {{baseUrl}}/movie/{{movieId}}
+Content-Type: application/json
+
+
+### ========================================
+### CREATE MOVIE
+### ========================================
+
+POST {{baseUrl}}/movie
+Content-Type: application/json
+
+{
+  "name": "8 Apellidos Vascos",
+  "genre": "comedy",
+  "num_rents": 0,
+  "rented": false
+}
+
+
+### ========================================
+### UPDATE MOVIE
+### ========================================
+
+PUT {{baseUrl}}/movie/{{movieId}}
+Content-Type: application/json
+
+{
+  "genre": "scary"
+}
+
+
+### ========================================
+### DELETE MOVIE
+### ========================================
+
+DELETE {{baseUrl}}/movie/{{movieId}}
+Content-Type: application/json
+
+
+### ========================================
+### RENT MOVIE
+### ========================================
+
+PATCH {{baseUrl}}/movie/{{movieId}}/rent
+Content-Type: application/json
+
+
+### ========================================
+### RETURN MOVIE
+### ========================================
+
+PATCH {{baseUrl}}/movie/{{movieId}}/return
+Content-Type: application/json
+
+
+### ========================================
+### TOP 5 MOST RENTED MOVIES
+### ========================================
+
+GET {{baseUrl}}/movie/stats/top
+Content-Type: application/json

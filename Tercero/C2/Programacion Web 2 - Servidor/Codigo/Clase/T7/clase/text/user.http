@@ -1,0 +1,19 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWE5NjdkZjE2NDZjMDkyN2ZkMmFmN2YiLCJyb2xlIjoidXNlciIsImlhdCI6MTc3MjcwOTg1NSwiZXhwIjoxNzcyNzE3MDU1fQ.O7T36u1pjba2Ioef4L0ThC7wCeYXHCwIuu75hybZ_x8
+
+###
+
+GET http://localhost:3000/api/user
+Authorization: Bearer {{token}}
+
+###
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+  "name": "Victor Peiro",
+  "email": "victor.peiro@gmail.com",
+  "password": "xxxxx",
+  "age": 24
+}
+
+
