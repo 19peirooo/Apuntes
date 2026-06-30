@@ -31,10 +31,9 @@ def lambda_handler(event, context):
     #aws_access_key_id=event["queryStringParameters"]["ak"];
     #aws_secret_access_key=event["queryStringParameters"]["sk"];
     #aws_session_token=event["queryStringParameters"]["st"];
-    aws_access_key_id="ASIA2E36C6W27WLQQCMV"
-    aws_secret_access_key="LjT72YZWTTbHufJarKgyUOf5zKPmV8hLJrw1UIfR"
-    aws_session_token="FwoGZXIvYXdzEHsaDLlIRpl8D6cvIF2wbSLAAVTFGqh+4W/ufPAHCLfhADJB7Do5lOmH2O3OAvEfJ/Hl9tZ7isjtkgIx1w3f2rZa0foM4f76WM5wKQvYDYmhup1Itf5Cu6AjeUD/upI50edd8oTlKR5aKIsY/5oQLWIvsDNU5UkXrra9YeqHEKQ1ImZeZlw9JCyTgmuF+OGazc1k3tgtAGKMF49AREBUrcrLwTtaw2XGQeeId8/lhjXQ9Y/7DUSu96KrSjJcAEET+L+k0nHFgEaGiqGuu+pUmgMkJCiardicBjItdp089qiReJHTOomzF4d83/T0y5vyjb72SdYn+GB4y49d3duiMamHNEK+MHz+"
-    
+    aws_access_key_id=""
+    aws_secret_access_key=""
+    aws_session_token=""
     
     stringToSign= b""
     
