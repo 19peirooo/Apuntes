@@ -1,0 +1,11 @@
+# Ignorar todos los archivos .env
+.env
+**/.env
+
+# Opcional: también ignora variantes como .env.local, .env.development, etc.
+.env.*
+**/.env.*
+
+# Ignorar todas las carpetas .vs (Visual Studio)
+.vs/
+**/.vs/
