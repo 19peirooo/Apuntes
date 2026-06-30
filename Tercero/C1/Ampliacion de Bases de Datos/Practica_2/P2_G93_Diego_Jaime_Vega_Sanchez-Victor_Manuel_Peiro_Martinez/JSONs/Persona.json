@@ -1,0 +1,346 @@
+[{
+	"_id": {
+		"$oid": "6900b70752eb63645212c10e"
+	},
+	"nombre": "David Romero",
+	"dni": "89012345H",
+	"descripcion": "Ingeniero de software embebido.",
+	"direccion": "C/ Castillo 6, 50003 Zaragoza, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-0.8907,
+			41.6561
+		]
+	},
+	"estudios": [
+		{
+			"universidad": "UPV",
+			"inicio": "2009-09-01",
+			"fin": "2013-06-30"
+		}
+	],
+	"trabajos": [
+		{
+			"empresa": "Intel",
+			"inicio": "2013-07-01",
+			"fin": "2019-06-30"
+		},
+		{
+			"empresa": "Google",
+			"inicio": "2019-07-01",
+			"fin": null
+		}
+	]
+},
+{
+	"_id": {
+		"$oid": "6900b70752eb63645212c10a"
+	},
+	"nombre": "Ana Navarro",
+	"dni": "90123456I",
+	"descripcion": "Profesora universitaria en inteligencia artificial.",
+	"direccion": "Av. de las Universidades 24, 48007 Bilbao, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-2.9373,
+			43.263
+		]
+	},
+	"estudios": [
+		{
+			"universidad": "UCM",
+			"inicio": "2007-09-01",
+			"fin": "2011-06-30"
+		},
+		{
+			"universidad": "UPM",
+			"inicio": "2011-09-01",
+			"fin": "2013-06-30"
+		}
+	],
+	"trabajos": [
+		{
+			"empresa": "UCM",
+			"inicio": "2013-09-01",
+			"fin": null
+		}
+	]
+},
+{
+	"_id": {
+		"$oid": "6900b70752eb63645212c107"
+	},
+	"nombre": "Carlos Perez",
+	"dni": "23456789B",
+	"descripcion": "Desarrollador backend con experiencia en bases de datos distribuidas.",
+	"direccion": "Calle Larios 5, 29015 Malaga, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-4.4239,
+			36.7202
+		]
+	},
+	"estudios": [
+		{
+			"universidad": "UPM",
+			"inicio": "2010-09-01",
+			"fin": "2014-06-30"
+		}
+	],
+	"trabajos": [
+		{
+			"empresa": "IBM",
+			"inicio": "2015-01-01",
+			"fin": "2019-12-31"
+		},
+		{
+			"empresa": "Google",
+			"inicio": "2020-01-01",
+			"fin": null
+		}
+	]
+},
+{
+	"_id": {
+		"$oid": "6900b70752eb63645212c109"
+	},
+	"nombre": "Sara Torres",
+	"dni": "78901234G",
+	"descripcion": "Especialista en UX/UI.",
+	"direccion": "Plaza de España 3, 18001 Granada, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.5986,
+			37.1773
+		]
+	},
+	"estudios": [
+		{
+			"universidad": "UGR",
+			"inicio": "2010-09-01",
+			"fin": "2014-06-30"
+		}
+	],
+	"trabajos": [
+		{
+			"empresa": "Microsoft",
+			"inicio": "2014-09-01",
+			"fin": null
+		}
+	]
+},
+{
+	"_id": {
+		"$oid": "6900b70752eb63645212c105"
+	},
+	"nombre": "Elena Martinez",
+	"dni": "56789012E",
+	"descripcion": "Gestora de proyectos tecnologicos en el sector financiero.",
+	"direccion": "Calle Gran Via 28, 28013 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.7034,
+			40.42
+		]
+	},
+	"estudios": [
+		{
+			"universidad": "Deusto",
+			"inicio": "2008-09-01",
+			"fin": "2012-06-30"
+		}
+	],
+	"trabajos": [
+		{
+			"empresa": "BBVA",
+			"inicio": "2012-07-01",
+			"fin": "2018-06-30"
+		},
+		{
+			"empresa": "Microsoft",
+			"inicio": "2018-07-01",
+			"fin": null
+		}
+	]
+},
+{
+	"_id": {
+		"$oid": "6900b70752eb63645212c10c"
+	},
+	"nombre": "Laura Gomez",
+	"dni": "12345678A",
+	"descripcion": "Ingeniera de software especializada en inteligencia artificial.",
+	"direccion": "Plaza de la Independencia 9, 28001 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.692,
+			40.4155
+		]
+	},
+	"estudios": [
+		{
+			"universidad": "UCM",
+			"inicio": "2012-09-01",
+			"fin": "2016-06-30"
+		},
+		{
+			"universidad": "UPM",
+			"inicio": "2017-09-01",
+			"fin": "2019-06-30"
+		}
+	],
+	"trabajos": [
+		{
+			"empresa": "Google",
+			"inicio": "2019-07-01",
+			"fin": "2022-09-30"
+		},
+		{
+			"empresa": "Microsoft",
+			"inicio": "2022-10-01",
+			"fin": null
+		}
+	]
+},
+{
+	"_id": {
+		"$oid": "6900b70752eb63645212c10d"
+	},
+	"nombre": "Raul Fernandez",
+	"dni": "67890123F",
+	"descripcion": "Consultor de ciberseguridad.",
+	"direccion": "C/ Mayor 12, 28013 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.7031,
+			40.415
+		]
+	},
+	"estudios": [
+		{
+			"universidad": "UCM",
+			"inicio": "2011-09-01",
+			"fin": "2015-06-30"
+		},
+		{
+			"universidad": "UAM",
+			"inicio": "2016-09-01",
+			"fin": "2018-06-30"
+		}
+	],
+	"trabajos": [
+		{
+			"empresa": "Google",
+			"inicio": "2018-07-01",
+			"fin": null
+		}
+	]
+},
+{
+	"_id": {
+		"$oid": "6900b70752eb63645212c10b"
+	},
+	"nombre": "Pablo Sanchez",
+	"dni": "01234567J",
+	"descripcion": "Arquitecto de software en sistemas distribuidos.",
+	"direccion": "C/ del Cid 14, 41004 Sevilla, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-5.996,
+			37.3875
+		]
+	},
+	"estudios": [
+		{
+			"universidad": "UZ",
+			"inicio": "2008-09-01",
+			"fin": "2012-06-30"
+		}
+	],
+	"trabajos": [
+		{
+			"empresa": "Microsoft",
+			"inicio": "2012-07-01",
+			"fin": null
+		}
+	]
+},
+{
+	"_id": {
+		"$oid": "6900b70752eb63645212c108"
+	},
+	"nombre": "Maria Lopez",
+	"dni": "34567890C",
+	"descripcion": "Analista de datos con experiencia en machine learning y big data.",
+	"direccion": "Rambla de Catalunya 10, 08007 Barcelona, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			2.162,
+			41.3912
+		]
+	},
+	"estudios": [
+		{
+			"universidad": "UCM",
+			"inicio": "2013-09-01",
+			"fin": "2017-06-30"
+		}
+	],
+	"trabajos": [
+		{
+			"empresa": "Amazon",
+			"inicio": "2017-09-01",
+			"fin": "2021-09-30"
+		},
+		{
+			"empresa": "Microsoft",
+			"inicio": "2021-10-01",
+			"fin": null
+		}
+	]
+},
+{
+	"_id": {
+		"$oid": "6900b70752eb63645212c106"
+	},
+	"nombre": "Javier Ruiz",
+	"dni": "45678901D",
+	"descripcion": "Administrador de sistemas especializado en entornos Linux.",
+	"direccion": "C/ Colon 28, 46004 Valencia, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-0.3763,
+			39.4699
+		]
+	},
+	"estudios": [
+		{
+			"universidad": "UPC",
+			"inicio": "2009-09-01",
+			"fin": "2013-06-30"
+		}
+	],
+	"trabajos": [
+		{
+			"empresa": "Red Hat",
+			"inicio": "2013-09-01",
+			"fin": "2018-12-31"
+		},
+		{
+			"empresa": "Google",
+			"inicio": "2019-01-01",
+			"fin": null
+		}
+	]
+}]
+

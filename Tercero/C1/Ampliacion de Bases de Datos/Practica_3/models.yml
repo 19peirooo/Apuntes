@@ -1,0 +1,41 @@
+Persona:
+  required_vars:
+    - nombre
+    - dni
+  admissible_vars:
+    - descripcion
+    - direccion
+    - estudios
+    - trabajos
+  unique_indexes:
+    - dni
+  regular_indexes:
+    - nombre
+  location_index: direccion
+Empresa:
+  required_vars:
+    - nombre
+    - cif
+  admissible_vars:
+    - direccion
+    - numEmpleados
+    - tipoDeEmpresa
+  unique_indexes:
+    - cif
+  regular_indexes:
+    - nombre
+    - tipoDeEmpresa
+  location_index: direccion
+Universidad:
+  required_vars:
+    - codigo
+    - nombre
+  admissible_vars:
+    - numAlumnos
+    - decano
+    - direccion
+  unique_indexes:
+    - codigo
+  regular_indexes:
+    - nombre
+  location_index: direccion

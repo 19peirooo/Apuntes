@@ -1,0 +1,10 @@
+{"_id":{"$oid":"68ec17f3e834848b275cc8ac"},"nombre":"Diego","dni":"8","apellido":"López","direccion_loc":{"type":"Point","coordinates":[-73.985972,40.75701]},"direccion":"Times Square, New York, USA","edad":31}
+{"_id":{"$oid":"68ec17f3e834848b275cc8ad"},"nombre":"María","dni":"1","apellido":"Martínez","direccion_loc":{"type":"Point","coordinates":[12.491903,41.890942]},"direccion":"Colosseum, Rome, Italy","edad":15}
+{"_id":{"$oid":"68ec17f3e834848b275cc8ae"},"nombre":"Carlos","dni":"2","apellido":"Ruiz","direccion_loc":{"type":"Point","coordinates":[-79.387087,43.642564]},"direccion":"CN Tower, Toronto, Canada","edad":57}
+{"_id":{"$oid":"68ec17f3e834848b275cc8af"},"nombre":"María","dni":"5","apellido":"Pérez","direccion_loc":{"type":"Point","coordinates":[-79.387087,43.642564]},"direccion":"CN Tower, Toronto, Canada","edad":38}
+{"_id":{"$oid":"68ec17f3e834848b275cc8b0"},"nombre":"Andrés","dni":"4","apellido":"Rodríguez","direccion_loc":{"type":"Point","coordinates":[-73.985972,40.75701]},"direccion":"Times Square, New York, USA","edad":23}
+{"_id":{"$oid":"68ec17f3e834848b275cc8b1"},"nombre":"Diego","dni":"0","apellido":"Martínez","direccion_loc":{"type":"Point","coordinates":[31.071483,30.020825]},"direccion":"Pyramids of Giza, Cairo, Egypt","edad":43}
+{"_id":{"$oid":"68ec17f3e834848b275cc8b2"},"nombre":"Carlos","dni":"9","apellido":"Fernández","direccion_loc":{"type":"Point","coordinates":[-73.985972,40.75701]},"direccion":"Times Square, New York, USA","edad":25}
+{"_id":{"$oid":"68ec17f3e834848b275cc8b3"},"nombre":"Miguel","dni":"6","apellido":"Hernández","direccion_loc":{"type":"Point","coordinates":[-73.985972,40.75701]},"direccion":"Times Square, New York, USA","edad":15}
+{"_id":{"$oid":"68ec17f3e834848b275cc8b4"},"nombre":"Sofía","dni":"7","apellido":"López","direccion_loc":{"type":"Point","coordinates":[12.491903,41.890942]},"direccion":"Colosseum, Rome, Italy","edad":69}
+{"_id":{"$oid":"68ec17f3e834848b275cc8b5"},"nombre":"Miguel","dni":"3","apellido":"Pérez","direccion_loc":{"type":"Point","coordinates":[-3.706997,40.415395]},"direccion":"Plaza Mayor, Madrid, España","edad":38}

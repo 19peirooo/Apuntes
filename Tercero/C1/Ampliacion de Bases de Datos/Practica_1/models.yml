@@ -1,0 +1,41 @@
+Persona:
+  required_vars:
+    - nombre
+    - dni
+  admissible_vars:
+    - apellido
+    - edad
+    - direccion
+  unique_indexes:
+    - dni
+  regular_indexes:
+    - nombre
+    - apellido
+    - edad 
+  location_index: direccion
+Empresa:
+  required_vars:
+    - nombre
+    - cif
+  admissible_vars:
+    - direccion
+    - numeroEmpleados
+    - tipoDeEmpresa
+  unique_indexes:
+    - cif
+  regular_indexes:
+    - nombre
+    - tipoDeEmpresa
+  location_index: direccion
+CentroEducativo:
+  required_vars:
+    - codigo
+    - nombre
+  admissible_vars:
+    - nivelEducativo
+    - direccion
+  unique_indexes:
+    - codigo
+  regular_indexes:
+    - nombre
+  location_index: direccion

@@ -1,0 +1,552 @@
+[
+  {
+    "start": 0,
+    "end": 5,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 1,
+    "end": 0,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 2,
+    "end": 9,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 3,
+    "end": 6,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 4,
+    "end": 0,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 5,
+    "end": 7,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 6,
+    "end": 6,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 7,
+    "end": 4,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 8,
+    "end": 1,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 9,
+    "end": 8,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 10,
+    "end": 8,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 11,
+    "end": 6,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 12,
+    "end": 3,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 13,
+    "end": 3,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 14,
+    "end": 5,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 15,
+    "end": 8,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 16,
+    "end": 9,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 17,
+    "end": 7,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 18,
+    "end": 4,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 19,
+    "end": 3,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 20,
+    "end": 6,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 21,
+    "end": 2,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 22,
+    "end": 2,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 23,
+    "end": 4,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 24,
+    "end": 5,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 25,
+    "end": 7,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 26,
+    "end": 6,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 27,
+    "end": 4,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 28,
+    "end": 0,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 29,
+    "end": 1,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 30,
+    "end": 5,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 31,
+    "end": 5,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 32,
+    "end": 1,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 33,
+    "end": 0,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 34,
+    "end": 2,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 35,
+    "end": 6,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 36,
+    "end": 4,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 37,
+    "end": 4,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 38,
+    "end": 2,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 39,
+    "end": 7,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 40,
+    "end": 2,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 41,
+    "end": 4,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 42,
+    "end": 6,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 43,
+    "end": 5,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 44,
+    "end": 9,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 45,
+    "end": 4,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 46,
+    "end": 4,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 47,
+    "end": 2,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 48,
+    "end": 3,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 49,
+    "end": 8,
+    "start_labels": [
+      "Mensaje"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  }
+]

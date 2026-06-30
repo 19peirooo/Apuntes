@@ -1,0 +1,171 @@
+[{
+	"_id": {
+		"$oid": "6900b719e8ce2a9b51db4e42"
+	},
+	"codigo": "UAM",
+	"nombre": "Universidad Autonoma de Madrid",
+	"numAlumnos": 50000,
+	"decano": "Jorge Lopez",
+	"direccion": "C/ Francisco Tomas y Valiente, 3, Ciudad Universitaria de Cantoblanco, 28049 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.691,
+			40.5445
+		]
+	}
+},
+{
+	"_id": {
+		"$oid": "6900b719e8ce2a9b51db4e3a"
+	},
+	"codigo": "UPV",
+	"nombre": "Universitat Politecnica de Valencia",
+	"numAlumnos": 40000,
+	"decano": "Alberto Garcia",
+	"direccion": "Camino de Vera, s/n, 46022 Valencia, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-0.357,
+			39.481
+		]
+	}
+},
+{
+	"_id": {
+		"$oid": "6900b719e8ce2a9b51db4e3b"
+	},
+	"codigo": "Deusto",
+	"nombre": "Universidad de Deusto",
+	"numAlumnos": 15000,
+	"decano": "Pedro Martin",
+	"direccion": "Avda. de las Universidades, 24, 48007 Bilbao, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-2.9373,
+			43.263
+		]
+	}
+},
+{
+	"_id": {
+		"$oid": "6900b719e8ce2a9b51db4e3c"
+	},
+	"codigo": "UPC",
+	"nombre": "Universitat Politecnica de Catalunya",
+	"numAlumnos": 45000,
+	"decano": "Clara Puig",
+	"direccion": "Avinguda Diagonal, 647, 08028 Barcelona, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			2.139,
+			41.3936
+		]
+	}
+},
+{
+	"_id": {
+		"$oid": "6900b719e8ce2a9b51db4e40"
+	},
+	"codigo": "UPM",
+	"nombre": "Universidad Politecnica de Madrid",
+	"numAlumnos": 60000,
+	"decano": "Marta Fernandez",
+	"direccion": "Av. Ramiro de Maeztu, 7, Campus Ciudad Universitaria, 28040 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.7288,
+			40.4441
+		]
+	}
+},
+{
+	"_id": {
+		"$oid": "6900b719e8ce2a9b51db4e3e"
+	},
+	"codigo": "UC3M",
+	"nombre": "Universidad Carlos III de Madrid",
+	"numAlumnos": 25000,
+	"decano": "Elena Diaz",
+	"direccion": "C/ Madrid, 126, 28903 Getafe, Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.7321,
+			40.3083
+		]
+	}
+},
+{
+	"_id": {
+		"$oid": "6900b719e8ce2a9b51db4e3f"
+	},
+	"codigo": "US",
+	"nombre": "Universidad de Sevilla",
+	"numAlumnos": 60000,
+	"decano": "Juan Romero",
+	"direccion": "Av. Reina Mercedes, s/n, 41012 Sevilla, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-5.9553,
+			37.3847
+		]
+	}
+},
+{
+	"_id": {
+		"$oid": "6900b719e8ce2a9b51db4e39"
+	},
+	"codigo": "UCM",
+	"nombre": "Universidad Complutense de Madrid",
+	"numAlumnos": 85000,
+	"decano": "Luis Garcia",
+	"direccion": "Avda. de Seneca, 2, Ciudad Universitaria, 28040 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.7262,
+			40.4522
+		]
+	}
+},
+{
+	"_id": {
+		"$oid": "6900b719e8ce2a9b51db4e3d"
+	},
+	"codigo": "UZ",
+	"nombre": "Universidad de Zaragoza",
+	"numAlumnos": 30000,
+	"decano": "Laura Pérez",
+	"direccion": "C/ Pedro Cerbuna, 12, 50009 Zaragoza, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-0.8913,
+			41.6551
+		]
+	}
+},
+{
+	"_id": {
+		"$oid": "6900b719e8ce2a9b51db4e41"
+	},
+	"codigo": "UGR",
+	"nombre": "Universidad de Granada",
+	"numAlumnos": 55000,
+	"decano": "Sofia Torres",
+	"direccion": "Paseo Profesor Juan Ossorio s/n, Campus de Fuentenueva, 18071 Granada, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.599,
+			37.176
+		]
+	}
+}]
+

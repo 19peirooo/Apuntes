@@ -1,0 +1,134 @@
+[
+  {
+    "start": 1,
+    "end": 7,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 7,
+    "end": 1,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 5,
+    "end": 7,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 7,
+    "end": 5,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 0,
+    "end": 4,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 4,
+    "end": 0,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 1,
+    "end": 8,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 8,
+    "end": 1,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 7,
+    "end": 4,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 4,
+    "end": 7,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 9,
+    "end": 5,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  },
+  {
+    "start": 5,
+    "end": 9,
+    "start_labels": [
+      "Persona"
+    ],
+    "end_labels": [
+      "Persona"
+    ],
+    "props": {}
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 0,
+    "props": {
+      "numAlumnos": 108,
+      "name": "ce0",
+      "id": 0
+    }
+  },
+  {
+    "id": 1,
+    "props": {
+      "numAlumnos": 311,
+      "name": "ce1",
+      "id": 1
+    }
+  },
+  {
+    "id": 2,
+    "props": {
+      "numAlumnos": 411,
+      "name": "ce2",
+      "id": 2
+    }
+  },
+  {
+    "id": 3,
+    "props": {
+      "numAlumnos": 121,
+      "name": "ce3",
+      "id": 3
+    }
+  },
+  {
+    "id": 4,
+    "props": {
+      "numAlumnos": 213,
+      "name": "ce4",
+      "id": 4
+    }
+  },
+  {
+    "id": 5,
+    "props": {
+      "numAlumnos": 249,
+      "name": "ce5",
+      "id": 5
+    }
+  },
+  {
+    "id": 6,
+    "props": {
+      "numAlumnos": 428,
+      "name": "ce6",
+      "id": 6
+    }
+  },
+  {
+    "id": 7,
+    "props": {
+      "numAlumnos": 131,
+      "name": "ce7",
+      "id": 7
+    }
+  },
+  {
+    "id": 8,
+    "props": {
+      "numAlumnos": 334,
+      "name": "ce8",
+      "id": 8
+    }
+  },
+  {
+    "id": 9,
+    "props": {
+      "numAlumnos": 382,
+      "name": "ce9",
+      "id": 9
+    }
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "nombre_alumno": "Victor Manuel Peiro Martinez",
+  "respuestas": [
+    {
+      "pregunta_id": 1,
+      "tecnologia": "mongodb",
+      "enunciado": "Realizar las operaciones necesarias para poder ejecutar las siguientes consultas de forma eficiente.",
+      "codigo_respuesta": "db.zips.createIndex({location:'2dsphere'}); db.zips.createIndex({state: 'text'}); db.zips.createIndex({population: 1})",
+      "explicacion_opcional": ""
+    },
+    {
+      "pregunta_id": 2,
+      "tecnologia": "mongodb",
+      "enunciado": "Obtener los 5 estados (state) que tienen la población total más alta, pero solo teniendo en cuenta aquellas ciudades (city) que tienen más de 5.000 habitantes. El resultado debe mostrar el ID del estado y el total de su población, ordenado de mayor a menor.",
+      "codigo_respuesta": "db.zips.aggregate([{$match: {population: {$gt: 5000}}}, {$group: {_id: '$state', total_population: {$sum: '$population'}}}, {$sort: {total_population: -1}}, {$limit: 5}])",
+      "explicacion_opcional": "Primero filtramos con match quitando las ciudades que tengan menos de 5000 habitantes. Despues agrupamos por estado y usamos el $sum para suma todas las poblaciones, despues ordenamos por total population, -1 indica que se ordena en orden descendiente. Finalmente tenemos el limit que solo sacara 5 resultados siendo estos los que mas poblacion tienen"
+    },
+    {
+      "pregunta_id": 3,
+      "tecnologia": "mongodb",
+      "enunciado": "Actualizar los documentos del estado de Nueva York (state: 'NY') que se encuentren a menos de 20km de las coordenadas (longitud: -73.97, latitud: 40.77) añadiendo un nuevo campo llamado zona_metropolitana con el valor booleano true.",
+      "codigo_respuesta": "db.zips.updateMany({$and: [{state: 'NY'}, {location: {$near: {type: 'Point', coordinates: [-73.97, 40.77]}, $maxDistance: 20000 }}]}, {$set: {zona_metropolitana: true}})",
+      "explicacion_opcional": "Primero ponemos el filtro de busqueda donde buscaremos que cumpla ambas condiciones usandoo $and. Para comparar con el punto usamos $near y $maxDistance que esta en metros. Usamos $set para añadir el atributo nuevo"
+    },
+    {
+      "pregunta_id": 4,
+      "tecnologia": "redis",
+      "enunciado": "La tienda recibe stock de tres juegos para la categoría 'Acción': 'Elden Ring' (50 unidades), 'Sekiro' (20 unidades) y 'Bloodborne' (15 unidades). Asimismo, para la categoría 'RPG' recibe: 'Elden Ring' (50 unidades), 'Final Fantasy' (40 unidades) y 'Starfield' (10 unidades). Almacene esta información en dos estructuras que permitan filtrar por cantidad de unidades (una consulta por categoría).",
+      "codigo_respuesta": "ZADD accion 50 'Elden Ring' 20 'Sekiro' 15 'Bloodborne'; ZADD rpg 50 'Elden Ring' 40 'Final Fantasy' 10 'Starfield'",
+      "explicacion_opcional": "Creamos un sorted set ya que le podemos añadir una puntuacion a un valor. En nuestro caso, la puntuación es el numero de copias de cada juego."
+    },
+    {
+      "pregunta_id": 5,
+      "tecnologia": "redis",
+      "enunciado": "Muestre los videojuegos de la categoría 'Acción' que tienen un stock comprendido entre 20 y 100 unidades (ambos inclusive), ordenados de menor a mayor cantidad, incluyendo el número de existencias.",
+      "codigo_respuesta": "ZRANGEBYSCORE accion 20 100 WITHSCORES",
+      "explicacion_opcional": "Usamos ZRANGEBYSCORE para poder coger los datos que queramos en funcion del la cantidad de stock. Usamos clausula WITHSCORES para poder ver las puntuaciones"
+    },
+    {
+      "pregunta_id": 6,
+      "tecnologia": "redis",
+      "enunciado": "Genere una nueva estructura llamada 'Multigenero' que contenga los juegos que pertenecen a AMBAS categorías (Acción y RPG), sumando las unidades totales de stock de ambos listados (una consulta, no se pide mostrarlo).",
+      "codigo_respuesta": "ZINTERSTORE multigenero 2 accion rpg AGGREGATE SUM",
+      "explicacion_opcional": "Al ser conjuntos, los juegos que esten en ambas categorias sera la intersección de ambos conjuntos.Usamos ZINTERSTORE en vez de ZINTER para poder guardar el resultado en un nuevo sorted set.El aggregate sum no hace falta porque es la opcion por defecto de redis."
+    },
+    {
+      "pregunta_id": 7,
+      "tecnologia": "redis",
+      "enunciado": "Se desea procesar las ventas de una lista de espera 'pedidos_pendientes'. Suponemos que la liste de espera se ha creado previamente y no es necesaria que la creemos nosotros. La prioridad de la lista es por posición y no por puntuación. Obtenga el próximo pedido de la lista (el más antiguo). Si no hay pedidos, el sistema debe quedarse esperando indefinidamente hasta que entre uno nuevo.",
+      "codigo_respuesta": "BLPOP pedidos_pendientes 0",
+      "explicacion_opcional": "Usamos operadores bloqueantes para que el sistema se queda en espera. El 0 dice que espere indefinidamente. Hemos asumido que los pedido mas antiguos estan a la izquierda de la lista"
+    },
+    {
+      "pregunta_id": 8,
+      "tecnologia": "neo4j",
+      "enunciado": "Crear tres nodos de tipo 'Almacen' (con nombres 'Norte', 'Sur' y 'Centro') y dos nodos de tipo 'Tienda' (con nombres 'T1' y 'T2'). Todos los nodos deben tener una propiedad 'activa' establecida en true. (Una sola consulta).",
+      "codigo_respuesta": "CREATE (a1:Almacen {nombre: 'Norte', activa: true}),(a2:Almacen {nombre: 'Sur', activa: true}),(a3:Almacen {nombre: 'Centro', activa: true}),(t1:Tienda {nombre: 'T1', activa: true}),(t2:Tienda {nombre: 'T2', activa: true})",
+      "explicacion_opcional": ""
+    },
+    {
+      "pregunta_id": 9,
+      "tecnologia": "neo4j",
+      "enunciado": "Crear una relación de tipo 'DISTRIBUYE' desde cada 'Almacen' hacia cada 'Tienda'. Cada relación debe incluir una propiedad 'distancia' con un valor aleatorio (utilizar rand()) entre 10 y 100. (Una sola consulta).",
+      "codigo_respuesta": "MATCH (a:Almacen),(t:Tienda) CREATE (a)-[r:DISTRIBUYE {distancia: (rand()*90)+10}] ->(t)",
+      "explicacion_opcional": "rand genera un numero entre 0 y 1. Al multiplicar por 90 genera numeros entre 0 y 90 y al añadir 10 lo hace entre 10 y 100"
+    },
+    {
+      "pregunta_id": 10,
+      "tecnologia": "neo4j",
+      "enunciado": "Encontrar los nombres de los almacenes que pueden abastecer a la tienda 'T1' con una distancia menor a 50km. Devolver el nombre del almacén y la distancia.",
+      "codigo_respuesta": "MATCH (a:Almacen)-[d:DISTRIBUYE]->(t:Tienda {nombre:'T1'}) WHERE d.distancia < 50.0 RETURN a.nombre as nombre_almacen, d.distancia as distancia",
+      "explicacion_opcional": ""
+    },
+    {
+      "pregunta_id": 11,
+      "tecnologia": "vector_db_theory",
+      "enunciado": "Explique la diferencia principal entre una búsqueda exacta (FLAT) y una búsqueda aproximada (ANN) en una base de datos de vectores. ¿En qué situación sería preferible utilizar FLAT sobre ANN según los apuntes?",
+      "codigo_respuesta": "FLAT compara con todos los vectores para garantizar el top k verdadero mientras que ANN solo compara con una parte bien elegida. Usaremos FLAT cuando tengamos colleciones de datos pequeñas o prefiltradas. Tambien usaremos FLAT cuando queramos priorizar la exactitud del resultado",
+      "explicacion_opcional": ""
+    },
+    {
+      "pregunta_id": 12,
+      "tecnologia": "chromadb",
+      "enunciado": "Dada una colección ya inicializada como 'col', escriba la consulta necesaria para insertar un nuevo documento con el texto 'Guía de redes', ID 'net_01' y los metadatos: tema 'infraestructura' y año 2025.",
+      "codigo_respuesta": "col.add(documents=['Guia de Redes'], metadatas=[{'tema': 'infraestructura', 'anyo': 2025}], ids=['net_01'])",
+      "explicacion_opcional": ""
+    },
+    {
+      "pregunta_id": 13,
+      "tecnologia": "chromadb",
+      "enunciado": "Escriba la consulta para buscar los 2 documentos más similares al texto 'configuración de servidores' que pertenezcan específicamente al tema 'infraestructura'.",
+      "codigo_respuesta": "col.query(query_texts=['configuracion de servidores'], n_results=2, where={'tema':'infraestructura'})",
+      "explicacion_opcional": ""
+    },
+    {
+      "pregunta_id": 14,
+      "tecnologia": "chromadb",
+      "enunciado": "Realice una consulta de búsqueda semántica para el texto 'seguridad perimetral' que devuelva los 5 mejores resultados, pero filtrando para que el año sea 2024 O el tema sea 'seguridad'. Use operadores lógicos.",
+      "codigo_respuesta": "col.query(query_texts=['seguridad perimetral'], n_results=5, where={'$or': [{'tema':'seguridad'},{'anyo': 2024}]})",
+      "explicacion_opcional": ""
+    }
+  ]
+}

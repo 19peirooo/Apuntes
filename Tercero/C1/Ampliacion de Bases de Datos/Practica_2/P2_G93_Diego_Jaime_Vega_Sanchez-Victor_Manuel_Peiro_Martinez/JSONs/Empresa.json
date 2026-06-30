@@ -1,0 +1,171 @@
+[{
+	"_id": {
+		"$oid": "6900b70ff0c6c3664b3d0c32"
+	},
+	"nombre": "Amazon",
+	"cif": "A45678901",
+	"direccion": "Calle Ramirez de Prado, 5, 28045 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.6922,
+			40.3989
+		]
+	},
+	"numEmpleados": 120000,
+	"tipoDeEmpresa": "Tecnologia"
+},
+{
+	"_id": {
+		"$oid": "6900b70ff0c6c3664b3d0c35"
+	},
+	"nombre": "Accenture",
+	"cif": "A89012345",
+	"direccion": "Paseo de la Castellana, 85, 28046 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.6903,
+			40.4471
+		]
+	},
+	"numEmpleados": 200000,
+	"tipoDeEmpresa": "Consultoria"
+},
+{
+	"_id": {
+		"$oid": "6900b70ff0c6c3664b3d0c37"
+	},
+	"nombre": "Intel",
+	"cif": "A56789012",
+	"direccion": "Calle de Jose Echegaray 6, 28232 Las Rozas, Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.8808,
+			40.4935
+		]
+	},
+	"numEmpleados": 90000,
+	"tipoDeEmpresa": "Tecnologia"
+},
+{
+	"_id": {
+		"$oid": "6900b70ff0c6c3664b3d0c39"
+	},
+	"nombre": "Microsoft",
+	"cif": "A23456789",
+	"direccion": "Paseo del Club Deportivo 1, Centro Empresarial La Finca, 28223 Pozuelo de Alarcon, Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.8008,
+			40.4367
+		]
+	},
+	"numEmpleados": 180000,
+	"tipoDeEmpresa": "Tecnologia"
+},
+{
+	"_id": {
+		"$oid": "6900b70ff0c6c3664b3d0c38"
+	},
+	"nombre": "Google",
+	"cif": "A12345678",
+	"direccion": "Plaza Pablo Ruiz Picasso (Torre Picasso), 1, 28020 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.6923,
+			40.4483
+		]
+	},
+	"numEmpleados": 150000,
+	"tipoDeEmpresa": "Tecnologia"
+},
+{
+	"_id": {
+		"$oid": "6900b70ff0c6c3664b3d0c31"
+	},
+	"nombre": "Red Hat",
+	"cif": "A67890123",
+	"direccion": "Travessera de Gracia, 11, 3º, 08021 Barcelona, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			2.1443,
+			41.3945
+		]
+	},
+	"numEmpleados": 5000,
+	"tipoDeEmpresa": "Software libre"
+},
+{
+	"_id": {
+		"$oid": "6900b70ff0c6c3664b3d0c36"
+	},
+	"nombre": "Telefonica",
+	"cif": "A01234567",
+	"direccion": "Ronda de la Comunicacion, s/n, Distrito Telefonica (Las Tablas), 28050 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.6174,
+			40.515
+		]
+	},
+	"numEmpleados": 110000,
+	"tipoDeEmpresa": "Telecomunicaciones"
+},
+{
+	"_id": {
+		"$oid": "6900b70ff0c6c3664b3d0c34"
+	},
+	"nombre": "Oracle",
+	"cif": "A90123456",
+	"direccion": "Paseo de la Castellana, 81, 28046 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.6899,
+			40.4475
+		]
+	},
+	"numEmpleados": 90000,
+	"tipoDeEmpresa": "Tecnologia"
+},
+{
+	"_id": {
+		"$oid": "6900b70ff0c6c3664b3d0c30"
+	},
+	"nombre": "IBM",
+	"cif": "A34567890",
+	"direccion": "Paseo de la Castellana 101, 28046 Madrid, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-3.6894,
+			40.4592
+		]
+	},
+	"numEmpleados": 100000,
+	"tipoDeEmpresa": "Tecnologia"
+},
+{
+	"_id": {
+		"$oid": "6900b70ff0c6c3664b3d0c33"
+	},
+	"nombre": "BBVA",
+	"cif": "A78901234",
+	"direccion": "Plaza de San Nicolas, 4, 48005 Bilbao, España",
+	"direccion_loc": {
+		"type": "Point",
+		"coordinates": [
+			-2.922,
+			43.2637
+		]
+	},
+	"numEmpleados": 70000,
+	"tipoDeEmpresa": "Banca"
+}]
+
