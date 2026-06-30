@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+function getAWSKeys() {
+	var asd=$.get(
+ 			"https://7blztqhezxpzh4ao3tbsrb2fgq0gulxn.lambda-url.us-east-1.on.aws/",
+		    {},
+		    function(data) {
+
+		       var json=data;
+               //        json=JSON.parse(json);
+		       document.getElementById("Policy").value = json.stringToSign;
+		       document.getElementById("X-Amz-Credential").value = json.xAmzCredential;		
+		       document.getElementById("X-Amz-Date").value = json.amzDate;		
+		       document.getElementById("X-Amz-Signature").value = json.stringSigned;	
+		       document.getElementById("X-Amz-Security-Token").value = json.securityToken;	
+			
+		    }
+		)
+  
+}
+
+function setKeyFilename() {
+	document.getElementById("key").value = document.getElementById("file").value.substring(document.getElementById("file").value.lastIndexOf('\\')+1);	
+}
+
+</script>
+
+
+
+</head>
+<body onload="getAWSKeys()">
+
+
+<form action="http://tut2bucketvpeiro.s3-website-us-east-1.amazonaws.com" onsubmit="setKeyFilename()" method="post" enctype="multipart/form-data">
+  <label >X-Amz-Credential</label>
+  <input type="text"  id="X-Amz-Credential" name="X-Amz-Credential" value="" />
+  <label >X-Amz-Date</label>
+  <input type="text"  id="X-Amz-Date" name="X-Amz-Date" value="" />
+  <label >Policy  (b64Policy)</label>
+  <input type="text"  id="Policy" name="Policy" value="" />
+  <label >X-Amz-Signature</label>
+  <input type="text"   id="X-Amz-Signature" name="X-Amz-Signature" value="" />
+  
+	<input type="input" id="key" name="key" value="fichero.sln" /><br />
+    <input type="hidden" name="acl" value="public-read" />
+    <input type="hidden" name="success_action_redirect" value="http://tut2bucketvpeiro.s3-website-us-east-1.amazonaws.com/success.html" />
+    <input type="text"   name="X-Amz-Algorithm" value="AWS4-HMAC-SHA256" />
+  	<input type="text" id="X-Amz-Security-Token" name="X-Amz-Security-Token" value=""/>
+   Select file to upload:
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload Image" name="submit" >
+</form>
+
+</body>
+</html>
+

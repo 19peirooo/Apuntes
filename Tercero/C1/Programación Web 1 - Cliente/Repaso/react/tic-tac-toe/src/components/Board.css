@@ -1,0 +1,16 @@
+.board {
+    display: grid;
+    grid-template: repeat(3,1fr) / repeat(3, 1fr);
+    height: 40vh;
+    width: 40vw;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.player_x {
+    background-color: crimson;
+}
+
+.player_o {
+    background-color: blue;
+}

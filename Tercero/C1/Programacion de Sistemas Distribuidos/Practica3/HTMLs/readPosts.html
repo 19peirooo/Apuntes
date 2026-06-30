@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        var user="userPrueba";
+        var sendPost=$.get(
+        "https://tadk2kvvn2kwreulcnzmo5xxcu0stgbt.lambda-url.us-east-1.on.aws/", //URL del la funcion readPosts de Lambda
+
+        {user: user},
+        function(data) {
+
+          // function jsonEscape(str)  {
+          //          return str.replace(/\n/g, "\\\\n").replace(/\r/g, "\\\\r").replace(/\t/g, "\\\\t").replace(/\\/g,"");
+          // }
+           var json=data;
+           alert('resultado ' + JSON.stringify(json));
+           for (let i in json.posts) {
+             var ul = document.getElementById("comment_list");
+             var li = document.createElement("li");
+             var comment=document.createElement("p");
+             comment.innerText= json.posts[i].user+" dice:"+json.posts[i].comment;
+             var video=document.createElement("video");
+             video.setAttribute("width","320");
+             video.setAttribute("height","320");
+             video.setAttribute("controls","");
+             
+             var source=document.createElement("source");
+             source.setAttribute("src",json.posts[i].attachment);
+             source.setAttribute("type","video/mp4");
+             video.appendChild(source);
+             ul.appendChild(li);
+             li.appendChild(comment);
+             li.appendChild(video);
+
+
+            }
+        }
+    )
+    });
+ 
+    </script>
+
+</head>
+<body>
+<ul id="comment_list">
+  <!-- <li>
+    <p> Comentario 1</p>
+    <video width="320" height="240" controls>
+    <source src="https://utadbucket1.s3.us-east-1.amazonaws.com/dp1.mp4" type="video/mp4">
+ 
+    Your browser does not support the video tag.
+    </video>
+  </li>
+  <li>
+    <p> Comentario 2</p>
+    <video width="320" height="240" controls>
+    <source src="https://utadbucket1.s3.us-east-1.amazonaws.com/dp1.mp4" type="video/mp4">
+ 
+    Your browser does not support the video tag.
+    </video>
+  </li>
+  <li>
+    <p> Comentario 3</p>
+    <video width="320" height="240" controls>
+    <source src="https://utadbucket1.s3.us-east-1.amazonaws.com/dp1.mp4" type="video/mp4">
+ 
+    Your browser does not support the video tag.
+    </video>
+  </li>
+  --> 
+</ul>
+</body>

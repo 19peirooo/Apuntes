@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Paises</title>
+    <script>
+        function addCountry(country) {
+            const EU_ul = document.querySelector('#EUcountries')
+            const li = document.createElement("li")
+            li.appendChild(document.createTextNode(country))
+            EU_ul.appendChild(li)
+        }
+    </script>
+</head>
+<body>
+    <ul id="EUcountries">
+        <li>Italy</li>
+        <li>Luxembourg</li>
+        <li>Poland</li>
+    </ul>
+</body>
+<form><button id="actionItem" type="button" onclick="addCountry('Spain')">Add country</button></form>
+</html>

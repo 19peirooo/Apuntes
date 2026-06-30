@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista Pokémon</title>
+</head>
+<body>
+  <h1>Lista de Pokémon</h1>
+  <ul id="ListaPokemon"></ul>
+
+  <script>
+    const lista = document.getElementById("ListaPokemon");
+
+    function mostrarPokemones(pokemones) {
+      pokemones.forEach(pokemon => {
+        const li = document.createElement("li");
+        li.textContent = pokemon.name;
+        lista.appendChild(li);
+      });
+    }
+
+    fetch("https://pokeapi.co/api/v2/pokemon?offset=204&limit=20")
+      .then(response => response.json())
+      .then(json => {
+        mostrarPokemones(json.results);
+      })
+      .catch(error => console.error("Error cargando Pokemon:", error));
+  </script>
+</body>
+</html>

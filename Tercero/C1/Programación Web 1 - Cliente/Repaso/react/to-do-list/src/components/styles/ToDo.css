@@ -1,0 +1,27 @@
+.complete {
+  text-decoration: line-through;
+  
+}
+
+li {
+  padding:0.8rem;
+  color:white;
+  margin: 0.5rem;
+  border-radius:8px;
+  font-size: 1rem;
+  width: 60vw;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li:nth-child(3n + 1) {
+  background-color: #1b1b32;
+}
+li:nth-child(3n + 2) {
+  background-color: #2a2a40;
+}
+li:nth-child(3n + 3) {
+  background-color: #3b3b4f;
+}

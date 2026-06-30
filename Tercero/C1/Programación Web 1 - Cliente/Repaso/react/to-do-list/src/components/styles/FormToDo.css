@@ -1,0 +1,18 @@
+
+input {
+  padding:0.8rem;
+  margin: 0.5rem;
+  border-radius:8px;
+  font-size: 1rem;
+  width: 60vw;
+  text-align: left;
+}
+
+button {
+  padding:0.8rem;
+  margin: 0.5rem;
+  border-radius:8px;
+  font-size: 1rem;
+  background-color: rgb(29, 29, 61);
+  color:aliceblue;
+}

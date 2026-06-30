@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: broker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: broker
+  template:
+    metadata:
+      labels:
+        app: broker
+    spec:
+      containers:
+      - name: broker
+        image: docker.io/19peirooo/broker:latest
+        ports:
+        - containerPort: 32002
+      volumes:
+      - name: shared-fm-dir
+        hostPath:
+          path: /home/ubuntu/Practica2/FileManagerDir
+          type: Directory

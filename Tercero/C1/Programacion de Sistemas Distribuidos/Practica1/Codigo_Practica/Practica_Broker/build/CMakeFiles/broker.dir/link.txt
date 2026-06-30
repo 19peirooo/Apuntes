@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/broker.dir/utils.cpp.o CMakeFiles/broker.dir/broker.cpp.o -o broker  -lpthread -lstdc++fs 

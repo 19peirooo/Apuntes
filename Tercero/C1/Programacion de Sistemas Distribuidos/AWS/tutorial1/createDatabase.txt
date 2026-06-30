@@ -1,0 +1,7 @@
+CREATE DATABASE calculator;
+use calculator;
+create table resultados(op1 int, op2 int, op3 varchar(5), result int);
+create table webpages(type varchar(20), pagename varchar(100));
+insert into  webpages values('success','success.html');
+commit;
+

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      containers:
+      - name: server
+        image: docker.io/19peirooo/server:latest
+        ports:
+        - containerPort: 32001
+        volumeMounts:
+        - name: nfs-fm-dir
+          mountPath: /app/FileManagerDir
+      volumes:
+      - name: nfs-fm-dir
+        persistentVolumeClaim:
+         claimName: nfs-pvc

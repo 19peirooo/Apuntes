@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/client.dir/chat.cpp.o CMakeFiles/client.dir/utils.cpp.o CMakeFiles/client.dir/main.cpp.o CMakeFiles/client.dir/userDistribuido.cpp.o -o client  -lpthread 

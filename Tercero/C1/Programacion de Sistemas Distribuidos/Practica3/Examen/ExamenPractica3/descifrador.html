@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+const syncWait = ms => {
+    const end = Date.now() + ms
+    while (Date.now() < end) continue
+}
+
+function decryptData() {
+    alert( "Enviando!" );
+    var encrypted=document.getElementById("encrypted").value;
+
+    var sendPost=$.get(
+    "https://f2ggcxamzn4ajowdm6dgnft6qm0thbah.lambda-url.us-east-1.on.aws/",
+
+        {encryptedData: encrypted},
+        function(data) {
+
+            function jsonEscape(str)  {
+                    return str.replace(/\n/g, "\\\\n").replace(/\r/g, "\\\\r").replace(/\t/g, "\\\\t").replace(/\\/g,"");
+            }
+
+           var json=data;
+           alert('resultado ' + JSON.stringify(json.res));
+           
+        }
+	)
+    
+	syncWait(3000);
+
+}
+
+
+</script>
+
+
+
+</head>
+<body>
+
+<label for="email">Datos Encriptados:</label>
+<input type="text" id="encrypted" value=""/><br><br>
+<button onclick="decryptData()">Descifrar</button>
+
+</html>
+

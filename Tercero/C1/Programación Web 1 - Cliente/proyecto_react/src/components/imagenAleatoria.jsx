@@ -1,0 +1,3 @@
+function imagen_aleatoria() {
+    
+}

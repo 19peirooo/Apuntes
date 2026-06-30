@@ -1,0 +1,4 @@
+/home/victor/Tercero/SSDD/Practica1/Practica_No_Broker/build/CMakeFiles/server.dir
+/home/victor/Tercero/SSDD/Practica1/Practica_No_Broker/build/CMakeFiles/client.dir
+/home/victor/Tercero/SSDD/Practica1/Practica_No_Broker/build/CMakeFiles/edit_cache.dir
+/home/victor/Tercero/SSDD/Practica1/Practica_No_Broker/build/CMakeFiles/rebuild_cache.dir

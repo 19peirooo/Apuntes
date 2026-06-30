@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+            function login() {
+                let user = document.getElementById("username").value
+                let pass = document.getElementById("password").value
+
+                fetch(`https://y3gswc3lq2a5n36bgferbej2m40sirgt.lambda-url.us-east-1.on.aws/?username=${user}&password=${pass}`)
+                    .then(res => res.text())
+                    .then(data => {
+                        if (data === "OK") {
+                            window.location.href = "postComment.html"
+                        } else {
+                            alert("ERROR No se pudo hacer login")
+                        }
+                    })
+            }
+
+            function register() {
+                let user = document.getElementById("username").value;
+                let pass = document.getElementById("password").value;
+
+                fetch(`https://nu4l2fhqhxvbt4vma4mox5rvpa0sziay.lambda-url.us-east-1.on.aws/?username=${user}&password=${pass}`)
+                    .then(res => res.text())
+                    .then(data => {
+                        if (data === "OK") {
+                            alert("Usuario Registrado")
+                        } else if (data === "EXISTS") {
+                            alert("ERROR: No se puede añadir datos repetidos")
+                        } else {
+                            alert("ERROR No se pudo añadir datos")
+                        }
+                    })
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <form>
+            <h2>Login</h2>
+            <label>Usuario: </label><input type="text" id="username">
+            <label>Contraseña: </label> <input type="text" id="password">
+            <button type= "button" onclick="login()">Login</button>
+            <button type= "button" onclick="register()">Registarse</button>
+        </form>
+
+    </body>
+</html>
