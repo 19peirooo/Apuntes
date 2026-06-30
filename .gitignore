@@ -9,3 +9,13 @@
 # Ignorar todas las carpetas .vs (Visual Studio)
 .vs/
 **/.vs/
+
+# Node.js
+node_modules/
+
+# Logs
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
