@@ -1,0 +1,5 @@
+# 7. Base datos
+
+Final assessment: Exam
+Unit number: 7
+Contenido: 1. Conceptos SQLite y Room (../Temario/1%20Conceptos%20SQLite%20y%20Room%208dfeeadeed70830ca52e0133df919956.md), 2. Operaciones con base de datos y Room (../Temario/2%20Operaciones%20con%20base%20de%20datos%20y%20Room%2033aeeadeed7082949bb081a82493d1cb.md), 3. Firebase. Configuración y primeros pasos (../Temario/3%20Firebase%20Configuraci%C3%B3n%20y%20primeros%20pasos%20d97eeadeed7083acb053012bcc9dc2f9.md), 4. Firebase Realtime Database (../Temario/4%20Firebase%20Realtime%20Database%20e8feeadeed7082db809b814bf2a2aef1.md), 5. Firebase Cloud (../Temario/5%20Firebase%20Cloud%20f99eeadeed7083f89700018288613f36.md), 6. Firebase Auth (../Temario/6%20Firebase%20Auth%2027aeeadeed70838484c201aad1027b8c.md), 7. Firebase Storage (../Temario/7%20Firebase%20Storage%20804eeadeed7082cfbea3813ebe036a0e.md), 0. SQLITE base (../Temario/0%20SQLITE%20base%2001deeadeed7082e8819d815a3c618a75.md), Ejercicio tienda (../Temario/Ejercicio%20tienda%20177eeadeed7082e0a2580120d4acc1cf.md)

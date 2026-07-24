@@ -1,0 +1,5 @@
+# 3. Interfaz gráfica
+
+Final assessment: Exam
+Unit number: 3
+Contenido: 1. Vistas (../Temario/1%20Vistas%20f2deeadeed7083399c0881a1127ac7a5.md), 2. Layouts (../Temario/2%20Layouts%20cc0eeadeed708299a8a781d9475f5af2.md), 3. Vistas básicas (../Temario/3%20Vistas%20b%C3%A1sicas%205b2eeadeed708306addc015d09dc867a.md), 4. Modificación en tiempo real (../Temario/4%20Modificaci%C3%B3n%20en%20tiempo%20real%20937eeadeed708298b846817ffa857edc.md), PRÁCTICA: calculadora (../Temario/PR%C3%81CTICA%20calculadora%20602eeadeed7083ff94b801df0d2b86d1.md), Sin título (https://www.notion.so/161f8f0a0e3d4703972c77dfbd814687?pvs=21), PRÁCTICA: IMC (../Temario/PR%C3%81CTICA%20IMC%20819eeadeed7082759aa281e81ba98f16.md), Sin título (../Temario/Sin%20t%C3%ADtulo%20b8ceeadeed7082cb9624817bfd49f0c8.md), Actividades para practicar (../Temario/Actividades%20para%20practicar%202f5eeadeed7082f59b6f811cd45383f4.md)

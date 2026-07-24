@@ -1,0 +1,5 @@
+# 2. Android Studio: primeros pasos
+
+Final assessment: Exam
+Unit number: 2
+Contenido: 4. Trabajo con elementos gráfico - lógico (../Temario/4%20Trabajo%20con%20elementos%20gr%C3%A1fico%20-%20l%C3%B3gico%207b5eeadeed7082cc925c816a2ae40d1d.md), 5. Intents (../Temario/5%20Intents%205f6eeadeed708316b09801acd4954cbf.md), 2. Elementos básicos de una aplicación (../Temario/2%20Elementos%20b%C3%A1sicos%20de%20una%20aplicaci%C3%B3n%20846eeadeed7083c798bd81254de2d96d.md), 1. Instalaciones y configuraciones (../Temario/1%20Instalaciones%20y%20configuraciones%20149eeadeed7083eb8f4081fb3d7431f5.md), 3. Estructura de un proyecto (../Temario/3%20Estructura%20de%20un%20proyecto%20b2beeadeed70820ea494814c0785ebdd.md), PRÁCTICA: adivinación cartas (../Temario/PR%C3%81CTICA%20adivinaci%C3%B3n%20cartas%20eeeeeadeed708338b497813d1adb2463.md), Sin título (https://www.notion.so/0329c9483fc64173bf5703674d761428?pvs=21)

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">clase</string>
+    <string name="email_placeholder">Introduce Correo</string>
+    <string name="pswd_placeholder">Contraseña</string>
+    <string name="verify_pswd_placeholder">Repetir Contraseña</string>
+    <string name="name_placeholder">Nombre</string>
+    <string name="surname_placeholder">Apellidos</string>
+    <string name="login_txt">Log in</string>
+    <string name="register_txt">Register</string>
+    <string name="ckbx_txt">Recordar Contraseña</string>
+    <string name="text_main">APP Android</string>
+    <string name="text_hint">Introduce tu nombre</string>
+    <string name="text_content">Saludar</string>
+    <string name="text_clear">Vaciar</string>
+    <string name="text_empty_edit"></string>
+</resources>

@@ -1,0 +1,5 @@
+# 5. Diálogos y menús
+
+Final assessment: Exam
+Unit number: 5
+Contenido: 1. Cuadros de diálogo (../Temario/1%20Cuadros%20de%20di%C3%A1logo%201b5eeadeed708273806081ed8611d10b.md), 2 Comunicación entre diálogos (../Temario/2%20Comunicaci%C3%B3n%20entre%20di%C3%A1logos%20d5eeeadeed70828aa8bc0180077b6d7d.md), 3. Menús (../Temario/3%20Men%C3%BAs%20935eeadeed70833d81260128fb6512bd.md), 4. Toolbar y notificaciones (../Temario/4%20Toolbar%20y%20notificaciones%20d62eeadeed7083d7955e818249bee04d.md), PRÁCTICA: Vuelos (../Temario/PR%C3%81CTICA%20Vuelos%20123eeadeed70824e8df401cf54969c83.md), PRÁCTICA: Compras (../Temario/PR%C3%81CTICA%20Compras%20605eeadeed70834885b0810701f184b0.md), PRÁCTICA: Trabajadores (../Temario/PR%C3%81CTICA%20Trabajadores%20d55eeadeed70827ebb1d819a783da6c3.md), PRÁCTICA: Trivial (../Temario/PR%C3%81CTICA%20Trivial%2041ceeadeed7082349a050119b3606ccb.md)

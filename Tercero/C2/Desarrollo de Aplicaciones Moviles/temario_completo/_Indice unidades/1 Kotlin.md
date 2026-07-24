@@ -1,0 +1,5 @@
+# 1. Kotlin
+
+Final assessment: Exam
+Unit number: 1
+Contenido: Variables (../Temario/Variables%2048aeeadeed70829ebda301fada70a113.md), Sentencias de control (../Temario/Sentencias%20de%20control%20ebaeeadeed708347956d81e4efa6daaf.md), Funciones (../Temario/Funciones%201feeeadeed7082629d1201b11538fdcc.md), Arrays y colecciones (../Temario/Arrays%20y%20colecciones%20e39eeadeed7083b88c3601e4015418d2.md), Clases. Herencia y polimorfismo (../Temario/Clases%20Herencia%20y%20polimorfismo%20991eeadeed70823b916481a0ca002d00.md), PRÁCTICA: Llamadas (../Temario/PR%C3%81CTICA%20Llamadas%20352eeadeed70831f8f8301a455559ebc.md), PRÁCTICA: Trigonometría (../Temario/PR%C3%81CTICA%20Trigonometr%C3%ADa%20bbaeeadeed7082ae849e819dcf8a5d74.md), PRÁCTICA: Trabajadores (../Temario/PR%C3%81CTICA%20Trabajadores%205cfeeadeed708351943b817612892513.md), PRÁCTICA: Alumnos (../Temario/PR%C3%81CTICA%20Alumnos%20fd9eeadeed70829ab7c6813998e7964b.md), Actividades para practicar (../Temario/Actividades%20para%20practicar%20cbfeeadeed7082059bb581162baf4248.md), EJERCICIOS CLASE (../Temario/EJERCICIOS%20CLASE%208f1eeadeed7083399bea0191abb6405a.md)

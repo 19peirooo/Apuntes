@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1038958401199",
+    "firebase_url": "https://dam-victorpeiro-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "dam-victorpeiro",
+    "storage_bucket": "dam-victorpeiro.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038958401199:android:91b33d04aec3f46dfae65a",
+        "android_client_info": {
+          "package_name": "com.example.clase2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ0LEEEWypGXk70Bdcr8tDTEAFwLgsilE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038958401199:android:e2d64723c667b96cfae65a",
+        "android_client_info": {
+          "package_name": "com.example.store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ0LEEEWypGXk70Bdcr8tDTEAFwLgsilE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

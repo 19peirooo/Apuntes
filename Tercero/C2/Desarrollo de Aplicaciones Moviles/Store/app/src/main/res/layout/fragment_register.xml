@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/registerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_title"
+        android:textSize="30sp"
+        android:id="@+id/loginTitle"
+        android:layout_marginBottom="48dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editMail"
+        android:drawableStart="@drawable/mail_icon"
+        android:drawablePadding="12dp"
+        android:hint="@string/mail_placeholder"
+        android:inputType="textEmailAddress"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editPass"
+        android:drawableStart="@drawable/pass_icon"
+        android:drawablePadding="12dp"
+        android:hint="@string/pass_placeholder"
+        android:inputType="textPassword"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editName"
+        android:drawableStart="@drawable/name_icon"
+        android:drawablePadding="12dp"
+        android:hint="@string/name_placeholder"
+        android:inputType="text"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editSurname"
+        android:drawableStart="@drawable/name_icon"
+        android:drawablePadding="12dp"
+        android:hint="@string/surname_placeholder"
+        android:inputType="text"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegister"
+        android:text="@string/register_txt"/>
+
+</LinearLayout>
