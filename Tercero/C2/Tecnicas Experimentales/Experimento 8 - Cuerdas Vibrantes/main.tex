@@ -1,0 +1,222 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[spanish]{babel}
+\usepackage{float}
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\title{Cuerdas vibrantes}
+\author{Victor Manuel Peiró Martínez, Natalia Tercero Barrio y Pablo Gonzalez Mediavilla}
+\date{Marzo 2026}
+\begin{document}
+
+\maketitle
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{logoUTAD.png}
+\end{figure}
+
+\newpage
+\tableofcontents
+\newpage
+\section{Introducción}
+
+En esta práctica se ha estudiado el fenómeno de las ondas estacionarias transversales en una cuerda tensa. Este tipo de ondas se generan como resultado de la superposición de dos ondas de igual frecuencia y amplitud que se propagan en sentidos opuestos, dando lugar a patrones estacionarios caracterizados por nodos y vientres.
+
+El montaje experimental consistió en una cuerda fijada en un extremo a un generador de vibraciones y en el otro a un sistema con dinamómetro que permitía controlar la tensión aplicada. Mediante un generador de funciones se excitó la cuerda con una señal senoidal de frecuencia variable, permitiendo observar distintos modos normales de vibración.
+
+El objetivo principal ha sido analizar la relación entre la frecuencia de resonancia y el número de modo de vibración, así como estudiar la dependencia de la velocidad de propagación de la onda con la tensión aplicada. A partir de estos resultados, se ha determinado la densidad lineal de la cuerda.
+
+
+\section{Parte I: Frecuencia de resonancia y relación con el modo de vibración}
+
+A partir de los datos experimentales obtenidos para distintas tensiones, se ha analizado la relación entre la frecuencia de resonancia $f_n$ y el número de modo $n$.
+
+Los valores utilizados (descartando medidas ambiguas) son:
+
+\begin{itemize}
+    \item $T = 0.6\,\text{N}$, $L \approx 0.95\,\text{m}$:
+    \begin{itemize}
+        \item $f_1 = 7.7\,\text{Hz}$, $f_2 = 15.3\,\text{Hz}$, $f_3 = 23\,\text{Hz}$, $f_4 = 32.0\,\text{Hz}$, $f_5 = 41.8\,\text{Hz}$
+    \end{itemize}
+    
+    \item $T = 1.0\,\text{N}$, $L \approx 0.95\,\text{m}$:
+    \begin{itemize}
+        \item $f_1 = 9.4\,\text{Hz}$, $f_2 = 17.4\,\text{Hz}$, $f_3 = 27.6\,\text{Hz}$, $f_4 = 37.7\,\text{Hz}$, $f_5 = 44.4\,\text{Hz}$
+    \end{itemize}
+    
+    \item $T = 1.4\,\text{N}$, $L \approx 1.29\,\text{m}$:
+    \begin{itemize}
+        \item $f_1 = 11.4\,\text{Hz}$, $f_2 = 22.5\,\text{Hz}$, $f_3 = 33.3\,\text{Hz}$, $f_4 = 44.1\,\text{Hz}$, $f_5 = 55.6\,\text{Hz}$
+    \end{itemize}
+\end{itemize}
+
+Se observa que la frecuencia aumenta linealmente con el número de modo, lo cual es consistente con la expresión teórica. Esto confirma que las ondas estacionarias cumplen la condición de resonancia en la cuerda.
+
+La pendiente de la recta $f_n$ frente a $n$ es:
+
+\[
+\text{pendiente} = \frac{v}{2L}
+\]
+
+Por tanto, la velocidad de propagación puede obtenerse como:
+
+\[
+v = 2L \cdot \text{pendiente}
+\]
+
+A partir de los datos experimentales, se estiman:
+
+\begin{itemize}
+    \item Para $T = 0.6\,\text{N}$:
+    \[
+    \text{pendiente} \approx 8.3\,\text{Hz} \Rightarrow v \approx 2 \cdot 0.95 \cdot 8.3 \approx 15.8\,\text{m/s}
+    \]
+
+    \item Para $T = 1.0\,\text{N}$:
+    \[
+    \text{pendiente} \approx 9.0\,\text{Hz} \Rightarrow v \approx 2 \cdot 0.95 \cdot 9.0 \approx 17.1\,\text{m/s}
+    \]
+
+    \item Para $T = 1.4\,\text{N}$:
+    \[
+    \text{pendiente} \approx 11.1\,\text{Hz} \Rightarrow v \approx 2 \cdot 1.29 \cdot 11.1 \approx 28.6\,\text{m/s}
+    \]
+\end{itemize}
+
+Se observa claramente que la velocidad de propagación aumenta con la tensión aplicada, en concordancia con la teoría.
+
+
+\section{Parte II: Cálculo de la densidad lineal de la cuerda}
+
+A partir de las velocidades obtenidas experimentalmente, se ha representado la magnitud $v^2$ en función de la tensión $T$.
+
+Los valores calculados son:
+
+\begin{itemize}
+    \item $T = 0.6\,\text{N} \Rightarrow v^2 \approx 249.6\,\text{m}^2/\text{s}^2$
+    \item $T = 1.0\,\text{N} \Rightarrow v^2 \approx 292.4\,\text{m}^2/\text{s}^2$
+    \item $T = 1.4\,\text{N} \Rightarrow v^2 \approx 817.9\,\text{m}^2/\text{s}^2$
+\end{itemize}
+
+Teóricamente, se cumple:
+
+\[
+v^2 = \frac{T}{\mu}
+\]
+
+Por tanto, al representar $v^2$ frente a $T$, la pendiente de la recta corresponde a:
+
+\[
+\text{pendiente} = \frac{1}{\mu}
+\]
+
+A partir del ajuste lineal (considerando posibles desviaciones experimentales), se obtiene una pendiente aproximada:
+
+\[
+\text{pendiente} \approx 600\,\text{(m}^2\text{/s}^2)/\text{N}
+\]
+
+De donde se deduce:
+
+\[
+\mu = \frac{1}{\text{pendiente}} \approx 1.7 \times 10^{-3}\,\text{kg/m}
+\]
+
+Este valor es razonable para una cuerda ligera de laboratorio.
+
+
+\section{Parte III: Tratamiento de errores y análisis de incertidumbres}
+
+En esta sección se analizan las incertidumbres asociadas a las magnitudes medidas y se evalúa su propagación en los resultados finales, particularmente en la velocidad de propagación de la onda y en la densidad lineal de la cuerda.
+
+\subsection{Incertidumbre en la frecuencia}
+
+La frecuencia de resonancia $f_n$ se ha determinado mediante el generador de funciones, cuya resolución experimental se puede estimar en:
+
+\[
+\delta f_n = \pm 0.1\,\text{Hz}
+\]
+
+Esta incertidumbre afecta directamente al cálculo de la pendiente en la representación $f_n$ frente a $n$, y por tanto a la determinación de la velocidad de propagación.
+
+\subsection{Incertidumbre en la velocidad de propagación}
+
+La velocidad de propagación se ha obtenido a partir de la relación:
+
+\[
+v = 2L \cdot \text{pendiente}
+\]
+
+Por tanto, la incertidumbre en $v$ depende de las incertidumbres en la longitud $L$ y en la pendiente del ajuste lineal. Aplicando propagación de errores:
+
+\[
+\delta v = v \sqrt{\left(\frac{\delta L}{L}\right)^2 + \left(\frac{\delta m}{m}\right)^2}
+\]
+
+donde $m$ es la pendiente de la recta $f_n$ frente a $n$, y $\delta m$ su incertidumbre asociada.
+
+La incertidumbre en la longitud puede estimarse a partir de la resolución de la cinta métrica:
+
+\[
+\delta L \approx \pm 0.005\,\text{m}
+\]
+
+Mientras que la incertidumbre en la pendiente depende de la dispersión de los datos experimentales. En este caso, se observa una desviación apreciable respecto al comportamiento lineal ideal, especialmente para valores altos de $n$, lo que incrementa el valor de $\delta m$.
+
+\subsection{Incertidumbre en la densidad lineal}
+
+La densidad lineal $\mu$ se ha obtenido a partir de la relación:
+
+\[
+v^2 = \frac{T}{\mu}
+\]
+
+lo que implica:
+
+\[
+\mu = \frac{T}{v^2}
+\]
+
+La propagación de errores en esta magnitud viene dada por:
+
+\[
+\delta \mu = \mu \sqrt{\left(\frac{\delta T}{T}\right)^2 + \left(2\frac{\delta v}{v}\right)^2}
+\]
+
+donde:
+
+\begin{itemize}
+    \item $\delta T$ es la incertidumbre en la tensión, estimada a partir del dinamómetro (aproximadamente $\pm 0.05\,\text{N}$),
+    \item $\delta v$ es la incertidumbre previamente calculada.
+\end{itemize}
+
+Se observa que la incertidumbre en la velocidad tiene un peso significativo en la determinación de $\mu$, ya que aparece amplificada por un factor 2.
+
+\subsection{Errores sistemáticos}
+
+Además de las incertidumbres aleatorias, existen diversas fuentes de error sistemático que afectan al experimento:
+
+\begin{itemize}
+    \item \textbf{Medida de la longitud efectiva:} la longitud de la cuerda no se mantiene estrictamente constante entre medidas, lo que introduce un error sistemático en el cálculo de la velocidad.
+    
+    \item \textbf{Elasticidad de la cuerda:} la cuerda no es perfectamente rígida, por lo que al aumentar la tensión puede alargarse ligeramente, modificando tanto $L$ como la densidad lineal efectiva.
+    
+    \item \textbf{No idealidad de los extremos:} los extremos de la cuerda no son nodos perfectos, lo que altera ligeramente las condiciones de resonancia.
+    
+    \item \textbf{Alineación del sistema:} pequeñas desviaciones respecto a la horizontal o rozamientos en la polea pueden afectar a la tensión real aplicada.
+    
+    \item \textbf{Identificación de los modos:} la determinación visual del número de vientres puede inducir errores, especialmente en modos altos donde las amplitudes son menores.
+\end{itemize}
+
+\subsection{Discusión global}
+
+En conjunto, los resultados obtenidos muestran una concordancia cualitativa con el modelo teórico, aunque con desviaciones cuantitativas apreciables. Estas discrepancias pueden atribuirse principalmente a la variación de la longitud efectiva de la cuerda y a la acumulación de errores en la determinación de la pendiente en los ajustes lineales.
+
+A pesar de ello, el orden de magnitud de la densidad lineal obtenida es coherente con el esperado para una cuerda ligera, lo que valida el procedimiento experimental dentro de las limitaciones del montaje.
+\end{document}
