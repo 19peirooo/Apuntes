@@ -1,0 +1,25 @@
+-- Ejercicio 1b
+πcity,country,officecode (σ territory='EMEA'∧ city ≠ 'London'(offices))
+
+-- Ejercicio 1c
+EUOffice ← πcity,country,officecode (σ territory='EMEA'∧ city ≠ 'London'(offices))
+
+-- Ejercicio 2
+Estudiante = {dni_est, nomb_est
+12345,Perez
+968574,Valdez
+192837,Juarez}
+
+Profesor = {dni_prof, nomb_prof
+654789,Perez
+852741, Fernandez
+192837,Juarez}
+
+-- Ejercicio 2a
+Estudiante ∪ Profesor
+
+-- Ejercicio 2b
+Estudiante ∩ Profesor
+
+-- Ejercicio 2c
+Profesor - Estudiante
