@@ -1,0 +1,22 @@
+//shader.vertex
+#version 330
+
+uniform mat4 M; //Matriz Modelo de Transformaciones
+uniform mat4 MVP; //Matriz modelo vista-proyeccion
+attribute vec4 vPos; //Posicion de vertice
+attribute vec4 vColor; // Color de vertice
+attribute vec4 vNormal; //normal de la superficie del vertice
+attribute vec4 vTextureCoords;
+out vec4 fColor;
+out vec4 fPos; //Posicion del fragmento generado, coordenadas absolutas
+out vec4 fNormal;
+out vec4 fTextureCoords;
+
+void main() {
+	gl_Position=MVP*vPos;
+	fColor = vColor;
+	fPos  = M * vPos;
+	fNormal = inverse(transpose(M)) * vNormal;
+	fNormal = vec4(normalize(fNormal.xyz),0);
+	fTextureCoords = vTextureCoords;
+}

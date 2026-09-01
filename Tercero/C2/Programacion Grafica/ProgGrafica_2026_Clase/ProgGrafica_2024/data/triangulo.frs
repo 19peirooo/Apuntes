@@ -1,0 +1,17 @@
+€ Numero de vertices
+3
+
+€ vertice superior
+0.0 0.5 0.0
+
+€ vertice inferior izq
+-0.5 -0.5 0.0
+
+€ vertice inferior der
+0.5 -0.5 0.0
+
+€ numero de caras
+1
+
+€ indices de vertices
+0 1 2

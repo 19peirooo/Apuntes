@@ -1,0 +1,35 @@
+#version 330
+
+
+uniform mat4 M; //matriz modelo para transformaciones de objeto
+uniform mat4 MVP; //matriz modelo vista proyeccion
+attribute vec4 vPos; //posicion de vertice
+attribute vec4 vColor; //color
+attribute vec4 vNormal; //normal de la superficie del vértice
+attribute vec4 vTextureCoords; //coordenadas de textura
+
+out vec4 fColor;
+out vec4 fPos;//posicion de fragmento generado, coordenadas absolutas
+out vec4 fNormal;
+out vec4 fTextureCoords;
+
+void main() {
+	gl_Position=MVP*vPos;
+	fColor = vColor;
+	fPos= M*vPos;
+	fNormal=inverse(transpose(M))*vNormal;
+	fNormal=vec4(normalize(fNormal.xyz),0);
+	fTextureCoords=vTextureCoords;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+€ Número de vértices
+3
+€ vértice superior
+0.0 0.5 0.0
+€ vértice inferior izquierda
+-0.5 -0.5 0.0
+€ vértice inferior derecha
+0.5 -0.5 0.0
+€ Número de caras
+1
+€ índice de vértice
+0 1 2
+€ Número de colores
+1
+€ Colores
+0 1 2 1.0 1.0 1.0 1.0

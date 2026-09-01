@@ -1,0 +1,70 @@
+//shader.fragment
+#version 330
+
+//uniform
+
+uniform sampler2D colorTexture;
+
+//luz
+struct Luz{
+	vec4 pos;
+	vec4 color;
+	float Ia,Id,Is;
+	bool activa;
+};
+
+struct Material {
+	float ka,kd,ks;
+	int shiny;
+	bool usaTextura;
+	vec4 color;
+	float alpha;
+};
+
+struct Camera {
+	vec4 pos;
+};
+
+uniform Luz luz;
+uniform Material material;
+uniform Camera camera;
+
+in vec4 fColor; //Color de Fragmento
+in vec4 fPos; //Posicion de Fragmento
+in vec4 fNormal; //normal del fragmento interpolado en la superficie
+in vec4 fTextureCoords;
+
+void main() {
+
+	vec4 colorDefinitivo = fColor + material.color;
+
+	if (material.usaTextura) {
+		colorDefinitivo = texture(colorTexture, fTextureCoords.xy);
+	}
+
+	float ambiental = luz.Ia * material.ka;
+	float difusa = 0;
+	float especular = 0;
+
+	float iluminacionTotal = ambiental;
+
+	//if luz.activa
+	if (luz.activa) {
+		// calcular ambiental, difusa , especular
+		ambiental = luz.Ia * material.ka;
+		vec4 L = normalize(luz.pos - fPos);
+		vec4 N = normalize(fNormal);
+		difusa = luz.Id *material.kd * max(dot(L,N),0); 
+
+		vec4 R = normalize(2*N*(dot(N,L))-L);
+		vec4 V = normalize(fPos - camera.pos);
+
+		especular = luz.Is*material.ks*pow( max(dot(R,V),0), material.shiny);
+
+		//sombrear pixel
+		iluminacionTotal = ambiental+difusa+especular;
+	}
+
+	gl_FragColor = colorDefinitivo * iluminacionTotal;
+	gl_FragColor.a = material.alpha + colorDefinitivo.a; 
+}

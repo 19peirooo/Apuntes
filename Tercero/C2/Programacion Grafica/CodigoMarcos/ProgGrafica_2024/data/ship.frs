@@ -1,0 +1,30 @@
+€ Numero de vertices
+4
+€ Vertices x y z
+-1.000000 1.000000 0.000000
+1.000000 -1.0000000.000000
+-1.000000 -1.000000 0.000000
+1.000000 1.000000 0.000000
+€ Numero de caras
+2
+€ 3 indices de vertices por cara
+
+0 1 2 
+0 3 1 
+€ colores y normales agrupados
+€ numero de colores
+1
+0 1 2 3  0.800000 0.800000 0.800000 1.0f
+€ numero de normales
+1
+0 1 2 3  -1.000000 0.000000 0.000000 0.0f
+€ numero de coordenadas de texturas
+4
+€ coordenadas de texturas
+0 0.989643 0.006078 
+1 0.011268 0.998782 
+2 0.011221 0.007888 
+3 0.989690 0.996972 
+data/ship.png
+data/shader.vertex
+data/shader.fragment

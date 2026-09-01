@@ -1,0 +1,40 @@
+€ Numero de vertices
+3
+
+€ vertice superior
+0.0 0.5 0.0
+
+€ vertice inferior izq
+-0.5 -0.5 0.0
+
+€ vertice inferior der
+0.5 -0.5 0.0
+
+€ numero de caras
+1
+
+€ indices de vertices
+0 1 2
+
+€ Num Colores
+1
+
+€ colores
+0 1 2 1.0 1.0 1.0 1.0
+
+€ Num Normales
+1
+
+€ Normales
+0 1 2 0.0 0.0 1.0 0.0
+
+€ num texturas
+3
+
+€ textura
+0 0.5 1.0
+1 0.0 0.0
+2 1.0 0.0
+data/ship.png
+data/shader.vertex
+data/shader.fragment

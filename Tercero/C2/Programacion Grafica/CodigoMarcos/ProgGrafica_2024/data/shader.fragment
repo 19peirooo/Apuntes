@@ -1,0 +1,80 @@
+#version 330
+// uniform 
+
+uniform sampler2D colorTexture; 
+
+//luz
+struct Luz{
+	vec4 pos;
+	vec4 color;
+	float Ia,Id,Is;
+	bool activa;
+};
+
+struct Material{
+	float ka,kd,ks;
+	bool usaTextura;
+	vec4 color;
+	int shiny;  //pulido
+	float alpha;//transparencia
+
+};
+
+struct Camara{
+	vec4 posicion;
+};
+
+uniform Luz luz;
+uniform Material material;
+uniform Camara camara;
+
+//textura de color
+//textura de normales
+in vec4 fColor; //color del fragmento, coloreado por vértice
+in vec4 fPos;//posición del fragmento, coordenadas absolutas
+in vec4 fNormal;//normal del fragmento interpolado en la superficie
+in vec4 fTextureCoords;
+
+void main() {
+	
+
+	vec4 colorDefinitivo=material.color; //sumar colores, intensificar color final
+	if(material.usaTextura)
+	{
+		colorDefinitivo=texture(colorTexture,fTextureCoords.xy);
+	}
+	
+	float ambiental=0;
+	float difusa=0;
+	float especular=0;
+	float iluminacionTotal=1.0f;
+	//if luz.activa
+	if(luz.activa){
+		ambiental=luz.Ia*material.ka;
+
+		//calcular ambiental , difusa, especular
+		vec4 L= normalize(luz.pos - fPos); //vector de incidencia de rayo de luz
+		vec4 N= normalize(fNormal);
+		difusa=luz.Id*max(dot(L,N),0);
+		//sombrear pixel
+
+		vec4 R=normalize(reflect(L,N));//normalize(2*N*(dot(N,L))-L);
+		vec4 V=normalize(fPos-camara.posicion);
+
+		especular=luz.Is*material.ks*pow(max(dot(R,V),0),material.shiny);
+
+
+
+		iluminacionTotal=ambiental+difusa+especular;
+	}
+
+	gl_FragColor = colorDefinitivo*iluminacionTotal;
+	gl_FragColor.a = material.alpha*colorDefinitivo.a;
+	if(gl_FragColor.a==0)
+		gl_FragColor=vec4(1,0,0,1);
+
+
+}
+
+
+
