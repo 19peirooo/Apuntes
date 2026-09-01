@@ -1,0 +1,65 @@
+Introduce la capacidad de la tabla: Numero de telefono del contacto: Nombre del contacto: Posicion 0 | Vacia: 0 | Borrada: 0 | Telefono: 0 | Nombre: Jose
+Posicion 1 | Vacia: 1 | Borrada: 0 | Telefono: 0 | Nombre: 
+Posicion 2 | Vacia: 1 | Borrada: 0 | Telefono: 0 | Nombre: 
+Posicion 3 | Vacia: 1 | Borrada: 0 | Telefono: 0 | Nombre: 
+Posicion 4 | Vacia: 1 | Borrada: 0 | Telefono: 0 | Nombre: 
+Numero de telefono del contacto: Nombre del contacto: Posicion 0 | Vacia: 0 | Borrada: 0 | Telefono: 0 | Nombre: Jose
+Posicion 1 | Vacia: 0 | Borrada: 0 | Telefono: 100000000 | Nombre: Luis
+Posicion 2 | Vacia: 1 | Borrada: 0 | Telefono: 0 | Nombre: 
+Posicion 3 | Vacia: 1 | Borrada: 0 | Telefono: 0 | Nombre: 
+Posicion 4 | Vacia: 1 | Borrada: 0 | Telefono: 0 | Nombre: 
+Numero de telefono del contacto: Nombre del contacto: Posicion 0 | Vacia: 0 | Borrada: 0 | Telefono: 0 | Nombre: Jose
+Posicion 1 | Vacia: 0 | Borrada: 0 | Telefono: 100000000 | Nombre: Luis
+Posicion 2 | Vacia: 0 | Borrada: 0 | Telefono: 200000000 | Nombre: Pedro
+Posicion 3 | Vacia: 1 | Borrada: 0 | Telefono: 0 | Nombre: 
+Posicion 4 | Vacia: 1 | Borrada: 0 | Telefono: 0 | Nombre: 
+Numero de telefono del contacto: Nombre del contacto: Posicion 0 | Vacia: 0 | Borrada: 0 | Telefono: 0 | Nombre: Jose
+Posicion 1 | Vacia: 0 | Borrada: 0 | Telefono: 100000000 | Nombre: Luis
+Posicion 2 | Vacia: 0 | Borrada: 0 | Telefono: 200000000 | Nombre: Pedro
+Posicion 3 | Vacia: 0 | Borrada: 0 | Telefono: 300000000 | Nombre: Juan
+Posicion 4 | Vacia: 1 | Borrada: 0 | Telefono: 0 | Nombre: 
+Numero de telefono del contacto: Nombre del contacto: Posicion 0 | Vacia: 0 | Borrada: 0 | Telefono: 0 | Nombre: Jose
+Posicion 1 | Vacia: 0 | Borrada: 0 | Telefono: 100000000 | Nombre: Luis
+Posicion 2 | Vacia: 0 | Borrada: 0 | Telefono: 200000000 | Nombre: Pedro
+Posicion 3 | Vacia: 0 | Borrada: 0 | Telefono: 300000000 | Nombre: Juan
+Posicion 4 | Vacia: 0 | Borrada: 0 | Telefono: 400000000 | Nombre: Maria
+Numero de telefono del contacto: Nombre: Jose
+Numero de telefono del contacto: Nombre: Luis
+Numero de telefono del contacto: Nombre: Pedro
+Numero de telefono del contacto: Nombre: Juan
+Numero de telefono del contacto: Nombre: Maria
+Numero de telefono del contacto El contacto SI esta
+Numero de telefono del contacto: Posicion 0 | Vacia: 1 | Borrada: 1 | Telefono: 0 | Nombre: Jose
+Posicion 1 | Vacia: 0 | Borrada: 0 | Telefono: 100000000 | Nombre: Luis
+Posicion 2 | Vacia: 0 | Borrada: 0 | Telefono: 200000000 | Nombre: Pedro
+Posicion 3 | Vacia: 0 | Borrada: 0 | Telefono: 300000000 | Nombre: Juan
+Posicion 4 | Vacia: 0 | Borrada: 0 | Telefono: 400000000 | Nombre: Maria
+Numero de telefono del contacto El contacto NO esta
+Numero de telefono del contacto El contacto SI esta
+Numero de telefono del contacto: Posicion 0 | Vacia: 1 | Borrada: 1 | Telefono: 0 | Nombre: Jose
+Posicion 1 | Vacia: 1 | Borrada: 1 | Telefono: 100000000 | Nombre: Luis
+Posicion 2 | Vacia: 0 | Borrada: 0 | Telefono: 200000000 | Nombre: Pedro
+Posicion 3 | Vacia: 0 | Borrada: 0 | Telefono: 300000000 | Nombre: Juan
+Posicion 4 | Vacia: 0 | Borrada: 0 | Telefono: 400000000 | Nombre: Maria
+Numero de telefono del contacto El contacto NO esta
+Numero de telefono del contacto El contacto SI esta
+Numero de telefono del contacto: Posicion 0 | Vacia: 1 | Borrada: 1 | Telefono: 0 | Nombre: Jose
+Posicion 1 | Vacia: 1 | Borrada: 1 | Telefono: 100000000 | Nombre: Luis
+Posicion 2 | Vacia: 1 | Borrada: 1 | Telefono: 200000000 | Nombre: Pedro
+Posicion 3 | Vacia: 0 | Borrada: 0 | Telefono: 300000000 | Nombre: Juan
+Posicion 4 | Vacia: 0 | Borrada: 0 | Telefono: 400000000 | Nombre: Maria
+Numero de telefono del contacto El contacto NO esta
+Numero de telefono del contacto El contacto SI esta
+Numero de telefono del contacto: Posicion 0 | Vacia: 1 | Borrada: 1 | Telefono: 0 | Nombre: Jose
+Posicion 1 | Vacia: 1 | Borrada: 1 | Telefono: 100000000 | Nombre: Luis
+Posicion 2 | Vacia: 1 | Borrada: 1 | Telefono: 200000000 | Nombre: Pedro
+Posicion 3 | Vacia: 1 | Borrada: 1 | Telefono: 300000000 | Nombre: Juan
+Posicion 4 | Vacia: 0 | Borrada: 0 | Telefono: 400000000 | Nombre: Maria
+Numero de telefono del contacto El contacto NO esta
+Numero de telefono del contacto El contacto SI esta
+Numero de telefono del contacto: Posicion 0 | Vacia: 1 | Borrada: 1 | Telefono: 0 | Nombre: Jose
+Posicion 1 | Vacia: 1 | Borrada: 1 | Telefono: 100000000 | Nombre: Luis
+Posicion 2 | Vacia: 1 | Borrada: 1 | Telefono: 200000000 | Nombre: Pedro
+Posicion 3 | Vacia: 1 | Borrada: 1 | Telefono: 300000000 | Nombre: Juan
+Posicion 4 | Vacia: 1 | Borrada: 1 | Telefono: 400000000 | Nombre: Maria
+Numero de telefono del contacto El contacto NO esta

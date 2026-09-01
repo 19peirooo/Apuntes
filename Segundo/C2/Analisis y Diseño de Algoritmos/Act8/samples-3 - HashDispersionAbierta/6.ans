@@ -1,0 +1,30 @@
+Introduce la capacidad de la tabla: Numero de telefono del contacto: Nombre del contacto: Posicion 0: n=1|ListaEnlazada=(0,Jose)
+Posicion 1: n=0|ListaEnlazada=vacia
+Posicion 2: n=0|ListaEnlazada=vacia
+Posicion 3: n=0|ListaEnlazada=vacia
+Posicion 4: n=0|ListaEnlazada=vacia
+Numero de telefono del contacto: Nombre del contacto: Posicion 0: n=2|ListaEnlazada=(100000000,Luis),(0,Jose)
+Posicion 1: n=0|ListaEnlazada=vacia
+Posicion 2: n=0|ListaEnlazada=vacia
+Posicion 3: n=0|ListaEnlazada=vacia
+Posicion 4: n=0|ListaEnlazada=vacia
+Numero de telefono del contacto: Nombre del contacto: Posicion 0: n=3|ListaEnlazada=(200000000,Pedro),(100000000,Luis),(0,Jose)
+Posicion 1: n=0|ListaEnlazada=vacia
+Posicion 2: n=0|ListaEnlazada=vacia
+Posicion 3: n=0|ListaEnlazada=vacia
+Posicion 4: n=0|ListaEnlazada=vacia
+Numero de telefono del contacto: Nombre del contacto: Posicion 0: n=4|ListaEnlazada=(300000000,Juan),(200000000,Pedro),(100000000,Luis),(0,Jose)
+Posicion 1: n=0|ListaEnlazada=vacia
+Posicion 2: n=0|ListaEnlazada=vacia
+Posicion 3: n=0|ListaEnlazada=vacia
+Posicion 4: n=0|ListaEnlazada=vacia
+Numero de telefono del contacto: Nombre del contacto: Posicion 0: n=5|ListaEnlazada=(400000000,Maria),(300000000,Juan),(200000000,Pedro),(100000000,Luis),(0,Jose)
+Posicion 1: n=0|ListaEnlazada=vacia
+Posicion 2: n=0|ListaEnlazada=vacia
+Posicion 3: n=0|ListaEnlazada=vacia
+Posicion 4: n=0|ListaEnlazada=vacia
+Numero de telefono del contacto: Nombre del contacto: Posicion 0: n=6|ListaEnlazada=(500000000,Luisa),(400000000,Maria),(300000000,Juan),(200000000,Pedro),(100000000,Luis),(0,Jose)
+Posicion 1: n=0|ListaEnlazada=vacia
+Posicion 2: n=0|ListaEnlazada=vacia
+Posicion 3: n=0|ListaEnlazada=vacia
+Posicion 4: n=0|ListaEnlazada=vacia

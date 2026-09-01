@@ -1,0 +1,82 @@
+Creando nuevo ABB
+VACIO
+
+Anadir numero
+
+3
+
+Anadir numero
+
+3
+I1
+
+
+Anadir numero
+
+3
+I1
+
+D5
+
+
+Anadir numero
+
+3
+I1
+D2
+
+
+D5
+
+
+Anadir numero
+
+3
+I1
+D2
+
+
+D5
+I4
+
+
+
+Elemento a buscar: NO ESTA
+Elemento a buscar: ENCONTRADO
+Numero a eliminar: 
+Elemento a buscar: NO ESTA
+3
+I2
+
+D5
+I4
+
+
+
+Elemento a buscar: ENCONTRADO
+Numero a eliminar: 
+Elemento a buscar: NO ESTA
+3
+D5
+I4
+
+
+
+Elemento a buscar: ENCONTRADO
+Numero a eliminar: 
+Elemento a buscar: NO ESTA
+4
+D5
+
+
+Elemento a buscar: ENCONTRADO
+Numero a eliminar: 
+Elemento a buscar: NO ESTA
+5
+
+Elemento a buscar: ENCONTRADO
+Numero a eliminar: 
+Elemento a buscar: NO ESTA
+VACIO
+
+Liberando memoria del arbol

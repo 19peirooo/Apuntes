@@ -1,0 +1,66 @@
+Creando nuevo ABB
+VACIO
+
+Leer Arbol
+1
+I2
+I4
+
+D5
+
+
+D3
+D6
+
+
+
+Es ABB?NO
+Liberando memoria del arbol
+Creando nuevo ABB
+VACIO
+
+Leer Arbol
+5
+I4
+I1
+
+
+D8
+I6
+
+D9
+
+
+
+Es ABB?SI
+Liberando memoria del arbol
+Creando nuevo ABB
+VACIO
+
+Leer Arbol
+VACIO
+
+Es ABB?SI
+Liberando memoria del arbol
+Creando nuevo ABB
+VACIO
+
+Leer Arbol
+2
+I3
+
+
+Es ABB?NO
+Liberando memoria del arbol
+Creando nuevo ABB
+VACIO
+
+Leer Arbol
+5
+I3
+D8
+
+
+
+Es ABB?NO
+Liberando memoria del arbol

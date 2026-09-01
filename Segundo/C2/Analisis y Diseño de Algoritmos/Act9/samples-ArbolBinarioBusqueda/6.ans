@@ -1,0 +1,42 @@
+Creando nuevo ABB
+VACIO
+
+Leer Arbol
+2
+I1
+
+D3
+D4
+
+
+
+Es AVL?SI
+Liberando memoria del arbol
+Creando nuevo ABB
+VACIO
+
+Leer Arbol
+1
+D3
+I2
+
+D4
+
+
+
+Es AVL?NO
+Liberando memoria del arbol
+Creando nuevo ABB
+VACIO
+
+Leer Arbol
+4
+I1
+
+D3
+D2
+
+
+
+Es AVL?NO
+Liberando memoria del arbol

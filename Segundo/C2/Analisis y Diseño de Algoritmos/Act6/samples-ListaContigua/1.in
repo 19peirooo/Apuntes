@@ -1,0 +1,38 @@
+N 2
+I 0 1
+M
+T
+I 1 2
+M
+T
+I 2 3
+M
+T
+I 3 4
+M
+T
+I 4 5
+M
+T
+I 5 6
+M
+T
+E 5
+M
+T
+E 4
+M
+T
+E 3
+M
+T
+E 2
+M
+T
+E 1
+M
+T
+E 0
+M
+T
+F 
