@@ -1,0 +1,6 @@
+package classadapterpattern.socket;
+
+//Adaptador Concreto --> Lo que va a adaptar el objeto adaptado
+public class EnergySocketClassAdapter {
+
+}

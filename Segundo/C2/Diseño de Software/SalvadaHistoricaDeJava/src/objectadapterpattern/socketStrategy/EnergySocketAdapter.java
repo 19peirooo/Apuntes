@@ -1,0 +1,6 @@
+package objectadapterpattern.socketStrategy;
+
+//Adapter/Target --> Los metodos que vamos a adaptar
+public interface EnergySocketAdapter extends EnergySocketService {
+	public void setEnergySocketStrategy(EnergySocketStrategy energySocketStrategy);
+}

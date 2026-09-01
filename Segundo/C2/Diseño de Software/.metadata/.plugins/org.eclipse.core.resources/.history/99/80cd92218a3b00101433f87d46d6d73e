@@ -1,0 +1,5 @@
+package statepattern.reproductor;
+
+public class StoppedState {
+
+}

@@ -1,0 +1,18 @@
+package abstractfactorymethod.phone;
+
+public class MobileClientTest {
+	public static void main(String[] args) {
+		MobileFactoryManager manager = MobileFactoryManager.getInstance();
+		Mobile iphone = manager.createIphone();
+		Mobile samsung = manager.createSamsung();
+		Mobile motorola = manager.createMotorola();
+		System.out.println("My Iphone available is: " + iphone);
+		System.out.println("My Samsung availabe is: " + samsung);
+		manager.setFactory(new Mobile4GFactory());
+		Mobile iphone2 = manager.createIphone();
+		Mobile samsung2 = manager.createSamsung();
+		System.out.println("My Iphone available is: " + iphone2);
+		System.out.println("My Samsung availabe is: " + samsung2);
+		
+	}
+}

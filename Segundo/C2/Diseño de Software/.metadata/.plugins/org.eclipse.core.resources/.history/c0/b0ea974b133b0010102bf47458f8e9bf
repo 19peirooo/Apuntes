@@ -1,0 +1,33 @@
+package facadepattern.atm;
+
+public class Account {
+	
+	private Double balance;
+	private Boolean accActive;
+	
+	public Account() {
+		this.balance = 10000.0;
+		this.accActive = true;
+	}
+	
+	public Double checkAvailableBalance() {
+		System.out.println("Checking Balance...");
+		return this.balance;
+	}
+	
+	public void blockAccount() {
+		System.out.println("Blocking Account");
+		accActive = false;
+	}
+	
+	public void unblockAccount() {
+		System.out.println("Unblocking account");
+		accActive = true;
+	}
+	
+	public void extractAmount(Double amount) {
+		this.balance -= amount;
+	}
+	
+	
+}

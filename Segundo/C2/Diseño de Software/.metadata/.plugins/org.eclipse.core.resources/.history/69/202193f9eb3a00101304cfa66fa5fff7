@@ -1,0 +1,6 @@
+package classadapterpattern.socket;
+
+//Adaptee --> Se adapta el voltaje que recibe
+public class EnergySocket {
+
+}

@@ -1,0 +1,11 @@
+package facadepattern.atm;
+
+public class Account {
+	
+	private Double balance;
+	private Boolean accActive;
+	
+	public 
+	
+	
+}

@@ -1,0 +1,5 @@
+package classadapterpattern.socket;
+
+public class EnergySocketClassAdapter {
+
+}

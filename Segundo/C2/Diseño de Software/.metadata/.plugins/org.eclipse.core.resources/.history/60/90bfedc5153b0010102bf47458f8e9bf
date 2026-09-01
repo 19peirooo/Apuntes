@@ -1,0 +1,5 @@
+package facadepattern.atm;
+
+public class Authentication {
+
+}

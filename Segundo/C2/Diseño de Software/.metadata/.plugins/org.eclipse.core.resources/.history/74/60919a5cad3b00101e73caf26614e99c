@@ -1,0 +1,5 @@
+package factorymethod.shapes;
+
+public interface ShapeFactory {
+	public Shape createShape(Double parametro1, Double parametro2);
+}

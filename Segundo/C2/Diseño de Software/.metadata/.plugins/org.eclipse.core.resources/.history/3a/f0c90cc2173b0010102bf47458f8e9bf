@@ -1,0 +1,9 @@
+package facadepattern.atm;
+
+public class AtmFacade {
+	
+	private Atm atm = new Atm();
+	private Authentication auth = new Authentication();
+	private Account account;
+	
+}

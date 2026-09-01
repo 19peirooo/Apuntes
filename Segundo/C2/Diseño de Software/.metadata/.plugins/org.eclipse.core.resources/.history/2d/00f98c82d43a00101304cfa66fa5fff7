@@ -1,0 +1,8 @@
+package abstractfactorymethod.phone;
+
+public class Iphone implements Mobile {
+	
+	private String languange;
+	
+	
+}

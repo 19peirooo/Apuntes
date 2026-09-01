@@ -1,0 +1,46 @@
+package observerpattern.bases;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ObservableNumber implements PullPushObservable {
+	
+	private List<PullPushObserver> observers;
+	private Integer number; //Estado a observar
+	
+	public ObservableNumber(Integer number) {
+		this(number, new ArrayList<PullPushObserver>());
+	}
+	
+	public ObservableNumber(Integer number, List<PullPushObserver> observers) {
+		this.number = number;
+		this.observers = observers;
+	}
+	
+	public Integer getNumber() {
+		return this.number;
+	}
+
+	public void setNumber(Integer number) {
+		this.number = number;
+		this.notifyObservers();
+	}
+
+	@Override
+	public void attach(PullPushObserver observer) {
+		this.observers.add(observer);
+	}
+
+	@Override
+	public void detach(PullPushObserver observer) {
+		this.observers.remove(observer);
+	}
+
+	@Override
+	public void notifyObservers() {
+		for (PullPushObserver observer : this.observers) {
+			observer.update(this, this.number);
+		}
+		
+	}
+}

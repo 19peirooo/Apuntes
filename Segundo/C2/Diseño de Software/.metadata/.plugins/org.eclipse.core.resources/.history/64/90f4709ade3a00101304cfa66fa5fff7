@@ -1,0 +1,5 @@
+package abstractfactorymethod.enemy;
+
+public interface Enemy {
+
+}

@@ -1,0 +1,5 @@
+package classadapterpattern.socket;
+
+public interface EnergySocketService {
+	public Volt getVolt();
+}

@@ -1,0 +1,30 @@
+package templatemethod.guarderia;
+
+//Template para las estrategias concretas
+public abstract class AbstractDoctorStrategy implements DoctorStrategy{
+
+	@Override
+	public void applyMedicalStrategy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void examineKids() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sendBills() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sendResults() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

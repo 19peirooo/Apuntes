@@ -1,0 +1,26 @@
+package singleton.contador;
+
+public class ContadorInstancias {
+	
+	private static ContadorInstancias contador = new ContadorInstancias();
+	private static Integer numInstancias;
+	
+	private ContadorInstancias() {
+		this.numInstancias = 0;
+	}
+	
+	public static ContadorInstancias getInstance() {
+		numInstancias++;
+		return contador;
+	}
+	
+	public Integer getNumInstancias() {
+		return numInstancias;
+	}
+	
+	public static void main(String[] args) {
+		ContadorInstancias contador = ContadorInstancias.getInstance();
+		contador.getNumInstancias()
+	}
+	
+}

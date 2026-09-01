@@ -1,0 +1,57 @@
+package statepattern.reproductor;
+
+public class ReproductorContext {
+	
+	private ReproductorState currentState;
+	private PlayingState playingState;
+	private PausedState pausedState;
+	private StoppedState stoppedState;
+	
+	public ReproductorContext() {
+		this.playingState = new PlayingState(this);
+		this.pausedState = new PausedState(this);
+		this.stoppedState = new StoppedState(this);
+		this.currentState = this.stoppedState;
+	}
+	
+	public ReproductorState getCurrentState() {
+		return currentState;
+	}
+
+	public void setCurrentState(ReproductorState currentState) {
+		this.currentState = currentState;
+	}
+
+	public PlayingState getPlayingState() {
+		return playingState;
+	}
+
+	public void setPlayingState(PlayingState playingState) {
+		this.playingState = playingState;
+	}
+
+	public PausedState getPausedState() {
+		return pausedState;
+	}
+
+	public void setPausedState(PausedState pausedState) {
+		this.pausedState = pausedState;
+	}
+
+	public StoppedState getStoppedState() {
+		return stoppedState;
+	}
+
+	public void setStoppedState(StoppedState stoppedState) {
+		this.stoppedState = stoppedState;
+	}
+
+	public void showState() {
+		this.currentState.showState();
+	}
+	
+	public void play() {
+		this.currentState = this.playingState;
+	}
+	
+}

@@ -1,0 +1,14 @@
+package facadepattern.atm;
+
+public class Account {
+	
+	private Double balance;
+	private Boolean accActive;
+	
+	public Account() {
+		this.balance = 1000.0;
+		this.accActive = true;
+	}
+	
+	
+}

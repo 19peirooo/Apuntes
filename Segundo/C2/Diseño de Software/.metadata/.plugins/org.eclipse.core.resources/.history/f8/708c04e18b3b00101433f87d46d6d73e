@@ -1,0 +1,14 @@
+package statepattern.reproductor;
+
+public class StoppedState implements ReproductorState{
+	
+	private ReproductorContext context;
+	
+	public StoppedState(ReproductorContext reproductorContext) {
+		this.context = reproductorContext;
+	}
+	
+	public void showState() {
+		System.out.println("Musica Detenida");
+	}
+}

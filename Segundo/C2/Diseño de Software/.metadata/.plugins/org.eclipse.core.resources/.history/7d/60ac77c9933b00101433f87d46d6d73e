@@ -1,0 +1,10 @@
+package composicion;
+
+public class ComposicionMain {
+	public static void main(String[] args) {
+		Contenido contenido = new Contenido();
+		
+		ContenedorComposicion c1 = new ContenedorComposicion();
+		ContenedorAgregacion c2 = new ContenedorAgregacion(contenido);
+	}
+}

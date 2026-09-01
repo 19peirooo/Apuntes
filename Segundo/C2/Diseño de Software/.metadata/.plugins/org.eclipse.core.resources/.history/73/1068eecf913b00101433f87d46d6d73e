@@ -1,0 +1,10 @@
+package decoratorpattern.message;
+
+public class MessageTest {
+	public static void main(String[] args) {
+		Screen screen = new Screen();
+		
+		screen.setMsg(new UpperCaseDecorator(screen.getMsg()));
+		screen.showMsg();
+	}
+}

@@ -1,0 +1,30 @@
+package templatemethod.guarderia;
+
+public class NoDoctorStrategy extends AbstractDoctorStrategy{
+	
+	public static final String DEFAULT_MSG = "[NoDoctor] No doctor is assigned";
+	
+	public NoDoctorStrategy() {
+		this("No Doctor");
+	}
+	
+	public NoDoctorStrategy(String name) {
+		super(name);
+	}
+
+	@Override
+	public void examineKids() {
+		System.out.println(NoDoctorStrategy.DEFAULT_MSG);
+	}
+
+	@Override
+	public void sendBills() {
+		System.out.println(NoDoctorStrategy.DEFAULT_MSG);
+	}
+
+	@Override
+	public void sendResults() {
+		System.out.println(NoDoctorStrategy.DEFAULT_MSG);
+	}
+
+}

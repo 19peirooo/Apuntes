@@ -1,0 +1,13 @@
+package composicion;
+
+public class ContenedorAgregacion {
+	private Contenido contenido;
+	
+	public ContenedorAgregacion(Contenido contenido) {
+		this.contenido = new Contenido();
+	}
+	
+	public void print() {
+		this.contenido.print();
+	}
+}

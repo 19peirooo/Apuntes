@@ -1,0 +1,17 @@
+package decoratorpattern.message;
+
+public class MessageTest {
+	public static void main(String[] args) {
+		Screen screen = new Screen();
+		
+		screen.showMsg();
+		screen.setMsg(new UpperCaseDecorator(screen.getMsg()));
+		screen.showMsg();
+		screen.setMsg(new GreetingDecorator(screen.getMsg(),"Hola Amiguitos"));
+		screen.showMsg();
+		screen.setMsg(new SignatureDecorator(screen.getMsg(),"VMPM"));
+		screen.showMsg();
+		screen.setMsg(new SignatureDecorator(screen.getMsg(),"VMPM"));
+		screen.showMsg();
+	}
+}

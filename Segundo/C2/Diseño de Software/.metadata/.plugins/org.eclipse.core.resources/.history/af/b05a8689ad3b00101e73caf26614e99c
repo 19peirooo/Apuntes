@@ -1,0 +1,11 @@
+package factorymethod.shapes;
+
+public class CircleFactory implements ShapeFactory{
+
+	@Override
+	public Shape createShape(Double radius, Double uselessParam) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

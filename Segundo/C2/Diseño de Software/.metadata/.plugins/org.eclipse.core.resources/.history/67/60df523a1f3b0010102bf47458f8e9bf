@@ -1,0 +1,29 @@
+package templatemethod.guarderia;
+
+public class GuarderiaStrategyContext implements MedicalStrategy {
+	
+	private MedicalStrategy medicalStrategy;
+	
+	public GuarderiaStrategyContext() {
+		this(new OculistStrategy());
+	}
+	
+	public GuarderiaStrategyContext (MedicalStrategy medicalStrategy) {
+		this.medicalStrategy = medicalStrategy;
+	}
+	
+	
+	public MedicalStrategy getMedicalStrategy() {
+		return this.medicalStrategy;
+	}
+
+	public void setMedicalStrategy(MedicalStrategy medicalStrategy) {
+		this.medicalStrategy = medicalStrategy;
+	}
+
+	@Override
+	public void applyMedicalStrategy() {
+		this.medicalStrategy.applyMedicalStrategy();
+	}
+
+}

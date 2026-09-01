@@ -1,0 +1,9 @@
+package decoratorpattern.message;
+
+public class UpperCaseDecorator extends AbstractMessageDecorator{
+
+	public UpperCaseDecorator(MessageComponent messageComponent) {
+		super(messageComponent);
+	}
+
+}

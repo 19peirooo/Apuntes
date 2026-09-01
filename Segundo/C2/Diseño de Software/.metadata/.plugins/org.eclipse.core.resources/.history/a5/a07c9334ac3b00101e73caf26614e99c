@@ -1,0 +1,35 @@
+package factorymethod.shapes;
+
+public class Circle implements Shape{
+	
+	private Double radius;
+	
+	public Circle() {
+		this(2.0);
+	}
+	
+	public Circle(Double radius) {
+		this.radius = radius;
+	}
+	
+	public Double getRadius() {
+		return this.radius;
+	}
+
+	public void setRadius(Double radius) {
+		this.radius = radius;
+	}
+
+	@Override
+	public Double calcularArea() {
+		return Math.PI * Math.pow(this.radius, 2);
+	}
+
+	@Override
+	public String toString() {
+		return "Circle [radius=" + radius +  ", area=" + calcularArea() + "]";
+	}
+	
+	
+	
+}

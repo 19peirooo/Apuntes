@@ -1,0 +1,12 @@
+package facadepattern.atm;
+
+import java.util.Scanner;
+
+public class Atm {
+	
+	public double readAmount() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Importe: ");
+	}
+	
+}

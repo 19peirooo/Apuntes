@@ -1,0 +1,16 @@
+package decoratorpattern.message;
+
+public abstract class AbstractMessageDecorator implements MessageComponent{
+	
+	protected MessageComponent messageComponent;
+	
+	public AbstractMessageDecorator(MessageComponent messageComponent) {
+		this.messageComponent = messageComponent;
+	}
+
+	public String getMessage() {
+		return this.getDecoratedMessage(messageComponent.getMessage());
+	}
+	
+	public abstract String getDecoratedMessage(String message);
+}

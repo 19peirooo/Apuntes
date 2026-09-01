@@ -1,0 +1,21 @@
+package statepattern.reproductor;
+
+public class ReproductorContext {
+	
+	private ReproductorState currentState;
+	private PlayingState playingState;
+	private PausedState pausedState;
+	private StoppedState stoppedState;
+	
+	public ReproductorContext() {
+		this.playingState = new PlayingState(this);
+		this.pausedState = new PausedState(this);
+		this.stoppedState = new StoppedState(this);
+		this.currentState = this.stoppedState;
+	}
+	
+	public void showState() {
+		this.currentState.showState();
+	}
+	
+}

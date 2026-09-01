@@ -1,0 +1,14 @@
+package abstractfactorymethod.phone;
+
+public class Iphone3G extends Iphone{
+	
+	public Iphone3G(String language) {
+		super(language);
+	}
+
+	@Override
+	public TypeConnectivity getTypeConnectivity() {
+		return TypeConnectivity.T3G;
+	}
+
+}

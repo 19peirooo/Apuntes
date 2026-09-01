@@ -1,0 +1,20 @@
+package facadepattern.atm;
+
+public class Authentication {
+	
+	private String key = "0000";
+	
+	public Boolean readCard() {
+		System.out.println("Reading card");
+		return true;
+	}
+	
+	public String readKey() {
+		return this.key;
+	}
+	
+	public Boolean checkKey(String key) {
+		return this.key.equals(key);
+	}
+	
+}

@@ -1,0 +1,5 @@
+package strategypattern.calculadora;
+
+public interface CalculadoraStrategy {
+	public void calcular(Integer num1, Integer num2);
+}

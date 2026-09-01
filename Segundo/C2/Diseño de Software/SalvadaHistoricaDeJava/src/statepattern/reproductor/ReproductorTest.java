@@ -1,0 +1,10 @@
+package statepattern.reproductor;
+
+public class ReproductorTest {
+	public static void main(String[] args) {
+		ReproductorContext reproductor = new ReproductorContext();
+		reproductor.play();
+		reproductor.pause();
+		reproductor.stop();
+	}
+}

@@ -1,0 +1,20 @@
+package facadepattern.atm;
+
+public class AtmFacade {
+	
+	private Atm atm = new Atm();
+	private Authentication auth = new Authentication();
+	private Account account;
+	
+	public void getPersonalData() {
+		Boolean correctCard = auth.readCard();
+		if (correctCard) {
+			String personalKey = auth.readKey();
+			Boolean correctKey = auth.checkKey(personalKey);
+			if (correctKey) {
+				this.account = auth.getPersonalAccount();
+			}
+		}
+	}
+	
+}

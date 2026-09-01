@@ -1,0 +1,15 @@
+package observerpattern.tienda;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Tienda {
+	private List<Product> productos;
+	private List<Client> clientes;
+	
+	public Tienda() {
+		this.productos = new ArrayList<Product>();
+		this.clientes = new ArrayList<Client>();
+	}
+	
+}

@@ -1,0 +1,16 @@
+package factorymethod.shapes;
+
+public class Square implements Shape{
+	
+	private Double side;
+	
+	public Square(Double side) {
+		this.side = side;
+	}
+	
+	@Override
+	public Double calcularArea() {
+		return Math.pow(this.side, 2);
+	}
+
+}

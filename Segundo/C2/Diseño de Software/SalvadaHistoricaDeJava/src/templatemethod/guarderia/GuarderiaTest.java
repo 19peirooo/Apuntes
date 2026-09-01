@@ -1,0 +1,25 @@
+package templatemethod.guarderia;
+
+import java.time.LocalDate;
+
+public class GuarderiaTest {
+	public static void main(String[] args) {
+		OculistStrategy oculista = new OculistStrategy();
+		LogopedaStrategy logopeda = new LogopedaStrategy();
+		GuarderiaStrategyContext guarderia = new GuarderiaStrategyContext();
+		LocalDate date = LocalDate.now();
+		
+		for (int i = 1; i <= 33; i++) {
+			System.out.println(date);
+			
+			if (date.getDayOfMonth() == 15) {
+				guarderia.setMedicalStrategy(oculista);
+			} else if (date.getDayOfMonth() == 28) {
+				guarderia.setMedicalStrategy(logopeda);
+			}
+			guarderia.applyMedicalStrategy();
+			guarderia.setMedicalStrategy(new NoDoctorStrategy());
+			date = date.plusDays(1);
+		}
+	}
+}

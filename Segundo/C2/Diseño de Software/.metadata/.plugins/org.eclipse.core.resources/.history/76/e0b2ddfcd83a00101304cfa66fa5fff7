@@ -1,0 +1,11 @@
+package abstractfactorymethod.phone;
+
+public class MobileFactoryManager {
+	
+	private AbstractMobileFactory factory;
+	
+	public MobileFactoryManager(AbstractMobileFactory factory) {
+		this.factory = factory;
+	}
+	
+}

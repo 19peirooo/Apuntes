@@ -1,0 +1,20 @@
+package objectadapterpattern.socketStrategy;
+
+public class EnergySocketTest {
+	public static void main(String[] args) {
+		EnergySocket socket = new EnergySocket();
+		EnergySocketAdapter adapter = new EnergySocketObjectAdapter(socket, new EnergySocket120VStrategy());
+		Volt v120 = adapter.getVolt();
+		adapter.setEnergySocketStrategy(new EnergySocket3VStrategy());
+		Volt v3 = adapter.getVolt();
+		adapter.setEnergySocketStrategy(new EnergySocket12VStrategy());
+		Volt v12 = adapter.getVolt();
+		
+		
+		Integer source = adapter.getVolt().getVolts();
+		
+		System.out.println("Consuming " + v3.getVolts() + " volts from source " + source + " volts");
+		System.out.println("Consuming " + v12.getVolts() + " volts from source " + source + " volts");
+		System.out.println("Consuming " + v120.getVolts() + " volts from source " + source + " volts");
+	}
+}

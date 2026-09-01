@@ -1,0 +1,58 @@
+package observerpattern.tienda;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Tienda {
+	private List<Product> productos;
+	private List<Client> clientes;
+	
+	public Tienda() {
+		this.productos = new ArrayList<Product>();
+		this.clientes = new ArrayList<Client>();
+	}
+	
+	public void addClient(Client cliente) {
+		this.clientes.add(cliente);
+		for (Product producto : this.productos) {
+			producto.attach(cliente);
+		}
+	}
+	
+	public void addProduct(Product producto) {
+		for (Client client : this.clientes) {
+			producto.attach(client);
+		}
+		this.productos.add(producto);
+	}
+	
+	public void removeClient(Client cliente) {
+		
+		for (Product producto : this.productos) {
+			producto.detach(cliente);
+		}
+		
+		this.clientes.remove(cliente);
+	}
+	
+	public void removeProduct(Product producto) {
+		for (Client client : this.clientes) {
+			producto.detach(client);
+		}
+		this.productos.remove(producto);
+	}
+	
+	public void buy(Product product) {
+		for (Product producto : this.productos) {
+			System.out.println(producto);
+		}
+		
+		for (Product producto : this.productos) {
+			if (producto.equals(product)) {
+				producto.setStock(producto.getStock()-1);
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,23 @@
+package abstractfactorymethod.phone;
+
+public class Iphone4G extends Iphone{
+	
+	private TypeConnectivity typeConnectivity;
+	
+	public Iphone4G(String language) {
+		super(language);
+		this.typeConnectivity = TypeConnectivity.T4G;
+	}
+
+	@Override
+	public TypeConnectivity getTypeConnectivity() {
+		return this.typeConnectivity;
+	}
+
+	@Override
+	public String toString() {
+		return "Iphone3G [typeConnectivity=" + this.typeConnectivity + ", brand=" + this.getBrand() + ", language="
+				+ this.getLanguage() + "]";
+	}
+	
+}

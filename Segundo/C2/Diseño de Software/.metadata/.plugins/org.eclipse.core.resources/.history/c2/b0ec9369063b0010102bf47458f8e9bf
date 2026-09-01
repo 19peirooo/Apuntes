@@ -1,0 +1,34 @@
+package objectadapterpattern.socket;
+
+public class EnergySocketObjectAdapter implements EnergySocketAdapter{
+	
+	private EnergySocket energySocket;
+	
+	public EnergySocketObjectAdapter(EnergySocket energySocket) {
+		this.energySocket = energySocket;
+	}
+	
+	@Override
+	public Volt getVolt() {
+		return null;
+	}
+
+	@Override
+	public Volt get3Volt() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Volt get12Volt() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Volt get120Volt() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

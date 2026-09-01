@@ -1,0 +1,7 @@
+package classadapterpattern.socket;
+
+public class EnergySocketTest {
+	public static void main(String[] args) {
+		EnergySocketAdapter adapter = new EnergySocketClassAdapter();
+	}
+}

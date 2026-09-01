@@ -1,0 +1,5 @@
+package abstractfactorymethod.phone;
+
+public class Samsung4G {
+
+}

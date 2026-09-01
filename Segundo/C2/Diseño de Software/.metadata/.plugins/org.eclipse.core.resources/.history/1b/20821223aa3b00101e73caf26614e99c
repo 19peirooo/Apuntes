@@ -1,0 +1,21 @@
+package factorymethod.shapes;
+
+public class Circle implements Shape{
+	
+	public Double radius;
+	
+	public Circle() {
+		this(2);
+	}
+	
+	public Circle(Double radius) {
+		this.radius = radius;
+	}
+	
+	@Override
+	public Double calcularArea() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

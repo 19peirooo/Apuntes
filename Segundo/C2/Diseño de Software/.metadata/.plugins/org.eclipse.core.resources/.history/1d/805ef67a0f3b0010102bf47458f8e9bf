@@ -1,0 +1,5 @@
+package facadepattern.server;
+
+public class ScheduleServer {
+
+}

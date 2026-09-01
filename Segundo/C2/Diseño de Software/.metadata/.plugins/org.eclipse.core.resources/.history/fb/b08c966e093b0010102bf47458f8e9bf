@@ -1,0 +1,17 @@
+package objectadapterpattern.socketStrategy;
+
+public class EnergySocketObjectAdapter implements EnergySocketAdapter{
+	
+	private EnergySocket energySocket;
+	private EnergySocketStrategy energySocketStrategy;
+	
+	public EnergySocketObjectAdapter(EnergySocket energySocket) {
+		this.energySocket = energySocket;
+	}
+	
+	@Override
+	public Volt getVolt() {
+		return this.energySocket.getVolt(); //Delegacion por agregacion
+	}
+
+}

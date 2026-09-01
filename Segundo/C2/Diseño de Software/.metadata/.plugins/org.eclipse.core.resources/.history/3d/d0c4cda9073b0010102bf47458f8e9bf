@@ -1,0 +1,8 @@
+package objectadapterpattern.socket;
+
+//Adapter/Target --> Los metodos que vamos a adaptar
+public interface EnergySocketAdapter extends EnergySocketService{
+	public Volt get3Volt();
+	public Volt get12Volt();
+	public Volt get120Volt();
+}

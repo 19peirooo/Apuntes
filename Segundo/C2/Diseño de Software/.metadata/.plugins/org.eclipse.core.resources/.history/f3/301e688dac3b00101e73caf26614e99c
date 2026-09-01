@@ -1,0 +1,41 @@
+package factorymethod.shapes;
+
+public class Triangle implements Shape{
+	
+	private Double base;
+	private Double height;
+	
+	public Triangle(Double base, Double height) {
+		this.base = base;
+		this.height = height;
+	}
+	
+	public Double getBase() {
+		return this.base;
+	}
+
+	public void setBase(Double base) {
+		this.base = base;
+	}
+
+	public Double getHeight() {
+		return this.height;
+	}
+
+	public void setHeight(Double height) {
+		this.height = height;
+	}
+
+	@Override
+	public Double calcularArea() {
+		return this.base*this.height * 0.5;
+	}
+
+	@Override
+	public String toString() {
+		return "Triangle [base=" + base + ", height=" + height + ", area=" + this.calcularArea() + "]";
+	}
+	
+	
+	
+}

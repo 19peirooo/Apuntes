@@ -1,0 +1,8 @@
+package observerpattern.tienda;
+
+public class TiendaTest {
+	public static void main(String[] args) {
+		Product camiseta = new Product(50,"camiseta");
+		Product zapatilla = new Product(100,"Las Kike")
+	}
+}

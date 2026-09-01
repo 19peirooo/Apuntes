@@ -1,0 +1,36 @@
+package singleton.contador;
+
+import observerpattern.tienda.Client;
+import observerpattern.tienda.Product;
+
+public class ContadorInstancias {
+	
+	private static ContadorInstancias contador = new ContadorInstancias();
+	private Integer numPeople;
+	private Integer numProducts;
+	
+	private ContadorInstancias() {
+		this.numPeople = 0;
+		this.numProducts = 0;
+	}
+	
+	public static ContadorInstancias getInstance() {
+		return contador;
+	}
+	
+	public void crea(Object obj) {
+		if (obj instanceof Client) {
+			this.numPeople++;
+		} else if (obj instanceof Product) {
+			this.numProducts++;
+		}
+	}
+	
+	public static void main(String[] args) {
+		ContadorInstancias contador = ContadorInstancias.getInstance();
+		System.out.println(contador.getNumInstancias());
+		ContadorInstancias contador2 = ContadorInstancias.getInstance();
+		System.out.println(contador.getNumInstancias());
+	}
+	
+}

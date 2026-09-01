@@ -1,0 +1,16 @@
+package abstractfactorymethod.phone;
+
+public class Mobile3GFactory implements AbstractMobileFactory {
+
+	@Override
+	public Mobile createIphone() {
+		return new Iphone3G(null);
+	}
+
+	@Override
+	public Mobile createSamsung() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

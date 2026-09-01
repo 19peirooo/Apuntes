@@ -1,0 +1,16 @@
+package statepattern.reproductor;
+
+public class PlayingState implements ReproductorState{
+	
+	private ReproductorContext context;
+	
+	public PlayingState(ReproductorContext reproductorContext) {
+		this.context = reproductorContext;
+	}
+
+	@Override
+	public void showState() {
+		System.out.println("Musica Sonando");
+	}
+
+}

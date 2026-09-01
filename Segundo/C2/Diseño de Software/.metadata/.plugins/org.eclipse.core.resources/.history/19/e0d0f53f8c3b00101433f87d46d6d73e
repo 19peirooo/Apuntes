@@ -1,0 +1,7 @@
+package statepattern.reproductor;
+
+public class ReproductorTest {
+	public static void main(String[] args) {
+		ReproductorContext reproductor = n
+	}
+}

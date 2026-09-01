@@ -1,0 +1,25 @@
+package observerpattern.tienda;
+
+public class Client implements PullPushObserver {
+	
+	private String name;
+	
+	public Client(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public void update(PullPushObservable observable, Object object) {
+		if (observable instanceof Product) {
+			System.out.println("[Pull Protocol] " + this.name + " ha detectado un nuevo cambio en el stock de "+ (((Product)observable).getName())) +". Nuevo Stock: " + ((Product)observable).getStock());
+		}
+		
+		if (object instanceof Integer) {
+			System.out.println("[Push Protocol] " + this.name + " ha detectado un nuevo cambio en el stock. Nuevo Stock: " + ((Integer)object));
+		}
+		
+	}
+	
+	
+
+}

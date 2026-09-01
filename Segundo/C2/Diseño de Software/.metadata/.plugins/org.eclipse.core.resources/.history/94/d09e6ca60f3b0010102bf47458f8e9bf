@@ -1,0 +1,21 @@
+package facadepattern.server;
+
+public class ScheduleServer {
+	
+	public void startBooting() {
+		System.out.println("Starts Booting...");
+	}
+	
+	public void readSystemCOnfigFiles() {
+		System.out.println("Reading system config files...");
+	}
+	
+	public void init() {
+		System.out.println("Initializing...");
+	}
+	
+	public void initContext() {
+		System.out.println("Initializing Context...");
+	}
+	
+}

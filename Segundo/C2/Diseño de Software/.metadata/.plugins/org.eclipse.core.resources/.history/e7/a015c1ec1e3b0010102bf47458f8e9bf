@@ -1,0 +1,13 @@
+package templatemethod.guarderia;
+
+public class NoDoctorStrategy extends AbstractDoctorStrategy{
+	
+	public NoDoctorStrategy() {
+		this("No Doctor")
+	}
+	
+	public NoDoctorStrategy(String name) {
+		super(name);
+	}
+
+}

@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+C:\U-TAD\Segundo Carrera\Segundo Cuatri\Diseño de Software\.metadata\.plugins\org.eclipse.jdt.core
+367060665.index
+630399727.index
+620750071.index
+3636176897.index
+1865797976.index

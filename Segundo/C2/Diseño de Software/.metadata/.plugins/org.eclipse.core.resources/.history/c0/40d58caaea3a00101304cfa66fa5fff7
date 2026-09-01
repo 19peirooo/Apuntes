@@ -1,0 +1,11 @@
+package classadapterpattern.socket;
+
+public class Volt {
+	private Integer volts;
+	
+	public Volt(Integer volts) {
+		this.volts = volts;
+	}
+	
+	
+}

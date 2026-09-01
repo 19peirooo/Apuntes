@@ -1,0 +1,12 @@
+package objectadapterpattern.socketStrategy;
+
+import objectadapterpattern.socket.Volt;
+
+public class EnergySocket120VStrategy implements EnergySocketStrategy {
+
+	@Override
+	public Volt convertVolt(Volt volt) {
+		return volt
+	}
+
+}

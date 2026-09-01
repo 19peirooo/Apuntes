@@ -1,0 +1,5 @@
+package objectadapterpattern.socketStrategy;
+
+public class EnergySocker3VStrategy {
+
+}

@@ -1,0 +1,7 @@
+package classadapterpattern.socket;
+
+public interface EnergySocketAdapter extends EnergySocketService{
+	public Volt get3Volt();
+	public Volt get12Volt();
+	public Volt get120Volt();
+}

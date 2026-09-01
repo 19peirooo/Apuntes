@@ -1,0 +1,12 @@
+package abstractfactorymethod.enemy;
+
+public class GameController implements AbstractEnemyFactory{
+	
+	private static GameController gameController = new GameController(new W1Factory);
+	private AbstractEnemyFactory enemyFactory;
+	
+	private GameController(AbstractEnemyFactory enemyFactory) {
+		this.enemyFactory = enemyFactory;
+	}
+	
+}

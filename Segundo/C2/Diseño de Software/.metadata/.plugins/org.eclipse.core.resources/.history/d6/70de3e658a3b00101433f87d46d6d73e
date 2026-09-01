@@ -1,0 +1,11 @@
+package statepattern.reproductor;
+
+public class StoppedState implements ReproductorState{
+	
+	private ReproductorContext context;
+	
+	public StoppedState(ReproductorContext reproductorContext) {
+		this.context = reproductorContext;
+	}
+
+}

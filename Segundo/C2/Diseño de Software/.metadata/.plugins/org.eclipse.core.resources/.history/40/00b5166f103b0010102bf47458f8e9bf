@@ -1,0 +1,24 @@
+package facadepattern.server;
+
+public class ScheduleServerFacade {
+	
+	private ScheduleServer server;
+	
+	public ScheduleServerFacade(ScheduleServer scheduleServer) {
+		this.server = scheduleServer;
+	}
+	
+	public void startServer() {
+		server.startBooting();
+		server.readSystemConfigFiles();
+		server.init();
+		server.initContext();
+		server.initListeners();
+		server.createSystemObjects();
+	}
+	
+	public void stopServer() {
+		
+	}
+	
+}

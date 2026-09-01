@@ -1,0 +1,43 @@
+package abstractfactorymethod.enemy;
+
+public class W1Daemon implements Daemon{
+	
+	private String name;
+	private Integer power;
+	private Integer lives;
+	private String color;
+	
+	
+	
+	public W1Daemon(String name, Integer power, Integer lives, String color) {
+		this.name = "W1Daemon";
+		this.power = 10 * World.World1.getComplexFactor();
+		this.lives = 1 * World.World1.getComplexFactor();
+		this.color = "Rojo";
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer getPower() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer getLives() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getColor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

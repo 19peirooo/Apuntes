@@ -1,0 +1,7 @@
+package abstractfactorymethod.phone;
+
+public class MobileClientTest {
+	public static void main(String[] args) {
+		MobileFactoryManager manager = MobileFactoryManager.getInstance();
+	}
+}

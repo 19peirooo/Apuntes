@@ -1,0 +1,15 @@
+package decoratorpattern.message;
+
+public class Screen {
+	
+	private MessageComponent msg;
+	
+	public Screen() {
+		this.msg = new Message("Hola Soy Gonzalo y me va a quedar Java");
+	}
+	
+	public String getMessage() {
+		this.msg.getMessage();
+	}
+	
+}

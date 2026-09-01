@@ -1,0 +1,26 @@
+package observerpattern.tienda;
+
+public class TiendaTest {
+	public static void main(String[] args) {
+		Tienda store = new Tienda();
+		
+		Product camiseta = new Product(50,"camiseta");
+		Product zapatilla = new Product(100,"Las Kike");
+		
+		Client paco = new Client("Paco");
+		Client gonzalo = new Client("Gonzalo");
+		
+		store.addProduct(camiseta);
+		store.addProduct(zapatilla);
+		
+		store.addClient(paco);
+		store.addClient(gonzalo);
+		
+		store.buyProduct(zapatilla);
+		store.returnProduct(camiseta);
+		
+		store.removeClient(paco);
+		store.buyProduct(zapatilla);
+		
+	}
+}

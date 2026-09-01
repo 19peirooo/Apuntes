@@ -1,0 +1,21 @@
+package abstractfactorymethod.phone;
+
+public abstract class Iphone implements Mobile {
+	
+	private String languange;
+
+	@Override
+	public String getBrand() {
+		return "Iphone";
+	}
+
+	@Override
+	public String getLanguage() {
+		return this.languange;
+	}
+
+	@Override
+	public abstract TypeConnectivity getTypeConnectivity();
+	
+	
+}

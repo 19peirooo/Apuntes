@@ -1,0 +1,29 @@
+package facadepattern.atm;
+
+import java.util.Scanner;
+
+public class Atm {
+	
+	private Double money;
+	
+	public Atm() {
+		this.money = 1000000.0;
+	}
+	
+	public double readAmount() {
+		Double amount = 0.0;
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Importe: ");
+		amount = scanner.nextDouble();
+		return amount;
+	}
+	
+	public Boolean hasAvailableMoney(Double amount) {
+		return this.money - amount >= 0.0;
+	}
+	
+	public void extractMoney(Double amount) {
+		this.money -= amount;
+	}
+	
+}

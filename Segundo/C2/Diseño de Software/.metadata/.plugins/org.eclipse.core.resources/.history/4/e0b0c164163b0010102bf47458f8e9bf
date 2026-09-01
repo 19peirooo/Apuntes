@@ -1,0 +1,12 @@
+package facadepattern.atm;
+
+public class Authentication {
+	
+	
+	
+	public Boolean readCard() {
+		System.out.println("Reading card");
+		return true;
+	}
+	
+}

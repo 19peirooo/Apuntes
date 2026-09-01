@@ -1,0 +1,10 @@
+package decoratorpattern.message;
+
+public class Message implements MessageComponent {
+	@Override
+	public String getMessage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

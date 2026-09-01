@@ -1,0 +1,15 @@
+package statepattern.reproductor;
+
+public class PausedState implements ReproductorState{
+	
+	private ReproductorContext context;
+	
+	public PausedState(ReproductorContext reproductorContext) {
+		this.context = reproductorContext;
+	}
+	
+	public void showState() {
+		System.out.println("Musica Pausada");
+	}
+	
+}

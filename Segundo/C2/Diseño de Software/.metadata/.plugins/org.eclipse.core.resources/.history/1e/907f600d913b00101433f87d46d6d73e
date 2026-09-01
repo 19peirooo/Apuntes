@@ -1,0 +1,5 @@
+package decoratorpattern.message;
+
+public class Screen {
+
+}

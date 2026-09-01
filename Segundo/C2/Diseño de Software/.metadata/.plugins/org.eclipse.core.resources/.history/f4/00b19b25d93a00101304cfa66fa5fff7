@@ -1,0 +1,23 @@
+package abstractfactorymethod.phone;
+
+public class MobileFactoryManager implements AbstractMobileFactory {
+	
+	private AbstractMobileFactory factory;
+	
+	public MobileFactoryManager(AbstractMobileFactory factory) {
+		this.factory = factory;
+	}
+
+	@Override
+	public Mobile createIphone() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Mobile createSamsung() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

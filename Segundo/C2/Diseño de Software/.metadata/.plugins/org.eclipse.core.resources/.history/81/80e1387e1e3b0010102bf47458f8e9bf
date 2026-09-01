@@ -1,0 +1,30 @@
+package templatemethod.guarderia;
+
+public class LogopedaStrategy extends AbstractDoctorStrategy {
+private String name;
+	
+	public LogopedaStrategy() {
+		this("Dr. Fong");
+	}
+	
+	public LogopedaStrategy(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public void examineKids() {
+		System.out.println("[Logopeda] " + this.name + " examinando a los niños.");
+	}
+
+	@Override
+	public void sendBills() {
+		System.out.println("[Logopeda] " + this.name + " enviando facturas.");
+		
+	}
+
+	@Override
+	public void sendResults() {
+		System.out.println("[Logopeda] " + this.name + " enviando resultados.");
+		
+	}
+}

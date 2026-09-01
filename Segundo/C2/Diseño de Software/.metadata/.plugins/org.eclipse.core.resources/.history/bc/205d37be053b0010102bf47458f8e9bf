@@ -1,0 +1,11 @@
+package classadapterpattern.socket;
+
+public class EnergySocketTest {
+	public static void main(String[] args) {
+		EnergySocketAdapter adapter = new EnergySocketClassAdapter();
+		
+		Volt v3 = adapter.get3Volt();
+		Volt v12 = adapter.get12Volt();
+		Volt v120 = adapter.get120Volt();
+	}
+}

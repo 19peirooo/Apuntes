@@ -1,0 +1,37 @@
+package classadapterpattern.socket;
+
+//Adaptador Concreto --> Lo que va a adaptar el objeto adaptado
+public class EnergySocketClassAdapter extends EnergySocket implements EnergySocketAdapter{
+
+	public EnergySocketClassAdapter(Volt volt) {
+		super(volt);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Volt getVolt() {
+		return super.getVolt();
+	}
+
+	@Override
+	public Volt get3Volt() {
+		return this.convertVolts(this.getVolt(), 40);
+	}
+
+	@Override
+	public Volt get12Volt() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Volt get120Volt() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public Volt convertVolts(Volt v, Integer i) {
+		return new Volt(v.getVolts()/i);
+	}
+
+}

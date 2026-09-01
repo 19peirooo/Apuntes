@@ -1,0 +1,11 @@
+package strategypattern.calculadora;
+
+public class ContextCalculadoraStrategy {
+	
+	private CalculadoraStrategy calculadoraStrategy;
+	
+	public ContextCalculadoraStrategy(CalculadoraStrategy calculadoraStrategy) {
+		this.calculadoraStrategy = calculadoraStrategy;
+	}
+	
+}

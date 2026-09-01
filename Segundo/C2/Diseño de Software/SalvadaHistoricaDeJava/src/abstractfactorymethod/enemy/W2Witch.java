@@ -1,0 +1,43 @@
+package abstractfactorymethod.enemy;
+
+public class W2Witch implements Witch{
+	
+	private String name;
+	private Integer power;
+	private Integer lives;
+	private String magicPower;
+	
+	public W2Witch() {
+		this.name = "Witch";
+		this.power = 20 * World.World2.getComplexFactor();
+		this.lives = 2 * World.World2.getComplexFactor();
+		this.magicPower = "Escoba";
+	}
+
+	@Override
+	public String getName() {
+		return this.name;
+	}
+
+	@Override
+	public Integer getPower() {
+		return this.power;
+	}
+
+	@Override
+	public Integer getLives() {
+		return this.lives;
+	}
+
+	@Override
+	public String getMagicPower() {
+		return this.magicPower;
+	}
+
+	@Override
+	public String toString() {
+		return "W2Witch [name=" + name + ", power=" + power + ", lives=" + lives + ", magicPower=" + magicPower + "]";
+	}
+	
+	
+}

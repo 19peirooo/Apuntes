@@ -1,0 +1,25 @@
+package abstractfactorymethod.phone;
+
+public abstract class Samsung implements Mobile {
+	
+	private String language;
+	
+	public Samsung(String language) {
+		this.language = language;
+	}
+	
+	@Override
+	public String getBrand() {
+		return "Iphone";
+	}
+
+	@Override
+	public String getLanguage() {
+		return this.language;
+	}
+
+	@Override
+	public abstract TypeConnectivity getTypeConnectivity();
+	
+}
+

@@ -1,0 +1,7 @@
+package objectadapterpattern.socket;
+
+import objectadapterpattern.socket.Volt;
+
+public interface EnergySocketStrategy {
+	public Volt convertVolt(Volt volt);
+}

@@ -1,0 +1,7 @@
+package strategypattern.calculadora;
+
+public class CalculadoraTest {
+	public static void main(String[] args) {
+		ContextCalculadoraStrategy calculadora = new ContextCalculadoraStrategy(null);
+	}
+}
