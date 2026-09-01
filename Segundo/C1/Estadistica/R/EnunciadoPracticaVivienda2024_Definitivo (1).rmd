@@ -1,0 +1,317 @@
+---
+title: "Práctica 1: Programación en R"
+author: "Probabilidad y Estadística"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introducción
+
+El objetivo de esta práctica es realizar un estudio muy superficial de modelos de regresión simple. Para ello, necesitaremos un conjunto de datos (*dataset*) sobre el que hacer el estudio. En la primera parte de la práctica, cargaremos dicho *dataset* y realizaremos una exploración estadística de ellos. En la segunda parte, realizaremos un estudio de regresión más específico. 
+
+## Información del *dataset*
+
+El dataset elegido es "*Boston Housing*". Consiste en un *dataset* público con información de viviendas en Boston. En concreto, el *dataset* contine las siguientes columnas:
+
+* **CRIM**: Per capita crime rate by town
+* **ZN**: Proportion of residential land zoned for lots over 25,000 sq. ft
+* **INDUS**: Proportion of non-retail business acres per town
+* **CHAS**: Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)
+* **NOX**: Nitric oxide concentration (parts per 10 million)
+* **RM**: Average number of rooms per dwelling
+* **AGE**: Proportion of owner-occupied units built prior to 1940
+* **DIS**: Weighted distances to five Boston employment centers
+* **RAD**: Index of accessibility to radial highways
+* **TAX**: Full-value property tax rate per $10,000
+* **PTRATIO**: Pupil-teacher ratio by town
+* **B**: 1000(Bk - 0.63)?, where Bk is the proportion of [people of African American descent] by town
+* **LSTAT**: Percentage of lower status of the population
+* **MEDV**: Median value of owner-occupied homes in $1000s```
+
+El *dataset* lo cargaremos en R mediante la instalación de un paquete y su posterior importación:
+```{r pressure, eval=TRUE}
+require("mlbench")
+library(mlbench)
+```
+
+Ya cargado en R, procedemos a guardar el *dataset* en la variable $\tt housing$ para que realicéis el resto de la práctica sobre ella:
+```{r, eval=TRUE}
+data("BostonHousing")
+housing <- BostonHousing
+```
+
+## Información de la práctica.
+* La práctica se calificará sobre 10 puntos.
+* La práctica se resuelve sobre este mismo código.
+* Antes de entregarlo, habrá que cambiar el nombre del fichero, sustituyendo *nombre1* y *apellido1* por los propios del alumno.
+* Si el alumno considera relevante la instalación de alguna librería extra que pueda mostrar mejores resultados o gráficos, es libre para hacerlo. Puntuará más si se realiza un trabajo óptimo en esta parte.
+* Sobre todo en la parte final (regresión), puntuará más aquellos comentarios del alumno que muestren haber investigado el significado de todos los análisis realizados.
+* Si el alumno se encuentra con errores durante la ejecución del código, tiene que aprender a lidiar con ellos como futuro ingeniero informático.
+* Es recomendable consultar los diferentes comandos, así como nuevos comendos y librerías, através de google, el cual os llevará a paginas web adecuadas de programación en R.
+
+## 1) Análisis exploratorio inicial: 
+Se pide utilizar los comandos $\tt str, head, dim, summary$ sobre $\tt housing$ para explorar distribución inicial de los datos en el *dataset*.
+
+```{r, eval=TRUE}
+# CODIGO DEL ALUMNO
+str(housing)
+head(housing)
+dim(housing)
+summary(housing)
+```
+
+Comentarios del alumno (máximo 100 palabras): 
+```{r, eval=FALSE}
+# TEXTO DEL ALUMNO
+Comando str:
+  EL comando str nos permite el contenido de cada una de las variables que 
+  estamos estudiando. Este lo imprime en el formato: nombre_variable: datos. 
+
+Comando head:
+  Tras la utilización de este comando, podemos mostrar los datos como 
+  formato tabla y elegir el numero de filas a mostrar. 
+  Por defecto, muestra solo 6 filas.
+  
+Comando dim:
+  Este comando nos muestra las dimensiones de nuestro set de datos. 
+  En este caso nos dice que hay 506 filas y 14 columnas. 
+  Las columnas corresponden a las variables de estudio y las filas a 
+  el numero de datos que hay sobre cada variable.
+  
+Comando summary:
+  El comando summary nos ofrece varias medidas estadisticas para analizar
+  los datos de cada variable. Esta medidas son: Valor Minimo, Primer Cuartil, 
+  Mediana, Media, Tercer Cuartil y Valor Maximo.  
+```
+
+## 2) Análisis exploratorio de la variable objetivo:
+En esta práctica, trataremos de predecir el valor del precio medio de la vivienda MEDV. Para ello, primero exploraremos la distribución de sus datos. Se pide dibujar un histograma, calcular asimetría y apuntamiento de MEDV. Se pide dibujar un boxplot, calcular los cuartiles y los percentiles 10-90 sobre MEDV. Se pide describir los elementos más importantes de ambas gráficas.
+
+```{r, eval=TRUE}
+# CODIGO DEL ALUMNO
+#install.packages("moments")
+library(moments) #Libreria necesaria para calcular asimetria y apuntamiento
+
+hist(housing$medv, 
+     main = "Histograma del valor medio de las vivienda ocupadas por su dueño", 
+     xlab = "Valor Medio en $1000", 
+     ylab = "Frecuencia",
+     col = "lightblue",
+     breaks = 30)  #Histograma de MEDV
+
+boxplot(housing$medv, horizontal = TRUE)
+
+quantile(housing$medv, probs = c(0.1,0.25,0.5,0.75,0.9))
+skewness(housing$medv) #Asimetria de Fischer
+kurtosis(housing$medv)
+
+```
+
+Comentarios del alumno (máximo 100 palabras): 
+```{r, eval=FALSE}
+# TEXTO DEL ALUMNO
+Gracias a el histograma, podemos encontrar la clase modal siendo este 
+el rango de valores mas frecuente. Se observa que valor medio mas frecuente
+es entre los 20 mil y 22 mil dolares ya que es la columna mas alta.
+
+Tenemos una simetria de 1.10. 
+Esta simetria es mayor que 0 asi que el valor medio de las viviendas ocupadas 
+desciende mas lentamente por la derecha.
+
+Tenemos un apuntamiento de 4.46. 
+Al ser mayor que 3, tenemos un apuntamiento platicurtico
+y es menos apuntada que la distribución normal
+
+El boxplot nos enseña los 3 cuartiles y un minimos y maximo relativos a estos 
+para definir valores atipicos. Podemos apreciar que hay una gran cantidad 
+de valores atipicos por la derecha para el valor medio de las viviendas ocupadas
+lo que nos puede indicar que estas medidas no son tan fiables 
+ya que estos valores alteran los resultados de por ejemplo la media.
+
+P10 = 12.75 P90 = 34.8
+Q1 = 17.025 Q2 = 21.2 Q3 = 25 IQR = 7,975
+
+```
+
+## 3) Correlación entre variables: 
+Lo primerio es que hay que tener en cuenta solo las variables cuantitativas. Se recomienda calcular la matriz de correlaciones de las variables cuantitativas con el comando $\tt cor$.Además se pide utilizar el comando $\tt corrplot$ de la libreria $\tt corrplot$, y la librería $\tt RColorBrewer$ (que posiblemente tengais que instalar) para mostrar graficamente las correlaciones entre todas las variables cuantitativas. Se pide describir los elementos de la gráfica que aportan mayor información.
+
+```{r, eval=TRUE}
+# CODIGO DEL ALUMNO
+#install.packages("corrplot")
+library(corrplot)
+
+#is.numeric --> Comprueba que las variables sean numericas(cuantitativas)
+vars_cuantitativas <- housing[,sapply(housing, is.numeric)]  
+
+matriz_correlacion <- cor(vars_cuantitativas) 
+matriz_correlacion
+
+corrplot(matriz_correlacion, type = "lower", method = "pie")
+
+```
+
+Comentarios del alumno (máximo 100 palabras): 
+```{r, eval=FALSE}
+# TEXTO DEL ALUMNO
+El comando cor es el que permite la creación de de la matriz de correlación y 
+corrplot nos permite visualizar con intensidades de color las correlaciones. 
+Cuanto mas intenso es el color, mayor es la correlación. Las correlaciones 
+positivas se muestran tonos de azul y las negativas en rojo. Tambien, gracias al
+atributo de method = pie, podemos observar la correlación viendo como de relleno
+esta el circulo. A mayor correlación, mas relleno esta el circulo.
+
+Podemos ver que por ejemplo, hay un gran interdependencia lineal negativa entre 
+el valor medio de las viviendas ocupadas por sus dueños y el porcentaje de 
+personas de clase social baja. Con esta información descubrimos que 
+a menor porcentaje de personas de clase baja, mayor va a ser 
+el valor medio de la vivienda debido a la correlación negativa.
+
+Por otra parte, hay una correlación positiva fuerte entre el 
+indice de accesibilidad a carreteras radiales y 
+la tasa imposiva del valor completo de la propiedad. Esto se refiere a que 
+un incremento de la tasa impositiva equivale a un aumento en 
+el indice de acceso a carreteras radiales.
+```
+
+## 4) Regresiones lineales simples:
+Se pide Regresiones lineales simples:Se pide escoger cuatro variables independientes (a vuestro juicio, las mejores) 
+y realizar cuatro regresiones simples con cada una de ellas sobre la variable dependiente MEDV. Se pide dibujar los *scatterplots* de cada variable independiente con MEDV y la recta de regresión resultante sobre cada *scatterplot*, para ello habrá que instalar la libreria $\tt ggplot2$. Describir brevemente el resultado de este análisis.
+
+```{r, eval=TRUE}
+# CODIGO DEL ALUMNO
+#install.packages("ggplot2")
+library(ggplot2)
+
+#se --> Elimina banda de error
+ggplot(housing, aes(x = rm, y = medv)) + 
+  geom_point(color = "blue") + 
+  labs(title = " Precio Medio sobre el Numero de Habitaciones") + 
+  geom_smooth(method = "lm", color = "red", se = FALSE)
+
+ggplot(housing, aes(x = lstat, y = medv)) + 
+  geom_point(color = "red") + 
+  labs(title = "Precio Medio sobre el Porcentage de personas de clase baja") + 
+  geom_smooth(method = "lm", se = FALSE)
+
+ggplot(housing, aes(x = ptratio, y = medv)) + 
+  geom_point(color = "orange") + 
+  labs(title = "Precio Medio sobre el Proporcion Alumno-Profesor") + 
+  geom_smooth(method = "lm", se = FALSE)
+
+ggplot(housing, aes(x = dis, y = medv)) + 
+  geom_point(color = "purple") + 
+  labs(title = "Precio Medio sobre el Distancia a Centros de Empleo") + 
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+Comentarios del alumno (máximo 100 palabras): 
+```{r, eval=FALSE}
+# TEXTO DEL ALUMNO
+Se han escogido las siguientes variables debido a que cada una muestra 
+un tipo de correlación distinta respecto a el precio medio de la vivienda. 
+
+Si analizamos en numero de habitaciones promedio en una vivienda (rm), 
+podemos ver que hay una correlación positiva fuerte ya que todos los puntos del 
+scatterplot estan agrupados cerca de la recta de regresión creada. 
+Como se observa a mayor numero de habitaciones, mayor es el precio medio.
+
+Si analizamos el porcentage de personas de clase baja(lstat), 
+se ve que hay otra correlacion fuerte pero en este caso negativa. 
+Analizando el diagrama de puntos, se confirma que a mayor precio medio, 
+menor es el porcentage de personas de clase baja. Sabemos que la correlación 
+es fuerte ya que si nos fijamos, en la disposición de lo puntos, 
+podemos ver que descienden de forma ordenada cerca de la recta.
+
+Tras visualizar el diagrama de puntos repecto a la proporción 
+alumno-profesor(ptratio),la recta de regresion no consigue atrapar 
+todos los puntos ya que la correlación entre las variables es debil. 
+Sin embargo vemos que es negativa ya que a mayor precio, la propocion es menor.
+
+Esto también ocurre cuando analizamos la distancia a centros de empleo(dis). 
+La unica diferencia es que en este caso, la correlación es positiva 
+ya que a mayor precio medio, mayor es la distancia.
+```
+
+## 5) Análisis de los residuos:
+Se pide mostrar en un *scatterplot* los residuos $e_i$ (eje-x) y la predicción que hace la recta de regresión de la variable independiente LSTAT respecto a la variable MEDV con cada punto $\hat{y}_i$ (eje-y), también llamada variable ajustada. Se pide realizar un histograma de los residuos exclusivamente. Se pide investigar el significado y la importancia de este gráfico y comentarlo brevemente.
+
+```{r, eval=TRUE}
+# CODIGO DEL ALUMNO
+library(ggplot2)
+modelo <- lm(medv ~ lstat, data = housing)
+residuos <- modelo$residuals
+frecuencia <- modelo$fitted.values
+
+ggplot(data = data.frame(frecuencia, residuos), 
+       aes(x=residuos, y = frecuencia)) + 
+  geom_point() +
+  labs(title = "Predicciones sobre Residuos")
+
+ggplot(data = data.frame(residuos), aes(x=residuos)) + 
+  geom_histogram(color = "black", fill = "aquamarine") + 
+  labs(title = "Histograma de Residuos")
+```
+
+Comentarios del alumno (máximo 100 palabras): 
+```{r, eval=FALSE}
+# TEXTO DEL ALUMNO
+Los residuos es como es un medida de como de bien se adaptan nuestro valores a 
+la recta de regresión. Miden la distancia entre el valor actual y el valor en la
+recta. Como podemos ver tanto en el histograma, como en el scatterplot, los
+residuos aparecen mayoritariamente cerca del 0. En el scatterplot, los puntos se
+concentran cerca del x = 0 y en el histograma, la clase modal es [-4,-2.5)]
+que son valores no muy altos. Esto significa que nuestros valores 
+se acoplan bien a la recta y que una regresion lineal se adapta correctamente 
+para modelar la relación entre el % de personas de clase baja y 
+el valor medio de la vivienda.
+
+```
+##  6) Regresión lineal múltiple:
+Se pide realizar una regresión lineal múltiple con las dos variables independientes a la vez sobre la variable MEDV. Se pide, además, realizar un análisis de los residuos, similar al realizado en el apartado anterior.
+
+```{r, eval=TRUE}
+# CODIGO DEL ALUMNO
+modeloMultiple <- lm (medv ~ lstat + rm, data = housing)
+
+residuosMultiple <- modeloMultiple$residuals
+frecuenciasMultiple <- modeloMultiple$fitted.values
+
+ggplot(housing, aes(y = medv , x = lstat + rm)) + 
+  geom_point(color = "turquoise") + 
+  labs(title = "Precio Medio sobre Numero de Habitaciones y % de clase baja") + 
+  geom_smooth(color = "red", se=FALSE)
+
+ggplot(data = data.frame(frecuenciasMultiple,residuosMultiple), 
+       aes( x = residuosMultiple, y = frecuenciasMultiple)) +
+  geom_point() + geom_smooth(color = "red", se = FALSE) +
+  labs(title = "Predicciones sobre Residuos", x = "Residuos",
+       y = "Frecuencia")
+
+ggplot(data = data.frame(residuosMultiple), aes(x = residuosMultiple)) +
+  geom_histogram(color = "black", fill = "aquamarine") + 
+  labs(title = "Histograma de Residuos", x = "Residuos")
+
+```
+
+Comentarios del alumno (máximo 150 palabras): 
+```{r, eval=FALSE}
+# TEXTO DEL ALUMNO
+Al ser una correlacion multiple, no tenemos una recta sino que los puntos 
+siguen una curva. Parece que los puntos se asemejan muy bien a la curva de
+regresion asi que el coeficiente de regresión tiene que ser cercano a -1 
+ya que la regresion es negativa, es decir a menor valor medio, mayor es el valor
+del porcentaje de personas de clase baja y el numero de habitaciones.
+
+Esto se nos confirma cuando analizamos el histograma y el scatterplot de los
+residuos. Vemos otra vez, que la clase modal de los residuos esta en -0.5 
+y -1.5. Asi que los puntos suelen estar bastante cerca de la curva de regresion.
+
+
+
+```
+
+
