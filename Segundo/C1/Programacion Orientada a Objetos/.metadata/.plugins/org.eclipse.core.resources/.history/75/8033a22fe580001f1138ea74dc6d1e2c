@@ -1,0 +1,43 @@
+package com.utad.poo.tema2;
+
+import java.util.Scanner;
+
+public class sumaElementosArray {
+	public static final int NUM_ELEMENTOS_POR_DEFECTO = 10;
+	private int numeros [];
+	private int numElementos;
+	private int sumaElementos;
+	
+	public void sumarArray() {
+		for (int i = 0; i < this.numElementos; i++) {
+			this.sumaElementos += this.numeros[i];
+		}
+	}
+	
+	public void rellenarArray() {
+		Scanner input = new Scanner(System.in);
+		for (int i = 0; i < this.numElementos; i++) {
+			System.out.print("Introduce un numero: ");
+			this.numeros[i] = input.nextInt();
+		}
+		input.close();
+	}
+	
+	public sumaElementosArray() {
+		this(sumaElementosArray.NUM_ELEMENTOS_POR_DEFECTO);
+	}
+	
+	
+	
+	public sumaElementosArray(int num) {
+		this.numeros = new int[num];
+		this.numElementos = num;
+		
+	}
+
+	public int getSumaElementos() {
+		return this.sumaElementos;
+	}
+}
+
+sumaElementosArray suma = new sumaElementosArray();

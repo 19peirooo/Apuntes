@@ -1,0 +1,20 @@
+package com.utad.poo.tema2;
+
+public class Ejercicio10 {
+	public static int[] clonarArray(int[] arr) {
+		int[] copia = {};
+		for (int i = 0; i < arr.length; i++) {
+			copia[i] = arr[i];
+		}
+		return copia;
+	}
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5};
+		int arr2[] = clonarArray(arr);
+		
+		for (int i = 0; i < arr2.length; i++) {
+			System.out.print(arr2[i] + " ");
+		}
+	}
+
+}

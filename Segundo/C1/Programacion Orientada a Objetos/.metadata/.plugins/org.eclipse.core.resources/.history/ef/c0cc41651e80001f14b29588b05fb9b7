@@ -1,0 +1,30 @@
+package com.utad.poo.tema2;
+
+public class Ejercicio9 {
+	//Constantes que almacenan las cadenas
+	public static final String CADENA1 = "Hola";
+	public static final String CADENA2 = "Lector";
+	public static void main(String[] args) {
+		
+		//Compara si son iguales las cadenas
+		//boolean sonIguales = (Ejercicio9.CADENA1 == Ejercicio9.CADENA2);
+		boolean sonIguales = Ejercicio9.CADENA1.equals(Ejercicio9.CADENA2);
+		
+		//Imprime si son iguales o no
+		if (sonIguales == true) {
+			System.out.println("Las cadenas son iguales");
+		} else {
+			System.out.println("Las cadenas no son iguales");
+		}
+		
+		System.out.println("Longitud Cadena 1: "+ Ejercicio9.CADENA1.length() + ". Longitud Cadena 2: " + Ejercicio9.CADENA2.length()); //.length() para la longitud
+		System.out.println("Segunda Letra Cadena 1: "+ Ejercicio9.CADENA1.charAt(1) + ". Segunda Letra Cadena 2: " + Ejercicio9.CADENA2.charAt(1)); //Caracter 2 es el caracter en el indice 1
+		String cadena3 = Ejercicio9.CADENA1 + Ejercicio9.CADENA2; //+ para concatenar
+		System.out.println(cadena3);
+		
+		System.out.println("Subcadena 2 a 6: "+ cadena3.substring(1, 5)); //.substring() para hacer subcadenas
+
+	}
+
+}
+

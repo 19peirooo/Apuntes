@@ -1,0 +1,76 @@
+package com.utad.poo.tema2;
+
+import java.util.Scanner;
+
+public class Ejercicio12 {
+	public static final String[] PALABRAS = {"Paco", "Pilar", "Eva", "Vanessa", "Rafael","Javier", "Samuel", "Laura"};
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		//Indice aleatorio
+		int elegida = (int)(Math.random()*Ejercicio12.PALABRAS.length);
+		//Coge la palabra correspondiente al indice aleatorio
+		String palabra = Ejercicio12.PALABRAS[elegida];
+		char letra = '\0';
+		char[] letrasIntroducidas = new char[27];
+		char[] palabraArray = new char[palabra.length()];
+		char[] palabraOculta = new char[palabra.length()];
+		int numLetrasIntroducidas = 0;
+		int fallos = 0;
+		boolean letraIntroducida = true;
+		boolean acierto = false;
+		boolean juegoTerminado = false;
+		
+		for (int i = 0; i < palabra.length(); i++) {
+			palabraArray[i] = palabra.charAt(i);
+			palabraOculta[i] = '-';
+		}
+		
+		while (!juegoTerminado) {
+			letraIntroducida = true;
+			acierto = false;
+			for (int i = 0; i < palabraOculta.length; i++) {
+				System.out.print(palabraOculta[i] + " ");
+			}
+			System.out.println("\tFallos: " + fallos);
+			while (letraIntroducida) {
+				letraIntroducida = false;
+				System.out.print("Letras Introducidas: ");
+				for (int i = 0; i < letrasIntroducidas.length; i++) {
+					System.out.print(letrasIntroducidas[i]+ " ");
+				}
+				System.out.print("\nIntroduce la letra: ");
+				letra = input.next().toLowerCase().charAt(0);
+				
+				for (int i = 0; i < letrasIntroducidas.length && !letraIntroducida; i++) {
+					if (letrasIntroducidas[i] == letra) {
+						System.out.println("ERROR: Letra ya introducida");
+						letraIntroducida = true;
+					}
+				}
+				if (!letraIntroducida) {
+					letrasIntroducidas[numLetrasIntroducidas++] = letra;
+				}
+			}
+			for (int i = 0; i < palabraArray.length; i++) {
+				if (letra == palabraArray[i]) {
+					palabraOculta[i] = palabraArray[i];
+					acierto = true;
+				}
+			}
+			if (!acierto) {
+				System.out.println("Has Fallado!!!");
+				fallos++;
+			}
+			if (fallos == 6) {
+				System.out.println("Has perdido. La palabra era: "+ palabra);
+				juegoTerminado = true;
+			}
+			if (palabraOculta.equals(palabraArray)) {
+				System.out.println("Has Ganado");
+			}
+		}
+		input.close();
+	}
+
+}

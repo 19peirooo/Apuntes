@@ -1,0 +1,12 @@
+package com.utad.poo.tema2;
+
+public class Ejercicio10 {
+	public static int [] clonarArray(int [] array) {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.utad.poo.tema2;
+
+public class sumaElementosArray {
+	public static final int NUM_ELEMENTOS_POR_DEFECTO = 10;
+	private int numeros [];
+	private int numElementos;
+	private int sumaElementos;
+	
+	public sumaElementosArray() {
+		this()
+	}
+	
+	public int getSumaElementos() {
+		return this.sumaElementos;
+	}
+}

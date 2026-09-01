@@ -1,0 +1,57 @@
+package com.utad.poo.tema2;
+
+import java.util.Scanner;
+
+public class Ejercicio12 {
+	public static final String[] PALABRAS = {"Paco", "Pilar", "Eva", "Vanessa", "Rafael","Javier", "Samuel", "Laura"};
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		//Indice aleatorio
+		int elegida = (int)(Math.random()*Ejercicio12.PALABRAS.length);
+		//Coge la palabra correspondiente al indice aleatorio
+		String palabra = Ejercicio12.PALABRAS[elegida];
+		char letra;
+		char[] letrasIntroducidas = new char[27];
+		char[] palabraArray = new char[palabra.length()];
+		char[] palabraOculta = new char[palabra.length()];
+		int numLetrasIntroducidas = 0;
+		int fallos = 0;
+		boolean letraIntroducida = true;
+		
+		for (int i = 0; i < palabra.length(); i++) {
+			palabraArray[i] = palabra.charAt(i);
+			palabraOculta[i] = '-';
+		}
+		
+		while (fallos < 6) {
+			letraIntroducida = true;
+			for (int i = 0; i < palabraOculta.length; i++) {
+				System.out.print(palabraOculta[i] + " ");
+			}
+			System.out.println("Fallos: " + fallos);
+			while (letraIntroducida) {
+				letraIntroducida = false;
+				System.out.print("Letras Introducidas: ");
+				for (int i = 0; i < letrasIntroducidas.length; i++) {
+					System.out.print(letrasIntroducidas[i]+ " ");
+				}
+				System.out.print("\nIntroduce la letra: ");
+				letra = input.next().toLowerCase().charAt(0);
+				
+				for (int i = 0; i < letrasIntroducidas.length && !letraIntroducida; i++) {
+					if (letrasIntroducidas[i] == letra) {
+						System.out.println("ERROR: Letra ya introducida");
+						letraIntroducida = true;
+					}
+				}
+				if (!letraIntroducida) {
+					letrasIntroducidas[numLetrasIntroducidas++] = letra;
+				}
+			}
+			 
+		}
+		input.close();
+	}
+
+}

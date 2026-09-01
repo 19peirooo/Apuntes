@@ -1,0 +1,13 @@
+package com.utad.poo.tema2;
+
+public class Ejercicio8 {
+
+	public static void main(String[] args) {
+		//Por cada letra del abecedario
+		for (char letra = 'a'; letra <= 'z'; letra++) {
+			System.out.print(letra + " " + (int)letra + "\n");
+		}
+
+	}
+
+}

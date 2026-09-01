@@ -1,0 +1,11 @@
+package com.utad.poo.tema2;
+
+public class Ahorcado {
+	public int fallos;
+	public static final String[] palabras = {"Paco", "Pilar", "Eva", "Vanessa", "Rafael","Javier", "Samuel", "Laura"};
+	
+	public Ahorcado() {
+		this.fallos = 0;
+		
+	}
+}

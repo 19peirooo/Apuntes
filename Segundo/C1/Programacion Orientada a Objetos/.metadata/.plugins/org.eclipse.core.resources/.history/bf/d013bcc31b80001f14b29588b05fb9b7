@@ -1,0 +1,24 @@
+package com.utad.poo.tema2;
+
+public class Ejercicio11 {
+	public static final int[][] M1 = {{1,2,3},{4,5,6}};
+	public static final int[][] M2 = {{7,8},{9,1},{2,3}};
+	
+	
+	
+	public static void main(String[] args) {
+		int[][] m3 = {};
+		int filas = Ejercicio11.M1.length;
+		int columnasM1 = Ejercicio11.M1[0].length;
+		int columnasM2 = Ejercicio11.M2[0].length;
+		for (int i = 0; i < filas; i++) {
+			for (int j = 0; j < columnasM1; j++) {
+				for (int k = 0; k < columnasM2; j++) {
+					m3[i][j] += Ejercicio11.M1[i][k]* Ejercicio11.M2[k][i]; 
+				}
+			}
+		}
+
+	}
+
+}

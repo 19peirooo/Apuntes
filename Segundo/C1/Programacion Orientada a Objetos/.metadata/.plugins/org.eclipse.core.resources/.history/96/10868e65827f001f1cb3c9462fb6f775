@@ -1,0 +1,20 @@
+package com.utad.poo.tema2;
+
+public class Ejercicio9 {
+	public static final String CADENA1 = "Hola";
+	public static final String CADENA2 = "Lector";
+	public static void main(String[] args) {
+		
+		boolean sonIguales = (CADENA1 == CADENA2);
+		
+		if (sonIguales == true) {
+			System.out.println("Las cadenas son iguales");
+		} else {
+			System.out.println("Las cadenas no son iguales");
+		}
+		
+		System.out.println("Longitud Cadena 1: "+ CADENA1.length() + ". Longitud Cadena 2: " + CADENA2.length());
+
+	}
+
+}

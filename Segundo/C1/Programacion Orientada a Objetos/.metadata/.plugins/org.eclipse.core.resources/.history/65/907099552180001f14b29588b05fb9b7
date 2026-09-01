@@ -1,0 +1,11 @@
+package com.utad.poo.tema2;
+
+public class Ejercicio12 {
+	public static final String[] PALABRAS = {"Paco", "Pilar", "Eva", "Vanessa", "Rafael","Javier", "Samuel", "Laura"};
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

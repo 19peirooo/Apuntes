@@ -1,0 +1,22 @@
+package com.utad.poo.tema2;
+
+public class Ahorcado {
+	public int fallos;
+	public static final String[] palabras = {"Paco", "Pilar", "Eva", "Vanessa", "Rafael","Javier", "Samuel", "Laura"};
+	public String palabra;
+	public char[] palabraVisible;
+	public char[] palabraOculta;
+	
+	public void rellenarPalabras() {
+		for (int i = 0; i < this.palabra.length(); i++) {
+			this.palabraVisible[i] = this.palabra.toLowerCase().charAt(i);
+			this.palabraOculta[i] = '-';
+		}
+	}
+	
+	public Ahorcado() {
+		this.fallos = 0;
+		this.palabra = palabras[(int)(Math.random()*Ejercicio12.PALABRAS.length)];
+		
+	}
+}
