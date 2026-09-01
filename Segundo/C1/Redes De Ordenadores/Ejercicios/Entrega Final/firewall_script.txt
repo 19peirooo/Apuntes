@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Borramos las cadenas
+iptables -t filter -F FORWARD
+iptables -t filter -F INPUT
+iptables -t filter -F OUTPUT
+
+# Desactivo políticas
+iptables -t filter -P FORWARD ACCEPT
+iptables -t filter -P INPUT ACCEPT
+iptables -t filter -P OUTPUT ACCEPT
+
+# Defino las políticas (Whitelisting)
+iptables -t filter -P FORWARD DROP # Política por defecto --> Que no pase nada
+iptables -t filter -P INPUT DROP
+iptables -t filter -P OUTPUT DROP
+
+# Regla 1: Tráfico HTTP de internet a DMZ
+iptables -t filter -A FORWARD -i enp0s3 -d 192.168.30.5 -p tcp --dport 80 -j ACCEPT
+iptables -t filter -A FORWARD -s 192.168.30.5 -o enp0s3 -p tcp --sport 80 -j ACCEPT
+
+# Regla 2: Tráfico HTTPS de internet a DMZ
+iptables -t filter -A FORWARD -i enp0s3 -d 192.168.30.5 -p tcp --dport 443 -j ACCEPT
+iptables -t filter -A FORWARD -s 192.168.30.5 -o enp0s3 -p tcp --sport 443 -j ACCEPT
+
+# Regla 3: Tráfico HTTP de intranet a DMZ
+iptables -t filter -A FORWARD -i enp0s9 -d 192.168.30.5 -p tcp --dport 80 -j ACCEPT
+iptables -t filter -A FORWARD -s 192.168.30.5 -o enp0s9 -p tcp --sport 80 -j ACCEPT
+
+# Regla 4: Tráfico HTTPS de intranet a DMZ
+iptables -t filter -A FORWARD -i enp0s9 -d 192.168.30.5 -p tcp --dport 443 -j ACCEPT
+iptables -t filter -A FORWARD -s 192.168.30.5 -o enp0s9 -p tcp --sport 443 -j ACCEPT
+
+# Regla 5: Tráfico SSH de intranet a DMZ
+iptables -t filter -A FORWARD -i enp0s9 -d 192.168.30.5 -p tcp --dport 22 -j ACCEPT
+iptables -t filter -A FORWARD -s 192.168.30.5 -o enp0s9 -p tcp --sport 22 -j ACCEPT
+
+# Regla 6: Tráfico DNS de intranet a internet
+iptables -t filter -A FORWARD -i enp0s9 -o enp0s3 -p udp --dport 53 -j ACCEPT
+iptables -t filter -A FORWARD -i enp0s9 -o enp0s3 -p udp --sport 53 -j ACCEPT
+iptables -t filter -A FORWARD -i enp0s9 -o enp0s3 -p tcp --dport 53 -j ACCEPT
+iptables -t filter -A FORWARD -i enp0s9 -o enp0s3 -p tcp --sport 53 -j ACCEPT
+
+# Regla 7: Tráfico HTTP de intranet a Internet
+iptables -t filter -A FORWARD -i enp0s9 -o enp0s3 -p tcp --dport 80 -j ACCEPT
+iptables -t filter -A FORWARD -i enp0s9 -o enp0s3 -p tcp --sport 80 -j ACCEPT
+
+# Regla 8: Tráfico HTTPS de intranet a DMZ
+iptables -t filter -A FORWARD -i enp0s9 -o enp0s3 -p tcp --dport 443 -j ACCEPT
+iptables -t filter -A FORWARD -i enp0s9 -o enp0s3 -p tcp --sport 443 -j ACCEPT
