@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/persona.dir/persona.cpp.o CMakeFiles/persona.dir/main.cpp.o -o persona  -lpthread 

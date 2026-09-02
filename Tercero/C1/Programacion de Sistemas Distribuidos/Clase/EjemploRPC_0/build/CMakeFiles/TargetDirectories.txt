@@ -1,0 +1,5 @@
+/home/victor/Tercero/SSDD/EjemploRPC_0/build/CMakeFiles/server.dir
+/home/victor/Tercero/SSDD/EjemploRPC_0/build/CMakeFiles/client.dir
+/home/victor/Tercero/SSDD/EjemploRPC_0/build/CMakeFiles/persona.dir
+/home/victor/Tercero/SSDD/EjemploRPC_0/build/CMakeFiles/edit_cache.dir
+/home/victor/Tercero/SSDD/EjemploRPC_0/build/CMakeFiles/rebuild_cache.dir

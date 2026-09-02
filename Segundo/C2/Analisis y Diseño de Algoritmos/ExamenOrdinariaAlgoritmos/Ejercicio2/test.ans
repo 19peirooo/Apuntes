@@ -1,0 +1,64 @@
+Introduce la capacidad de la tabla: 
+Codigo de licencia: 
+Nombre de la herramienta: 
+
+P0: n=1 | contenido=(78600, VisualStudio) 
+P1: n=0 | contenido=
+P2: n=0 | contenido=
+Codigo de licencia: 
+Nombre de la herramienta: 
+
+P0: n=1 | contenido=(78600, VisualStudio) 
+P1: n=1 | contenido=(78601, GCC) 
+P2: n=0 | contenido=
+Codigo de licencia: 
+Nombre de la herramienta: 
+
+P0: n=1 | contenido=(78600, VisualStudio) 
+P1: n=1 | contenido=(78601, GCC) 
+P2: n=1 | contenido=(78602, ChatGPT) 
+Codigo de licencia: 
+Nombre de la herramienta: 
+
+P0: n=2 | contenido=(96600, Copilot) (78600, VisualStudio) 
+P1: n=1 | contenido=(78601, GCC) 
+P2: n=1 | contenido=(78602, ChatGPT) 
+Codigo de licencia: 
+Nombre de la herramienta: 
+
+P0: n=2 | contenido=(96600, Copilot) (78600, VisualStudio) 
+P1: n=2 | contenido=(96601, GDB) (78601, GCC) 
+P2: n=1 | contenido=(78602, ChatGPT) 
+Codigo de licencia: 
+Nombre de la herramienta: 
+
+P0: n=2 | contenido=(96600, Copilot) (78600, VisualStudio) 
+P1: n=2 | contenido=(96601, GDB) (78601, GCC) 
+P2: n=2 | contenido=(96602, Eclipse) (78602, ChatGPT) 
+Codigo de licencia: 
+Nombre de la herramienta: 
+
+P0: n=3 | contenido=(12300, Gemini) (96600, Copilot) (78600, VisualStudio) 
+P1: n=2 | contenido=(96601, GDB) (78601, GCC) 
+P2: n=2 | contenido=(96602, Eclipse) (78602, ChatGPT) 
+Codigo de licencia: 
+Nombre de la herramienta: 
+
+P0: n=3 | contenido=(12300, Gemini) (96600, Copilot) (78600, VisualStudio) 
+P1: n=3 | contenido=(12301, DeepSeek) (96601, GDB) (78601, GCC) 
+P2: n=2 | contenido=(96602, Eclipse) (78602, ChatGPT) 
+Codigo de licencia: 
+
+P0: n=2 | contenido=(12300, Gemini) (78600, VisualStudio) 
+P1: n=3 | contenido=(12301, DeepSeek) (96601, GDB) (78601, GCC) 
+P2: n=2 | contenido=(96602, Eclipse) (78602, ChatGPT) 
+Codigo de licencia: 
+
+P0: n=2 | contenido=(12300, Gemini) (78600, VisualStudio) 
+P1: n=3 | contenido=(12301, DeepSeek) (96601, GDB) (78601, GCC) 
+P2: n=1 | contenido=(78602, ChatGPT) 
+Codigo de licencia: 
+
+P0: n=2 | contenido=(12300, Gemini) (78600, VisualStudio) 
+P1: n=2 | contenido=(12301, DeepSeek) (96601, GDB) 
+P2: n=1 | contenido=(78602, ChatGPT) 

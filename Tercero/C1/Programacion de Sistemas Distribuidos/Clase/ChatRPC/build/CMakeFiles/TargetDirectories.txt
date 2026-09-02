@@ -1,0 +1,4 @@
+/home/victor/Tercero/SSDD/ChatRPC/build/CMakeFiles/server.dir
+/home/victor/Tercero/SSDD/ChatRPC/build/CMakeFiles/client.dir
+/home/victor/Tercero/SSDD/ChatRPC/build/CMakeFiles/edit_cache.dir
+/home/victor/Tercero/SSDD/ChatRPC/build/CMakeFiles/rebuild_cache.dir
