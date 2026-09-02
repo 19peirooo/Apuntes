@@ -1,0 +1,9 @@
+*{
+	text-align: center;
+	background-image: url("imagenes/camavinga.jpg");
+}
+
+#hora{
+	font-size: 4em;
+	color: purple;
+}

@@ -1,0 +1,22 @@
+#flex-container{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end; /*Solo para columnas*/
+	background-color: cyan;
+	border: 2px solid black;
+	align-items:center;
+}
+
+.flex-item{
+	background-color: yellow;
+	border: 2px solid black;
+	text-align: center;
+	font-size: 36px;
+	line-height: 6;
+	width:200px;
+	margin: 10px;
+}
+
+#hijo1{
+	align-self: auto;
+}

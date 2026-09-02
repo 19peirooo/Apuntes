@@ -1,0 +1,62 @@
+*{
+	text-align: center;
+}
+
+@font-face{/*Fuente Propia*/
+	font-family: "DevilCandle";
+	src: url("DevilCandle.otf");
+}
+
+h1{
+	color: blue;
+	text-align: center;
+	font-family: DevilCandle;
+}
+
+p{
+	border: 3px dotted black; /*Borde*/
+	margin: 20px 250px; /*Arriba y abajo el primero, izquierda derecha el segundo*/
+	text-align: center; /*Alinea el texto en el centro*/
+	background-color: #A36E62; /*Color de Fondo*/
+	font-family: DevilCandle,Impact,Arial;
+
+}
+
+a{
+	text-decoration: none; /*Quita el subrayado*/
+	border: 3px solid black; 
+	margin: 20px 300px 20px; /*Arriba el Primero, Derecha/Izquierda el segundo, Abajo el Tercero*/  
+	padding: 0px 50px;
+	text-align: center; 
+	background-color: #A36E62; 
+}
+
+a:hover{
+	background-color: red;
+}
+
+
+img{
+	margin-top: 20px;
+	height: 30vh;
+	width: 30vw;
+}
+
+body{
+	background-image: url("Bandera De España.png"); /*Imagen de Fondo*/
+}
+
+#p1{
+	background-color: #85C875;
+}
+
+#img1{
+	opacity: 0.6;
+}
+#img2{
+	opacity: 0.4
+}
+
+#img1:hover{/*Cambia cuando el raton esta encima del elemento*/
+	transform: rotate(30deg) scale(2)
+}

@@ -1,0 +1,32 @@
+body{
+	background-image: url("city.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@keyframes mov{
+	from{
+		margin-right: 100%;
+	}
+	25%{
+		margin-bottom: 20%;
+		
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	75%{
+		margin-bottom: 0%;
+	}
+	to{
+		margin-left: 100%;
+	}
+}
+
+#gif{
+	margin-top: 70%;
+	width: 40vw;
+	height: 40vh;
+	animation: mov 5s infinite;
+	animation-timing-function: linear;
+}

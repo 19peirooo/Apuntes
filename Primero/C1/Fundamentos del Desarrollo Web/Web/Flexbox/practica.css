@@ -1,0 +1,39 @@
+
+nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	background-image: url("Bandera de España.png");
+	border: 2px solid black;
+	align-items: center;
+	flex-grow: 1;
+	height: 80vh
+}
+a{
+	text-decoration: none;
+	background-color: cyan;
+	border: 2px solid black;
+	text-align: center;
+	margin: 10px;
+	padding: 50px;
+	font-size: 4em;
+}
+
+#google{
+	order:1;
+}
+#bing{
+	order:4;
+}
+#yahoo{
+	order:2;
+}
+#chatgpt{
+	flex-grow: 2;
+	order: 3;
+}
+
+#chatgpt:hover{
+	align-self:flex-end;
+}

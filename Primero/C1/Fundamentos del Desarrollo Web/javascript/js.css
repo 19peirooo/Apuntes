@@ -1,0 +1,173 @@
+*{
+	text-align: center;
+}
+body{
+	background-color:#f0ddc2;
+}
+
+header{
+	padding: 10px;
+	background-color: #b79462;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+nav{
+	padding: 20px;
+	background-color: #b79462;
+	border: 3px solid black;
+	border-radius: 20px;
+	margin: 20px 0px;
+}
+
+a{
+	text-decoration:none;
+	padding: 10px;
+	background-color: #9dc2e7;
+	border: 3px solid black;
+	border-radius: 20px;
+	margin: 10px 0px;
+}
+section{
+	padding: 10px;
+	margin: 10px;
+	background-color: #b79462;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+h1{
+	padding: 10px;
+	margin: 10px;
+	background-color: #d3e391;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+h2{
+	background-color: #a3bc38;
+	margin: 10px 85vw 10px 0px;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+p{
+	padding: 10px;
+	margin: 10px;
+	background-color: #9dc2e7;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+img{
+	display:inline-block;
+	background-color: #ae44ca;
+	border: 3px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px 30vw;
+}
+
+table{
+	align-self: center;
+	padding: 10px;
+	background-color: #9dc2e7;
+	border: 3px solid black;
+	border-radius: 0px 0px 20px 20px;
+	margin: 10px 0px;
+	table-layout: fixed;
+}
+
+caption{
+	background-color: #a3bc38;
+	border: 3px solid black;
+	border-radius: 20px 20px 0px 0px;
+}
+
+th{
+	border: 3px solid black;
+	padding: 0px 30px;
+	background-color: white;
+	flex-grow: 1;
+}
+td{
+	border: 3px solid black;
+	padding: 0px 30px;
+	background-color: white;
+	flex-grow: 1;
+}
+
+ul {
+	padding: 10px;
+	margin: 10px;
+	background-color: #9dc2e7;
+	border: 3px solid black;
+	border-radius: 20px;
+	list-style-position: inside;
+}
+
+ol {
+	padding: 10px;
+	margin: 10px;
+	background-color: #9dc2e7;
+	border: 3px solid black;
+	border-radius: 20px;
+	list-style-position: inside;
+}
+
+dl {
+	padding: 10px;
+	margin: 10px;
+	background-color: #9dc2e7;
+	border: 3px solid black;
+	border-radius: 20px;
+	list-style-position: inside;
+}
+
+summary {
+	padding: 10px;
+	margin: 10px;
+	background-color: #9dc2e7;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+object {
+	padding: 10px;
+	margin: 10px;
+	background-color: #ae44ca;
+	border: 3px solid black;
+	border-radius: 20px;
+	width: 50vw;
+	height: 50vh;
+}
+
+iframe {
+	padding: 10px;
+	margin: 10px;
+	background-color: #ae44ca;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+audio {
+	padding: 10px;
+	margin: 10px;
+	background-color: #ae44ca;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+video {
+	padding: 10px;
+	margin: 10px;
+	background-color: #ae44ca;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+.prop{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}

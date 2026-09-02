@@ -1,0 +1,34 @@
+@font-face{/*Fuente Propia*/
+	font-family: "DevilCandle";
+	src: url("../DevilCandle.otf");
+}
+h1{
+	font-family: DevilCandle;
+}
+
+p{
+	background-color: #3975ea;
+	text-align: center;
+	border: 3px solid black;
+	padding-bottom: 100px;
+	margin: 0px 500px
+}
+
+#rotate:hover{
+	transform: rotate(45deg);
+	background-color: pink;
+	
+}
+#scale:hover{
+	transform: scale(2);
+	background-color: yellow;
+}
+#translate:hover{
+	transform: translate(60px);
+	background-color: blue;
+}
+#skew:hover{
+	transform: skew(25deg);
+	background-color: red;
+}
+

@@ -1,0 +1,12 @@
+.bloque{
+	padding: 10px;
+	margin: 10px;
+	display: block;
+	background: red;
+}
+.linea{
+	padding: 10px;
+	margin: 10px;
+	display: inline;
+	background: blue;
+}

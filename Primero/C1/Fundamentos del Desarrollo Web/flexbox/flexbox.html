@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<link href="flexbox.css" rel="stylesheet" type="text/css">
+		<title> Notas Flexbox </title>
+	</head>
+	<body>
+		<header>Flexbox</header>
+		<nav>
+			<a href="../notas.html">Inicio</a>
+			<a href="../html/html.html">HTML</a>
+			<a href="../css/css.html">CSS</a>
+			<a href="../maquetacion/maquetacion.html">Maquetacion</a>
+			<a href="../javascript/js.html">Javascript</a>
+		</nav>
+		<main>
+		<section class= "prop">
+			<h1>Flexbox</h1>
+			<p>Diseño con Cajas Flexibles</p>
+			<p>display: flex</p>
+			<p>Se puede controlar order, alineamiento, direccion y tamaño de las cajas</p>
+			<table>
+				<caption>Propiedades</caption>
+				<tr>
+					<th>Propiedad</th>
+					<th>Valor</th>
+					<th>Descripcion</th>
+				</tr>
+				<tr>
+					<td>flex-direction</td>
+					<td>row,row-reverse,column,column-reverse</td>
+					<td>Direccion de la cajas</td>
+				</tr>
+				<tr>
+					<td>flex-wrap</td>
+					<td>nowrap,wrap,wrap-reverse</td>
+					<td>Modo Multilinea, permite desborde</td>
+				</tr>
+				<tr>
+					<td>justify-content</td>
+					<td>flex-start,flex-end,center,space-between,space-around</td>
+					<td>Agrupa los items en un sitio o los separa equitativamente en el eje principal(horizontal)</td>
+				</tr>
+				<tr>
+					<td>align-content</td>
+					<td>flex-start,flex-end,center,space-between,space-around,stretch</td>
+					<td>Alinea el contenido de multiples lineas en una posicion en el eje principal o los estira de forma equitativa</td>
+				</tr>
+				<tr>
+					<td>align-items</td>
+					<td>flex-start,flex-end,center,stretch,baseline</td>
+					<td>Alinea los items en un posicion del eje secundario(vertical) o los estira</td>
+				</tr>
+				<tr>
+					<td>align-self</td>
+					<td>auto,flex-start,flex-end,center,stretch,baseline</td>
+					<td>Alinea un hijo en especifico</td>
+				</tr>
+				<tr>
+					<td>flex-grow/flex-shrink</td>
+					<td>Valor</td>
+					<td>Factor de crecimiendo/decrecimiento respecto a los otros elementos</td>
+				</tr>
+				<tr>
+					<td>flex-basis</td>
+					<td>content</td>
+					<td>Tamaño por defecto de un item</td>
+				</tr>
+				<tr>
+					<td>order</td>
+					<td>Valor</td>
+					<td>Orden de aparicion</td>
+				</tr>
+			</table>
+			</section>
+			<section>
+				<h1>Propiedades</h1>
+				<h2>flex-direction</h2>
+				<p>row</p>
+				<article class = "flexrow">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<p>row reversed</p>
+				<article class = "flexrow" id="rowreversed">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<p>column</p>
+				<article class = "flexcolumn">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<p>column reversed</p>
+				<article class = "flexcolumn" id="columnreversed">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<h2>justify-content</h2>
+				<p>flex start</p>
+				<article class = "flexrow" id="flex-start">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<p>flex end</p>
+				<article class = "flexrow" id="flex-end">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<p>center</p>
+				<article class = "flexrow" id="center">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<p>space between</p>
+				<article class = "flexrow" id="space-between">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<p>space-around</p>
+				<article class = "flexrow" id="space-around">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<h2>align-content</h2>
+				<p>flex start</p>
+				<article class = "flexrow" id="flex-start1">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+					<p class="item">5</p>
+					<p class="item">6</p>
+					<p class="item">7</p>
+					<p class="item">8</p>
+				</article>
+				<p>flex end</p>
+				<article class = "flexrow" id="flex-end1">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+					<p class="item">5</p>
+					<p class="item">6</p>
+					<p class="item">7</p>
+					<p class="item">8</p>
+				</article>
+				<p>center</p>
+				<article class = "flexrow" id="center1">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+					<p class="item">5</p>
+					<p class="item">6</p>
+					<p class="item">7</p>
+					<p class="item">8</p>
+				</article>
+				<p>space between</p>
+				<article class = "flexrow" id="space-between1">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+					<p class="item">5</p>
+					<p class="item">6</p>
+					<p class="item">7</p>
+					<p class="item">8</p>
+				</article>
+				<p>space-around</p>
+				<article class = "flexrow" id="space-around1">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+					<p class="item">5</p>
+					<p class="item">6</p>
+					<p class="item">7</p>
+					<p class="item">8</p>
+				</article>
+				<p>stretch</p>
+				<article class = "flexrow" id="stretch">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+					<p class="item">5</p>
+					<p class="item">6</p>
+					<p class="item">7</p>
+					<p class="item">8</p>
+				</article>
+				<h2>align-items</h2>
+				<p>flex start</p>
+				<article class = "flexrow" id="flex-start2">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<p>flex end</p>
+				<article class = "flexrow" id="flex-end2">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<p>center</p>
+				<article class = "flexrow" id="center2">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<p>stretch</p>
+				<article class = "flexrow" id="stretch1">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<p>baseline</p>
+				<article class = "flexrow" id="baseline">
+					<p class="item">1</p>
+					<p class="item">2</p>
+					<p class="item">3</p>
+					<p class="item">4</p>
+				</article>
+				<h2>align-self</h2>
+				<article class = "flexrow" id="height">
+					<p class="item" id="i1">1. align-self: center;</p>
+					<p class="item">2</p>
+					<p class="item" id="i2">3. align-self: flex-end;</p>
+					<p class="item">4</p>
+				</article>
+				<h2>order y flex-grow</h2>
+				<article class = "flexrow" >
+					<p class="item" id="i3">1</p>
+					<p class="item" id="i4">2. flex-shrink: 2;</p>
+					<p class="item" id="i5">3</p>
+					<p class="item" id="i6">4. flex-grow: 2;</p>
+				</article>
+			</section>
+		</section>
+		</main>
+	</body>
+</html>

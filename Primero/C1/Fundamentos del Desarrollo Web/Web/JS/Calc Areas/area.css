@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    background-color: aquamarine;
+    color: grey;
+}
+
+header{
+    font-size: 4em;
+    padding: 10px;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+}
+
+section{
+    border: 3px solid black;
+    padding: 10px 15px;
+    background-color: aliceblue;
+    height: 25vh;
+    width: 40vw;
+    color: black;
+}
+
+input{
+    margin: 5px;
+}

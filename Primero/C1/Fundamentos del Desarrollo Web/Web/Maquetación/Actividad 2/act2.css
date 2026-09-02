@@ -1,0 +1,48 @@
+header{
+	display: block;
+	text-align: center;
+	padding: 50px;
+	border: 3px solid black;
+	background: lime;
+	margin: 50px;
+	font-size: 3em;
+}
+
+nav{
+	display: block;
+	text-align: center;
+	padding: 50px;
+	border: 3px solid black;
+	background: lime;
+	margin: 50px;
+}
+section{
+	display: inline-block;
+	text-align: center;
+	padding: 50px 450px 100px;
+	border: 3px solid black;
+	background: lime;
+	margin: 50px 0px 50px 50px;
+}
+article{
+	display: inline-block;
+	background-color: yellow;
+	border: 3px solid black;
+}
+aside{
+	margin: 50px;
+	display: inline-block;
+	float: right;
+	text-align: center;
+	padding: 50px 50px 175px;
+	border: 3px solid black;
+	background: pink;
+}
+footer{
+	display: block;
+	text-align: center;
+	padding: 50px;
+	border: 3px solid black;
+	background: lime;
+	margin: 50px;
+}

@@ -1,0 +1,45 @@
+<!-- JUEGO DEL AHORCADO -->
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Juego Ahorcado</title>
+		<link rel="stylesheet" href="css/ahorcado.css">	
+		<script type= "text/javascript" src="js/ahorcado.js" defer></script>	
+	</head>
+	<body onload = "inicio()">	
+			<h1 class="titulo">Deja De Ser Un Mileurista Ahorcado</h1>
+			<img class = "lambo" src = "img/lambo.png">
+			<div class="main-container">
+				<h1 id="msg-final"></h1>
+				<h2 id="acierto"></h2>
+				<h2 class="palabra" id="palabra"></h2>
+				<div id="picture">
+				<!--NUEVO: Imagenes Diferentes-->
+					<img src="img/ahorcado_6.png" id="image6">
+					<img src="img/ahorcado_5.png" id="image5">
+					<img src="img/ahorcado_4.png" id="image4">
+					<img src="img/ahorcado_3.png" id="image3">
+					<img src="img/ahorcado_2.png" id="image2">
+					<img src="img/ahorcado_1.png" id="image1">
+					<img src="img/ahorcado_0.png" id="image0">
+				</div>
+				<div id = "menupista">
+					<button id = "btnPista" onclick="pista()"><img id ="imgPista" src="img/boton.png"></button>
+					<p id = "pista"></p>
+				</div>
+                <div id = "dificultad">
+					<h2>Dificultad:</h2>
+					<button id "btnFacil" onclick="facil()">Facil</button>
+					<button id "btnMedio" onclick="medio()">Media</button>
+					<button id "btnDificil" onclick="dificil()">Dificil</button>
+				</div>				
+			</div>
+            <div id="intentosmenu">			
+				<h2 id="turnos">Intentos restantes: <span id="intentos">6</span></h2> 
+				<button onclick="inicio()" id="reset">Elegir otra palabra</button>
+				<div id="abcdario"></div>
+            </div>			
+	</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<link href="js.css" rel="stylesheet" type="text/css">
+		<script src="js.js" type="text/javascript" defer></script>
+		<title> JavaScript </title>
+	</head>
+	<body>
+		<header>JavaScript</header>
+		<nav>
+			<a href="../notas.html">Inicio</a>
+			<a href="../html/html.html">HTML</a>
+			<a href="../css/css.html">CSS</a>
+			<a href="../maquetacion/maquetacion.html">Maquetacion</a>
+			<a href="../flexbox/flexbox.html">Flexbox</a>
+		</nav>
+		<section class="prop">
+			<h1>Lenguaje Javascript</h1>
+				<h2>Sintaxis: </h2>
+					<p>Es case sensitive</p>
+					<p>No se define el tipo de variables</p>
+					<p>Cada sentencia acaba en ;</p>
+					<p>// Comentario de linea, /*Comentario multilinea*/</p>
+				<h2>Variables: </h2>
+					<p>Formadas por letras,numeros y simbolos. El primer caracter no puede un numero</p>
+					<p>Se declaran con var, let o const</p>
+				<h2>Palabras reservadas: </h2>
+					<img src="reservadas.png" alt="reservadas">
+				<h2>Tipos de datos: </h2>
+					<p>Numericos: Valores enteros o decimales. Valores especiales: NaN,Infinite</p>
+					<p>Cadena de caracteres: Encerradas entre comillas simples</p>
+					<p>Booleanos: Verdadero o falso</p>
+					<p>Arrays: Conjunto de variables de cualquier tipo</p>
+				<h2>Operadores: </h2>
+					<img src="operadores.png" alt="operadores">
+				<h2>Sentencias de Seleccion: </h2>
+					<p><b>Sentencia if else:</b></p>
+					<p>if(condicion){Instruccion}else{Instruccion}</p>
+					<p><b>Sentencia switch: </b></p>
+					<p>switch(expresion){case valor1: Instrucciones caso 1; break; default: Si no se cumple ninguna condicion}</p>
+				<h2>Sentencias de Bucle: </h2>
+					<p><b>Bucle for: </b></p>
+					<p>for (inicializacion,condicion,actualizacion){Intrucciones}</p>
+					<p>for (indice de un array){Instrucciones}</p>
+					<p><b>Bucle while y do while: </b></p>
+					<p>while (condicion){Instrucciones}</p>
+					<p>do{Instrucciones}while(condicion);</p>
+				<h2>Sentencia de control: </h2>
+					<p><b>Sentencia try:</b></p>
+					<p>try{Codigo}catch(error){Gestion de error}</p>
+				<h2>Funciones: </h2>
+					<p>Definidas con las palabras function teniendo el codigo entre {}</p>
+					<p>Termina con la sentencia return</p>
+					<p>Si no hay define devuelve undefined</p>
+				<h2>Funciones de Pop Up: </h2>
+					<p onclick=alert("Tetas")>Funcion alert</p>
+					<p onclick="confirmar()">Funcion confirm</p>
+					<p onclick="preg()">Funcion prompt</p>
+		</section>
+		<section>
+			<h1>Inclusion en Paginas web</h1>
+			<h2>Inclusion: </h2>
+				<p onclick = "alert('¡¡Gracias por pulsar!!')">En las etiquetas: Pulsa este boton</p>
+				<p>Dentro del head</p>
+				<p>En un archivo externo</p>
+				<p>Si tu navegador no soporta js, se utiliza la etiqueta noscript</p>
+				<p>Atributo defer: El script se descarga mientras se analiza el html y se ejecuta despues del analisis sin pararlo</p>
+				<p>Atributo async: El script se descarga mientras se analiza el html, pero cuando acaba la descarga, se para el analisis hasta que se ejecute el script</p>
+		</section>
+		<section class="prop">
+			<h1>Arbol BOM</h1>
+				<p>Objetos caracteristos para interactuar con el navegador</p>
+				<img src="BOM.png" alt="arbolBOM">
+				<p>Objeto Windows: Contiene propiedades de la ventana</p>
+				<p>Objeto Document: Contiene propiedades del documento actual</p>
+				<p>Objeto Location: Contiene la informacion sobre la URL</p>
+				<p>Objeto History: Contiene la informacion de los enlaces visitados</p>
+				<p>Objeto Navigator: Permite obtener informacion del navegador</p>
+				<p>Objeto Screen: Permite obtener la informacion de la resolucion de la pantalla</p>
+		</section>
+		<section>
+			<h1>Arbol DOM</h1>
+			<p>Define los Objetos y propiedades de los elementos HTML</p>
+			<p>Permite inspeccionar y modificar elementos HTML</p>
+			<h2>Acceso: </h2>
+				<p>getElementById("id"): Devuelve el elemento con ese id</p>
+				<p>getElementsById("name"): Devuelve los elemento con ese nombre</p>
+				<p>getElementsByTagName("tag"): Devuelve los elementos con ese tag</p>
+				<p>getElementsByClassName("class"): Devuelve los elementos con esa clase</p>
+			<h2>Modificar: </h2>
+				<p>document.write: Para escribir en el documento</p>
+				<p>element.getAttribute(atributo): Devuelve el valor del atributo</p>
+				<p>element.setAttribute(atributo,valor): permite modificar el valor del atributo</p>
+			<h2>Propiedad: </h2>
+				<p>element.innerHTML: cambiar el contenido del elemento</p>
+				<p>element.style.property: Cambiar el estilo del documento</p>
+				<p>element.attribute: cambiar un atributo de un elemento</p>
+		</section>
+		<section>
+			<h1>Manejadores de eventos</h1>
+				<p>onclick: Cuando pulsas algo, se ejecuta una funcion</p>
+				<p>onload: Cuando se carga la pagina</p>
+				<p>setInterval: Funcion se ejecuta cada x tiempo</p>
+				<p>clearInterval: detiene la ejecucion del setInterval</p>
+				<p>setTimeoout: Lo mismo que el setInterval pero solo una vez</p>
+		</section>
+		<section>
+			<h1>Metodos</h1>
+			<h2>Para Strings: </h2>
+				<p>substring(inicio,fin): Devuelve el trozo de un string</p>
+				<p>concat(""): Concatena cadenas</p>
+				<p>parseInt(string): Convierte cadenas a numeros enteros</p>
+				<p>parseFloat(string): Convierte cadenas a numeros flotantes</p>
+				<p>.length: Devuelve el numero de cadenas de caracteres</p>
+			<h2>Para Arrays: </h2>
+				<p>join(separador): Une elementos de un array</p>
+				<p>concat(): Concatena elementos de varios array</p>
+				<p>pop(): Elimina el ultimo elemento del array</p>
+				<p>push(): Agrega un elemento del array</p>
+				<p>shift(): Elimina el primer elemento del array</p>
+				<p>unshift(): Agrega un elemento al principio del array</p>
+				<p>reverse(): Coloca los elementos en orden inverso</p>
+				<p>.length: Devuelve el numeros de elementos</p>
+			<h2>Para Number: </h2>
+				<p>isNaN(): Protege el codigo de valores no numericos</p>
+				<p>toFixed(digitos): Fija el numero de decimales</p>
+				<p>toString(base): Convierte un numero a una cadena</p>
+			<h2>Math: </h2>
+				<p>Math.random(): Numero aleatorio</p>
+				<p>Math.pow(): Potencias</p>
+				<p>Math.sqrt(): Raiz cuadrada</p>
+				<p>Math.PI: Numero pi</p>
+			<h2>Audio: </h2>
+				<p>new Audio("ruta"): Para poner un audio</p>
+				<p>play(): Reproduce un audio</p>
+				<p>pause(): Detiene el audio</p>
+				<p>load(): Recarga el audio</p>
+				<p>.currentTime: Coloca la reproduccion el en segundo indicado</p>
+			<h2>Date: </h2>
+				<p>getDay(): Dia de la semana(Lunes a Domingo)</p>
+				<p>getDate(): Dia del mes</p>
+				<p>getMonth(): Devuelve el mes</p>
+				<p>getFullYear(): Devuelve el año</p>
+				<p>getHours(): Devuelve la hora del dia</p>
+				<p>getMinutes(): Devuelve los minutos</p>
+				<p>getSeconds(): Devuelve los segundos</p>
+		</section>
+		<section>
+			<h1>Formularios</h1>
+			<p>Etiqueta form: Para poner los inputs</p>
+			<p>Etiqueta Inputs: Entrada de datos</p>
+			<h2>Inputs: </h2>
+				<p>Tipo Text: <input type="text"></p>
+				<p>Tipo Password: <input type="password"></p>
+				<p>Tipo date : <input type="date"></p>
+				<p>Tipo radio: <input type="radio"></p>
+		</section>
+	</body>
+</html>

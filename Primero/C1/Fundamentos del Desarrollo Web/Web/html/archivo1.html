@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>Archivo 1</title>
+	</head>
+	
+	<body>
+		<h1>Heading</h1>
+		<p><b>Negrita</b></p>
+		<p><i>Cursiva</i></p>
+		<p><u>Subrayar</u></p>
+		<p><b><i>Negrita y Cursiva</i></b></p>
+		
+		<ul> <!--unordered list -->
+			<li>Elemento</li>
+			<li>Elemento</li>
+		</ul>
+		<ol> <!--ordered list-->
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+		</ol>
+		<dl> <!--definition list-->
+			<dt>Elemento a definir</dt>
+			<dd>definicion</dd>
+		</dl>
+		<p>Para caracteres especiales: &#169;<br>Empieza con & y acaba con ;</p>
+		<p>Para simbolos de &lt; y &gt;,utilizar el & </p>
+		<a href="http://www.google.es">Ir a google</a> <!-- para ir a archivos/paginas web-->
+		<br>
+		<a href="archivo2.html" target = "_blank">Ir a Archivo 2</a> <!--Si esta en el mismo directorio, el blank abre el archivo en otra pestaña-->
+		<br>
+		<a href="../../../xd/archivo3.html">Ir a Archivo 3</a> <!--el ../ es para salirse de una carpeta -->
+		<br>
+		<table> <!--tabla-->
+			<caption>Curso FUDW 2023-24</caption>
+			<tr> <!--fila-->
+				<th>Grupo</th> <!--heading-->
+				<th>Aula</th>
+				<th>Alumnos</th>
+				<th>Alumnos</th>
+			</tr>
+			<tr>
+				<td>INSO1A</td> <!--data-->
+				<td>BE104</td>
+				<td>25</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>INSO1B</td>
+				<td>BE102</td>
+				<td>18</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>INSV1C</td>
+				<td>BE103</td>
+				<td>21</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>MAIS1A</td>
+				<td>BE116</td>
+				<td>14</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>FIIS1A</td>
+				<td>BE116</td>
+				<td>7</td>
+				<td>2</td>
+			</tr>
+		</table>
+		<details open> <!--Crea un dropbox de informacion-->
+			<summary>Contenido Visible</summary>
+			<ol><!--Contenido Escondido-->
+				<li>Barça</li>
+				<li>Girona</li>
+				<li>Madrid</li>
+			</ol>
+		</details>
+		<p>"Si, Fisica, H<sub>2</sub>O" - Tao</p> <!--para subscript(texto abajo)-->
+		<p>El Cuadrado es <var>x<sup>2</sup></var></p> <!--Para texto arriba y variables-->
+		<p> Esto es <mark>resaltado</mark></p> <!--Para resaltar en amarillo-->
+		<object type="application/pdf" 
+			data="horario.pdf"
+			width="540"
+			height="220">
+		</object> <!--Para poner archivos-->
+		<!--Para poner cosas interactivos rollo mapa-->
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d795588.264422601!2d-3.81602965!3d40.525282100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2ses!4v1695635275919!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<br>
+		<img src ="franco.jpg" alt = "El Caudillo" height = "220" width="540"> <!--Imagen: En caso de no encontrar imagen, se pone el alt-->
+		<audio src ="audio.mp3" controls ></audio> <!--Para audio, controls para la barra de control-->
+		<audio controls> <!--Lo mismo pero para todos los formato-->
+			<source src= "audio.mp3" type = "audio/mp3">
+			<source src= "audio.ogg" type = "audio/ogg">
+			<source src= "audio.wav" type = "audio/wav">
+		</audio>
+		<video src = "video.mp4" loop autoplay muted></video> <!--Video Descargado-->
+		<!--Video De Youtube-->
+		<iframe width="588" height="441" src="https://www.youtube.com/embed/JrkhAJt80PA" title="1943 05 24 NODO 21B  Franco en Sevilla  Desfile de Falange y de los productores agropecuarios" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+main{
+    display: flex;
+    justify-content: center;
+    background-color: burlywood;
+    border: 3px solid black;
+    border-radius: 25px;
+    height: 75vh;
+    margin: 25%;
+}
+
+input{
+    display: block;
+}
+
+p{
+    font-size: 1em;
+}

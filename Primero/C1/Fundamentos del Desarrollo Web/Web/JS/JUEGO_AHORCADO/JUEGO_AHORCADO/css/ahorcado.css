@@ -1,0 +1,176 @@
+/**** JUEGO DEL AHORCADO ****/
+
+html{
+    overflow-x: hidden;    
+}
+
+/*NUEVO: Cambio de fuente*/
+@font-face{
+	font-family: "moneywise";
+    src: url("../moneywise/Moneywise.ttf");
+} 
+
+
+/*NUEVO Cambio el fondo*/
+body{
+	background-image: url("../img/penthouse.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#reset{
+	width: 200px;
+	height: 30px;
+	font-size: 15px;
+	padding: 4px;
+}
+
+#abcdario{
+	margin: 10px;
+}
+
+.main-container {
+  max-width: 800px;
+  margin: auto;  /*lo calcula el navegador, poniendo un valor adecuado*/
+  padding-top: 10vh;
+}
+
+.titulo {
+  margin-top: 8vh;
+  text-align: center;
+  font-family: moneywise;
+  font-size: 6em;  
+}
+/*NUEVO: Estilo del la caja de la dificultad*/
+#dificultad{
+	text-align: center;
+}
+
+
+/*NUEVO: Estilo del boton de pista y pop-up*/
+
+#imgPista{
+	height: 10vh;
+	width: 5vw;
+}
+
+#btnPista{
+	background: none;
+	border: none;
+}
+
+#pista{
+	text-align: center;
+	font-size: 1em;
+	background: #A0E8E8;
+	border-radius:20px;
+	border: 2px solid black;
+	transition: opacity 3s ease;
+	visibility: hidden;
+}
+
+#intentosmenu{
+	text-align: center;
+}
+
+#msg-final {
+  text-align: center;
+  color: red;
+  transition: all 0.8s ease;
+  font-size: 60px;
+  height: 60px;
+  margin-bottom: 20;
+}
+
+.zoom-in {
+  transform: scale(1) !important;  /*usar la regla !important es una mala práctica y debería evitarse*/
+}
+
+#acierto {
+  text-align: center;
+  min-height: 24px;
+  transform: scale(0); /*lo hace desaparecer*/
+}
+
+.acierto{
+  animation: zoomInOut 1s ease;
+}
+
+.rojo {
+  color: red;
+}
+
+.verde{
+  color: green;
+}
+
+@keyframes zoomInOut {
+  0% {transform: scale(0);}
+  50% {transform: scale(1);}
+  70% {transform: scale(1);}
+  100% {transform: scale(0);}
+}
+
+.palabra {
+  margin: 0 auto 25px auto;
+  text-align: center;
+  color: royalblue;
+  letter-spacing: 6px;
+}
+
+span {
+   color: red;
+}
+
+.letra:disabled { /*pseudo-clase*/
+  color:blue;
+}
+
+#picture {
+  position: relative;  
+}
+
+#picture img {  /*selector espacio en blanco: descendientes*/
+  position: absolute;
+  top: -203px;
+  right: 52vw;
+  height: 225px;
+}
+
+#image5, #image4, #image3,
+#image2, #image1, #image0 {	
+  opacity: 0; /*invisible*/
+  transition: opacity 0.8s ease;
+  display: block;
+}
+
+
+.fade-in {
+  opacity: 1 !important;
+}
+
+/*NUEVO: Desaparece progresivamente*/
+.fade-out{
+	opacity: 0 !important;
+}
+
+.encuadre {
+  border: 2px dashed crimson;
+  padding: 3px 2px 2px 6px;
+}
+
+.lambo{
+	height: 15vh;
+	width: 15vw; 
+	animation: buitre 15s infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes buitre{
+	from{
+		margin-right: 100%; 
+	}
+	to{
+		margin-left: 100%; 
+	}
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calculadora de Areas</title>
+        <link href = "area.css" rel = "stylesheet" type="text/css">
+        <script src="area.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>Calculo de Areas</header>
+        <hr>
+        <p>
+            Introduzca la base y la altura del triangulo que quiera calcular el area
+            o el radio del circulo. Usar el punto para los decimal
+        </p>
+        <hr>
+        <main>
+            <section>
+                <h1>Area del triangulo</h1>
+                <form>
+                    Base: <input size = "4" id = "base" placeholder="0.0">
+                    Altura: <input size = "4" id = "altura" placeholder="0.0"><br>
+                    <input type="button" value="Calcular" onclick="calculaAreaT()"><br>
+                    Area = <input type = "text" size= "6" id = "resultado_T" readonly><br>
+                    <input type = "reset" value="Borrar">
+                </form>
+            </section>
+            <section>
+                <form>
+                    <h1>Area Del Circulo</h1>
+                    Radio: <input size = "4" id = "radio" placeholder="0.0"><br>
+                    <input type="button" value="Calcular" onclick="calculaAreaC()"><br>
+                    Area = <input type = "text" size= "6" id = "resultado_C" disabled><br>
+                    <input type = "reset" value="Borrar">
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

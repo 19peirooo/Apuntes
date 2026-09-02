@@ -1,0 +1,288 @@
+/*Diseño general*/
+body{
+	width: 100vw;
+	overflow-x: hidden;
+}
+.fondo-azul{
+	background-color:#2073c5;
+	border-top: 2px solid black;
+	width: 100vw;
+}
+
+.fondo-blanco{
+	border-top: 2px solid black;
+	width: 100vw;
+}
+
+.img-con-texto{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.elemento-linea{
+	display: inline;
+}
+
+@font-face{
+	font-family: "furbo";
+	src: url("../fonts/clubdefutbol.otf")
+}
+
+/*Diseño de la cabecera*/
+header{
+	text-align: center;
+	width: 100vw;
+	background-color: white;
+}
+
+#logo{
+	width: 6vw;
+	height: 10vh;;	
+}
+
+#titulo{
+	font-size: 2.5vw;
+}
+
+/*Diseño Descripcion*/
+
+#descripcion{
+	text-align: center;
+	margin: 10px 10px;
+}
+
+/*Diseño del Menu de Navegacion*/
+#MenuNav{
+	width: 30vw;
+	height: 100vh;
+	position: fixed;
+	left: -30vw;
+	top: 0;
+	z-index: 1;
+	transition: 0.5s;
+	text-align:center;
+	background-color:#2073c5;
+}
+
+#btnMenu{
+	width: 15%;
+	height: 20%;
+}
+
+#boton{
+	z-index: 2;
+	width: 15%;
+	height: 20%;
+	cursor: pointer;
+	display: block;
+	position: fixed;
+	left: 30px;
+	top: 20px;
+}
+
+a{
+	text-align:center;
+	text-decoration: none;
+	color: black;
+}
+
+ul{
+	margin-top: 100px;
+}
+
+li{
+	list-style: none;
+	border: 2px solid black;
+	border-radius: 20px;
+	margin: 20px 5% 20px 0px;
+	padding:10px 10%;
+	transition: background-color 0.5s ease; 
+}
+
+.escudo{
+	height: 50px;
+	width: 50px;
+	margin-right: 5px;
+}
+
+#valladolid:hover{
+	background-color: purple;
+}
+#madrid:hover{
+	background-color: white;
+}
+#barcelona:hover{
+	background-color: darkred;
+}
+#bilbao:hover{
+	background-color: red;
+}
+#ibiza:hover{
+	background-color: aqua;
+}
+#malaga:hover{
+	background-color: cyan;
+}
+#hercules:hover{
+	background-color: yellow;
+}
+
+/*Diseño Footer*/
+footer{
+	text-align: center;
+}
+
+
+/*Diseño Info Jugadores*/
+
+.subtitulo{
+	text-align: center;
+	font-size: 3em;
+	padding-top: 10px;
+}
+
+#jugador{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#foto-jugador{
+	height: 70vh;
+	width: 45vw;
+	margin: 0px 2.5% 20px;
+}
+
+.flecha{
+	height: 5vh;
+	width: 5vw;
+}
+
+#izq{
+	margin-left: 40px;
+}
+
+#der{
+	margin-right: 40px;
+}
+
+
+#texto-jugador{
+	height: 70vh;
+	margin-bottom: 20px;
+}
+
+.datos{
+	font-size: 2vw;
+	font-family: furbo;
+}
+
+
+/*Diseño menu himno*/
+
+@keyframes girar{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+.icono{
+	height: 5vh;
+	width: 5vw;
+	margin: 10px;
+}
+
+#controles{
+	display: flex;
+	margin-bottom: 5px;
+}
+
+#mute{
+	height: 3.5vh;
+	width: 3.5vw;
+	margin: 10px;
+}
+
+#control-volumen{
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+#himno{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px 25%;
+	border: 3px dotted black;
+	border-radius: 20px;
+	background-color: #bdbdbd;
+}
+
+#cd{
+	transform-origin: center center;
+	animation: girar 5s infinite linear;
+}
+
+/*Diseño Estadio*/
+
+#texto-estadio{
+	margin: 20px;
+}
+
+#estadio{
+	margin: 20px;
+}
+
+/*Diseño Quiz*/
+
+#quiz{
+	margin: 10px 40px;
+}
+
+#pregunta{
+	font-weight:bold;
+	font-style: italic;
+	margin-left: 30px;
+}
+
+#botonPreguntas{
+	margin-left: 10vw;
+}
+
+#resultado{
+	margin-left: 10px;
+	width: 35vw;
+}
+
+/*Diseño footer*/
+
+.red-social{
+	height: 2.5vh;
+	width: 2.5vh;
+	margin: 10px;
+}
+
+#rrss{
+	width: 10vw;
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+}
+#texto-final{
+	margin: 10px 40vw;
+	
+}
+footer{
+	height: 10vh;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+}

@@ -1,0 +1,186 @@
+@keyframes vuelo{
+		from{
+			margin-left: 0%
+			transform:rotate(0deg);
+		}
+		to{
+			margin-left:90%;
+			transform:rotate(360deg);
+		}
+}
+
+*{
+	text-align: center;
+}
+body{
+	background-color:#f0ddc2;
+}
+
+header{
+	padding: 10px;
+	background-color: #b79462;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+nav{
+	padding: 20px;
+	background-color: #b79462;
+	border: 3px solid black;
+	border-radius: 20px;
+	margin: 20px 0px;
+}
+
+a{
+	text-decoration:none;
+	padding: 10px;
+	background-color: #9dc2e7;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+section{
+	padding: 10px;
+	margin: 10px;
+	background-color: #b79462;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+h1{
+	padding: 10px;
+	margin: 10px;
+	background-color: #d3e391;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+h2{
+	background-color: #a3bc38;
+	margin: 10px 0px 10px;
+	width:15vw;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+p{
+	padding: 10px;
+	margin: 10px;
+	background-color: #9dc2e7;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+
+img{
+	display:inline-block;
+	background-color: #ae44ca;
+	border: 3px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px 30vw;
+}
+
+table{
+	align-self: center;
+	padding: 10px;
+	background-color: #9dc2e7;
+	border: 3px solid black;
+	border-radius: 0px 0px 20px 20px;
+	margin: 10px 0px;
+	table-layout: fixed;
+}
+
+caption{
+	background-color: #a3bc38;
+	border: 3px solid black;
+	border-radius: 20px 20px 0px 0px;
+}
+
+th{
+	border: 3px solid black;
+	padding: 0px 30px;
+	background-color: white;
+	flex-grow: 1;
+}
+td{
+	border: 3px solid black;
+	padding: 0px 30px;
+	background-color: white;
+	flex-grow: 1;
+}
+
+.prop{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#vis1{
+	opacity: 0.6;
+}
+
+#vis2{
+	opacity: 0.2;
+}
+
+#p1{
+	background-color: Skyblue;
+}
+
+#p1:hover{
+	transform: rotate(45deg);
+	background-color: fuchsia;
+}
+
+#p2{
+	background-color: Skyblue;
+}
+#p2:hover{
+	transform: scale(2.0);
+	background-color: yellow;
+}
+
+#p3{
+	background-color: Skyblue;
+}
+#p3:hover{
+	transform: translate(60px);
+	background-color: blue;
+}
+
+#p4{
+	background-color: Skyblue;
+}
+
+#p4:hover{
+	transform: skew(25deg);
+	background-color: red;
+}
+
+#camavinga{
+	transition-property:background-color,transform;
+	transition-duration:3s,2s;
+}
+#camavinga:hover{
+	background-color: cyan;
+	transform: scale(0.5);
+}
+#city{
+	border: 3px solid black;
+	border-radius: 20px;
+	background-image: url("city.jpeg");
+	height: 50vh;
+	background-size:cover;
+}
+
+#avion{
+	width:10vw;
+	height:10vh;
+	margin-top: 20px;
+	text-align: left;
+	margin-right:90%;
+	background-color: inherit;
+	border: none;
+	animation: vuelo 5s infinite;
+	animation-timing-function: linear;
+}

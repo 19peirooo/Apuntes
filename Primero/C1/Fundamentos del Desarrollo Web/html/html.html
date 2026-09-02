@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<link href="html.css" rel="stylesheet" type="text/css">
+		<title> Notas HTML</title>
+	</head>
+	<body>
+		<header id="inicio">HTML</header>
+		<nav>
+			<a href="../notas.html">Inicio</a>
+			<a href="../css/css.html">CSS</a>
+			<a href="../maquetacion/maquetacion.html">Maquetacion</a>
+			<a href="../flexbox/flexbox.html">Flexbox</a>
+			<a href="../javascript/js.html">Javascript</a>
+		</nav>
+		<section>
+			<h1>Estructura del documento</h1>
+			<h2>Directiva: </h2>
+				<p>Los documentos HTML5 de declaran con !DOCTYPE html</p>
+				<p>Define la gramatica del documento</p>
+			<h2>Cabecera: </h2>
+				<p>Etiqueta head</p>
+				<p>Contiene informacion sobre la identificacion y control de la pagina</p>
+				<p>Etiqueta title: Texto que se muestra en la barra de titulos</p>
+				<p>Etiqueta meta: Metadatos del documento. Atributo charset = utf-8 para visualizar mas caracteres de otros idiomas</p>
+				<p>Etiqueta link: Para implementar recursos externos como css o icono en barra de titulos</p>
+				<p>Etiqueta script: Para incluir javascript al documento</p>
+			<h2>Cuerpo: </h2>
+				<p>Etiqueta body</p>
+				<p>Donde se representa el contenido de la pagina</p>
+				<p>Hay elementos de linea y de bloque</p>
+		</section>
+		<section class="prop">
+			<h1>Elementos y etiquetas</h1>
+			<h2>De texto: </h2>
+				<p>Encabezados: Etiquetas de h1 a h6</p>
+				<p>Parrafos: Etiqueta p</p>
+				<p>Fuentes: Etiquetas b o strong para negrita, i o em para cursiva, u para subrayado</p>
+				<p>Salto de linea: Etiqueta br</p>
+			<h2>Listas: </h2>
+				<ul>
+					<li>Listas no ordenadas</li>
+					<li>Etiqueta ul</li>
+					<li>Etiqueta li para contenido de la lista</li>
+					<li>Se muestran datos con puntos</li>
+				</ul>
+				<ol>
+					<li>Listas ordenadas</li>
+					<li>Etiqueta ol</li>
+					<li>Etiqueta li para contenido de la lista</li>
+					<li>Se muestran datos con numeros</li>
+				</ol>
+				<dl>
+					<dt>Listas de definicion</dt>
+					<dd>Etiqueta dl</dd>
+					<dt>Etiqueta dt: Elemento a definir </dt>
+					<dd>Etiqueta dd: Definicion. Sale con indent</dd>
+				</dl>
+			<h2>Comentarios: </h2>
+				<p>Utilizados para explicar porciones de codigo</p>
+				<p>Empiezan con !-- y acaban con --</p>
+			<h2>Caracteres Especiales: </h2>
+				<p>Comienzan con & y acaban con ;</p>
+				<p>Ejemplo: #169 es &#169;</p>
+			<h2>Hiperenlaces: </h2>
+				<p>Etiqueta a, de linea</p>
+				<p>Atributo href: Contiene el la ruta de la pagina web o el archivo</p>
+				<a class="ejemplo" href="https://www.google.es">Ruta absoluta: Ejemplo google</a>
+				<a class="ejemplo" href="../notas.html">Ruta relativa: ../ para salir de archivo. Ir a pagina de inicio</a>
+				<a href="#inicio" class="ejemplo">Para ir a partes del mismo documento. #id del elemento</a>
+			<h2>Tablas: </h2>
+			<p>Se crea por filas</p>
+			<table>
+				<caption>Datos de tabla</caption>
+				<tr>
+					<th>Etiqueta caption</th>
+					<th>Etiqueta table</th>
+					<th>Etiqueta tr</th>
+					<th>Etiqueta th</th>
+					<th>Etiqueta td</th>
+				</tr>
+				<tr>
+					<td>Nombre de la tabla</td>
+					<td>Engloba la tabla</td>
+					<td>Filas de la tabla</td>
+					<td>Encabezados</td>
+					<td>Datos</td>
+				</tr>
+			</table>
+			<h2>Varios: </h2>
+				<p>Etiqueta span: Agrupa elementos de linea en un bloque</p>
+				<details>
+					<summary>Etiqueta details</summary>
+					<p>Permite esconder contenido</p>
+					<p>Etiqueta summary: Contenido visible</p>
+				</details>
+				<p>Etiqueta sub: H<sub>2</sub>O</p>
+				<p>Etiqueta sup y var: <var>x<sup>2</sup></var></p>
+				<p>Etiqueta mark: Esto esta <mark>resaltado</mark></p>
+			<h2>Tipos: </h2>
+				<p>De bloque: Ocupan todo el espacio del elemento padre</p>
+				<p>De linea: Unicamente contiene texto o otros elementos de linea</p>
+		</section>
+		<section>
+			<h1>Integracion Multimedia</h1>
+			<h2>Documentos: </h2>
+				<p>Etiqueta object</p>
+				<p>Atributo type: Tipo de documento</p>
+				<p>Atributo data: Ruta al documento</p>
+				<object type="application/pdf" data="horario.pdf"></object>
+			<h2>Media: </h2>
+				<p>Etiqueta iframe</p>
+				<p>Atributo src: Enlace</p>
+				<p>Sirve tambien para poner videos de youtube</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.803781067386!2d-3.7191557!3d40.435343599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228417672f143%3A0x278ee4b227540111!2sIntercambiador%20de%20Moncloa%2C%20Moncloa%20-%20Aravaca%2C%2028008%20Madrid!5e0!3m2!1ses!2ses!4v1705836424472!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<h2>Imagenes: </h2>
+				<p>Etiqueta img</p>
+				<p>Atributo src: Enlace</p>
+				<p>Atributo alt: Lo que aparece si no se encuentra la imagen</p>
+				<img src="camavinga.jpg" alt="camapinga">
+			<h2>Audio: </h2>
+				<p>Etiqueta audio</p>
+				<p>Atributo src: Enlace</p>
+				<p>Atributo controls: Intefaz visual</p>
+				<p>Atributo autoplay: Se pone al cargar la pagina</p>
+				<p>Atributo loop: Reproducion en bucle</p>
+				<audio src = "audio.mp3" controls autoplay loop></audio>
+			<h2>Video: </h2>
+				<p>Etiqueta video</p>
+				<p>Atributo src: Enlace</p>
+				<p>Atributo controls: Intefaz visual</p>
+				<p>Atributo autoplay: Se pone al cargar la pagina</p>
+				<p>Atributo loop: Reproducion en bucle</p>
+				<p>Atributo muted: Silenciar el video</p>
+				<video src="video.mp4" autoplay loop controls muted></video>
+		</section>
+	</body>
+</html>

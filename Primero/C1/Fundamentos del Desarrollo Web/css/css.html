@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<link href = "css.css" rel="stylesheet" type="text/css">
+		<title> Notas CSS </title>
+	</head>
+	<body>
+		<header>CSS</header>
+		<nav>
+			<a href="../notas.html">Inicio</a>
+			<a href="../html/html.html">HTML</a>
+			<a href="../maquetacion/maquetacion.html">Maquetacion</a>
+			<a href="../flexbox/flexbox.html">Flexbox</a>
+			<a href="../javascript/js.html">Javascript</a>
+		</nav>
+		<section>
+			<h1>Conceptos Basicos</h1>
+			<p>Para Introducir archivo CSS en HTML: &lt;link href="archivo.css" rel="stylesheet" type="text/css" &gt;</p>
+			<p>Formato: selector{propiedad1: valor1; propiedad2: valor2; etc.}</p> 
+			<p>* para añadir propiedad a todos los elementos html</p>
+		</section>
+		<section>
+			<h1>Identificadores</h1>
+			<h2>ID:</h2>
+				<p>Formato: #nombre{propiedad1: valor1; propiedad2: valor2; etc.}</p>
+				<p>Es unico, no puede repetirse</p>
+			<h2>Class:</h2>
+				<p>Formato: .nombre{propiedad1: valor1; propiedad2: valor2; etc.}</p>
+				<p>Se aplica el mismo estilo a los elementos de la misma clase</p>
+		</section>
+		<section>
+			<h1>Modelo de Cajas</h1>
+			<img src="cajas.png" alt="content-padding-border-margin">
+			<p>content-padding-border-margin</p>
+			<h2>Medidas: </h2>
+				<p>Orden: Sentido horario - Arriba, Derecha, Abajo, Izquierda 
+				<p>margin: 10px; - Se aplica a todos los lados</p>
+				<p>margin: 10px 50px; - Primero arriba y abajo, Segundo izquierda y derecha</p>
+				<p>margin: 10px 50px 10px; - Primero arriba, Segundo Izquierda y Derecha, Tercero Abajo</p>
+				<p>margin: 10px 50px 10px 50px; - Sigue el orden</p>
+		</section>
+		<section class = "prop">
+			<h1>Propiedades</h1>
+			<table>
+				<caption>Generales</caption>
+				<tr>
+					<th>Propiedad</th>
+					<th>Descripcion</th>
+					<th>Valor</th>
+				</tr>
+				<tr>
+					<td>height/width</td>
+					<td>Altura/Anchura del Elemento</td>
+					<td>valor ó %</td>
+				</tr>
+				<tr>
+					<td>background-color</td>
+					<td>Color de fondo</td>
+					<td>nombre, rgb o codigo hex</td>
+				</tr>
+				<tr>
+					<td>background-image</td>
+					<td>Imagen de Fondo</td>
+					<td>url(enlace)</td>
+				</tr>
+				<tr>
+					<td>text-align</td>
+					<td>Alinea el texto</td>
+					<td>center, left, right</td>
+				</tr>
+			</table>
+			<table>
+				<caption>Texto</caption>
+				<tr>
+					<th>Propiedad</th>
+					<th>Descripcion</th>
+					<th>Valor</th>
+				</tr>
+				<tr>
+					<td>text-decoration</td>
+					<td>Decorado del texto</td>
+					<td>none, underline, overline</td>
+				</tr>
+				<tr>
+					<td>font-family</td>
+					<td>Tipo de fuente</td>
+					<td>Arial,sans-serif</td>
+				</tr>
+				<tr>
+					<td>font-size</td>
+					<td>tamaño de fuente</td>
+					<td>valor ó %</td>
+				</tr>
+				<tr>
+					<td>font-style</td>
+					<td>Estilo de letra</td>
+					<td>normal, italic</td>
+				</tr>
+				<tr>
+					<td>font-weight</td>
+					<td>Peso de la fuente</td>
+					<td>bold</td>
+				</tr>
+				<tr>
+					<td>color</td>
+					<td>Color del texto</td>
+					<td>nombre, rgb o codigo hex</td>
+				</tr>
+			</table>
+			<table>
+				<caption>Border</caption>
+				<tr>
+					<th>Propiedad</th>
+					<th>Descripcion</th>
+					<th>Valor</th>
+				</tr>
+				<tr>
+					<td>border</td>
+					<td>Añade un borde a la caja con su grosor, decorado y color</td>
+					<td>valor, solid,black, groove, dotted, rgb, hex</td>
+				</tr>
+				<tr>
+					<td>border-radius</td>
+					<td>Añade curvatura en las esquinas de las cajas</td>
+					<td>valor ó %</td>
+				</tr>
+				<tr>
+					<td>border-image</td>
+					<td>Añade imagen como borde</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>border-collapse</td>
+					<td>Especifica si los bordes de una tabla se colapsan</td>
+					<td>collapse, separate</td>
+				</tr>
+			</table>
+		</section>
+		<section class = "prop">
+			<h1>Unidades</h1>
+			<table>
+				<caption>Unidades</caption>
+				<tr>
+					<th>Unidad</th>
+					<th>Descripcion</th>
+				</tr>
+				<tr>
+					<td>cm</td>
+					<td>Centimetros</td>
+				</tr>
+				<tr>
+					<td>mm</td>
+					<td>Milímetros</td>
+				</tr>
+				<tr>
+					<td>in</td>
+					<td>Pulgadas</td>
+				</tr>
+				<tr>
+					<td>px</td>
+					<td>Pixeles</td>
+				</tr>
+				<tr>
+					<td>em</td>
+					<td>Tamaño de fuente actual(16px)</td>
+				</tr>
+				<tr>
+					<td>pc</td>
+					<td>Pica(12pt)</td>
+				</tr>
+				<tr>
+					<td>pt</td>
+					<td>Punto(1/72 in)</td>
+				</tr>
+				<tr>
+					<td>%</td>
+					<td>Porcentaje</td>
+				</tr>
+				<tr>
+					<td>deg</td>
+					<td>Grados</td>
+				</tr>
+				<tr>
+					<td>vh</td>
+					<td>Altura relativa</td>
+				</tr>
+				<tr>
+					<td>vw</td>
+					<td>Anchura relativa</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h1>Pseudoclases</h1>
+			<p>:link - Enlace que no ha sido visitado</p>
+			<p>:visited - Enlace que ha sido visitado por el usuario</p>
+			<p>:active - Estilo de un enlace que esta siendo seleccionado por el usuario</p>
+			<p>:hover - Estilo de un enlace que tiene el cursor encima</p>
+			<p>:focus - Estilo de un enlace que tiene el foco del navegador</p>	
+			<p>Ejemplo: a:hover{}</p>
+		</section>
+		<section>
+			<h1> Fuentes </h1>
+			<p>@font-face para crear fuentes propias o de internet</p>
+			<p>Formatos de Fuente: .TTF(True Type Font), .OTF(Open Type Font), .WOFF(Web Open Type Font)</p>
+			<p>Ejemplo: @font-face{font-family: "nombre", src: url(archivo);}
+		</section>
+		<section>
+			<h1>Visibilidad </h1>
+			<h2>Display:</h2>
+				<p>Sirve para esconder elementos</p>
+				<p>No reserva espacio para el elemento si no se expone en la web</p>
+				<p>Valor: none</p>
+			<h2>Visibility:</h2>
+				<p>Reserva espacio para el elemento si no se expone en la web</p>
+				<p>Valores: hidden, inherit, visible y collapse</p>
+			<h2>Opacity:</h2>
+				<p>Define lo visible que es el elemento</p>
+				<p>0 es no visible y 1 es perfectamente visible</p>
+				<p id = "vis1">Visibilidad 0.6</p>
+				<p id = "vis2">Visibilidad 0.2</p>
+		</section>
+		<section>
+			<h1> Transformaciones </h1>
+			<p>Propiedad: tranform. Valores: translate,scale,rotate,skew.</p>
+			<p id = "p1">Rotar 45º: transform:rotate(45deg)</p>
+			<p id = "p2">Escalar por 2: transform:scale(2)</p>
+			<p id = "p3">Transladar 60px: transform:translate(60px)</p>
+			<p id = "p4">Sesgar 25º: transform:skew(25deg)</p>
+		</section>
+		<section class = "prop">
+			<h1>Transiciones</h1>
+			<p>Transicion entre 2 estados</p>
+			<p>Propiedades: transition-property, transition-duration, transition-delay, transition-timing-function.</p>
+			<p>transition-property: Explica la propiedad a la que se le aplica</p>
+			<p>transition-duration: Indica la duracion de la transicion</p>
+			<p>transition-delay: Tiempo en el que se cambia la propiedad y el inicio de la transicion</p>
+			<p>transition-timing-function: Indica el ritmo de la transicion utilizando la curva de Bezier. Valores: ease, linear, ease-in, ease-out, ease-in-out</p>
+			<table>
+				<caption>Valores Timing Function</caption>
+				<tr>
+					<th>Valor</th>
+					<th>Inicio</th>
+					<th>Transcurso</th>
+					<th>Final</th>
+					<th>Equivalente en Bezier</th>
+				</tr>
+				<tr>
+					<td>ease</td>
+					<td>Lento</td>
+					<td>Rapido</td>
+					<td>Lento</td>
+					<td>(0.25, 0.1, 0.25, 1)</td>
+				</tr>
+				<tr>
+					<td>linear</td>
+					<td>Normal</td>
+					<td>Normal</td>
+					<td>Normal</td>
+					<td>(0, 0, 1, 1)</td>
+				</tr>
+				<tr>
+					<td>ease-in</td>
+					<td>Lento</td>
+					<td>Normal</td>
+					<td>Normal</td>
+					<td>(0.42, 0, 1, 1)</td>
+				</tr>
+				<tr>
+					<td>ease-out</td>
+					<td>Normal</td>
+					<td>Normal</td>
+					<td>Lento</td>
+					<td>(0, 0, 0.58, 1)</td>
+				</tr>
+				<tr>
+					<td>ease-in-out</td>
+					<td>Lento</td>
+					<td>Normal</td>
+					<td>Lento</td>
+					<td>(0.42, 0, 0.58, 1)</td>
+				</tr>
+			</table>
+			<img src="camavinga.jpg" id = "camavinga">
+			<p>#camavinga{transition-property:background-color,transform;transition-duration:3s,2s;}   #camavinga:hover{background-color: cyan;transform: scale(0.5);}</p>
+		</section>
+		<section class = "prop">
+			<h1>Animaciones</h1>
+			<p>Regla: @keyframes. Propiedad: animation.</p>
+			<p>Sintaxis: @keyframes nombre{from{propiedad1:valor1} to{propiedad2:valor2}}
+			<p>Se pueden añadir puntos intermedios utilizando los porcentajes</p>
+			<table>
+				<caption>Propiedades</caption>
+				<tr>
+					<th>Propiedad</th>
+					<th>Descripcion</th>
+					<th>Valores</th>
+				</tr>
+				<tr>
+					<td>animation-name</td>
+					<td>Nombre de la Animacion</td>
+					<td>Identificador puesto en @keyframes</td>
+				</tr>
+				<tr>
+					<td>animation-duration</td>
+					<td>Duracion de la animacion</td>
+					<td>Tiempo</td>
+				</tr>
+				<tr>
+					<td>animation-timing-function</td>
+					<td>Funcion de Tiempo</td>
+					<td>ease,linear,cubic-bezier</td>
+				</tr>
+				<tr>
+					<td>animation-delay</td>
+					<td>Retardo</td>
+					<td>Tiempo</td>
+				</tr>
+				<tr>
+					<td>animation-iteration-count</td>
+					<td>Nº de veces</td>
+					<td>Nº infinite</td>
+				</tr>
+				<tr>
+					<td>animation-direction</td>
+					<td>Direccion</td>
+					<td>normal, reverse, altenate</td>
+				</tr>
+				<tr>
+					<td>animation-play-state</td>
+					<td>Estado</td>
+					<td>running, paused</td>
+				</tr>
+			</table>
+			<article id = "city">
+				<img src="avion.png" id="avion">
+			</article>
+		</section>
+	</body>
+</html>
