@@ -1,0 +1,140 @@
+---
+title: "Matrices con R"
+author: "Mar Angulo"
+date: "1/3/2022"
+output:
+  word_document: default
+  pdf_document: default
+---
+Definición de matrices: la función matrix
+  Los datos de la matriz se introducen en un vector c()
+  Hay que indicar el número de filas: nrow y el número de columnas: ncol
+  El parámetro lógico byrow permite indicar si introducimos los elementos por filas o por columnas
+```{r}
+#Creamos una matriz fila
+row=matrix(c(2,3,-1), nrow=1)
+row
+#Y creamos una matriz columna
+col=matrix(c(2,-1,5), ncol=1)
+col
+
+```
+```{r}
+A=matrix(c(1,2,-1,0,3,-4,2,2,-1), nrow=3, ncol=3, byrow=TRUE) 
+#byrow=TRUE para indicar que introducimos los elementos de la matriz por filas
+A
+
+B=matrix(c(3,2,-1,0,4,-5), nrow=2, ncol=3, byrow=TRUE)
+B
+
+C=matrix(c(3,2,-1,0,4,-5), nrow=3, ncol=2, byrow=TRUE)
+C
+```
+Otra forma de crear matrices: utilizando la función rbind (unir filas) o la función cbind (unir columnas)
+```{r}
+M<-rbind(c(1,2,-1), c(1,0,-2), c(3,2,0))
+M
+
+N<-cbind(c(1,2,-1), c(1,0,-2), c(3,2,0))
+N
+```
+Cómo acceder al elemento ij de una matriz
+```{r}
+M[2,3]   #es el elemento 23 de la matriz M (está en la 2ª fila y en la 3ª columna)
+
+#Para obtener toda la segunda fila de M
+M[2,]
+
+#Y para obtener la tercera columna
+M[,3]
+```
+También puedo crear matrices concretas
+```{r}
+#Para crear una matriz nula 3x4 
+O<-matrix(0, nrow=3, ncol=4, byrow=TRUE)
+O
+
+#Y para crear una matriz diagonal utilizo diag y le indicamos los valores de los elementos diagonales en forma de vector
+D<-diag(c(1,2,-1,0,3))
+D
+
+#Y si queremos obtener los elementos diagonales de una matriz cualquiera
+M<-rbind(c(1,2,-1), c(1,0,-2), c(3,2,0))
+diag(M)
+
+#y las funciones nrow() y ncol() nos da el número de filas y columnas de una matriz
+#La función dim  proporciona el orden de la matriz
+B=matrix(c(3,2,-1,0,4,-5), nrow=2, ncol=3, byrow=TRUE)
+nrow(B)
+ncol(B)
+dim(B)
+```
+Manipulación de matrices
+La función sum() suma todos los elementos de la matriz
+rowSums() realiza la suma por filas y colSums() realiza la suma por columnas
+La función prod() calcula el producto de todos los números
+mean()calcula la media aritmética de todos los elementos de la matriz
+rowMeans calcula la media por filas y colMeans da la media por columnas
+```{r}
+B=matrix(c(3,2,-1,0,4,-5), nrow=2, ncol=3, byrow=TRUE)
+sum(B)
+rowSums(B)
+colSums(B)
+prod(B)
+mean(B)
+rowMeans(B)
+colMeans(B)
+```
+Operaciones con matrices en R
+MATRIZ TRANSPUESTA: la función t()
+```{r}
+B=matrix(c(3,2,-1,0,4,-5), nrow=2, ncol=3, byrow=TRUE)
+t(B)
+dim(t(B))
+
+row=matrix(c(2,3,-1), nrow=1)
+t(row)
+dim(t(row))
+```
+Cálculo de la traza de una matriz
+```{r}
+N<-cbind(c(1,2,-1), c(1,0,-2), c(3,2,0))
+sum(diag(N))
+```
+Suma, resta y producto de matrices con R
+```{r}
+P<-rbind(c(1,2,-1), c(1,0,-2), c(3,2,0))
+
+Q<-rbind(c(0,2,-3), c(2,0,-1), c(3,-1,1))
+print("La matriz P+Q es ",P+Q)
+Q+P
+P-Q
+2*P-3*Q
+
+#Si intentamos sumar matrices de distinto orden nos aparecerá error
+
+#Y el producto de matrices: Es A%*%P   NO BASTA ESCRIBIR A*P
+A<-matrix(c(1,2,-1,2,0,4), nrow=2, ncol=3, byrow=TRUE)
+P<-rbind(c(1,2,-1), c(1,0,-2), c(3,2,0))
+A
+P
+A%*%P
+
+#Si hacemos A*P estamos calculando el producto elemento a elemento (producto tensorial) cij=aij*bij
+A<-matrix(c(1,2,-1,2,0,4), nrow=2, ncol=3, byrow=TRUE)
+B<-matrix(c(0,3,-3,5,0,-4), nrow=2, ncol=3, byrow=TRUE)
+A*B
+```
+Rango de una matriz. Función qr()$rank
+```{r}
+#La función qr, una vez aplicada a una matriz permite calcular una serie de propiedades, entre ellas el rango
+qr(P)$rank
+```
+Inversa de una matriz. La función solve()
+```{r}
+solve(P)
+```
+Podemos comprobar que efectivamente son matrices inversas
+```{r}
+round(P%*%solve(P))
+```

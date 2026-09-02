@@ -1,0 +1,192 @@
+---
+title: "Sistemas de ecuaciones lineales con R"
+author: "Mar Angulo"
+date: "4/3/2022"
+output: word_document
+---
+===SISTEMAS COMPATIBLES DETERMINADOS===
+Un sistema AX=B donde la matriz de coeficientes A es una matriz mxn (sistema de m ecuaciones y n incógnitas), si es compatible determinado (SCD) se puede resolver con la función solve(A,b)
+#Ejemplo 1
+x+y+2z=9
+2x+4y-3z=1
+3x+6y-5z=0
+```{r}
+#Escribimos el sistema en forma matricial
+A<-rbind(c(1,1,2),c(2,4,-3),c(3,6,-5))   #matriz de coeficientes
+b=c(9,1,0)   #columna de términos independientes
+AB=cbind(A,b)   #Es la matriz ampliada
+
+#Discusión del sistema: teorema de Rouché-Frobenius
+qr(A)$rank==qr(AB)$rank  # preguntamos si los rangos son iguales
+#Como son iguales, ya sabemos que el sistema es compatible
+#Y ese rango, ¿coincide con el número de incógnitas?
+qr(A)$rank   #Como este rango es 3: nuestro sistema es compatible determinado: SCD
+
+#Resolución del sistema
+solve(A,b)   # por tanto la solución es un único punto x=1; y=2; z=3
+
+#Comprobamos que efectivamente esos valores verifican las ecuaciones del sistema
+sol<-c(1,2,3)
+A%*%sol==b
+```
+Otra forma de resolver sistemas compatibles determinados: la librería matlib (librería de matrices de R)
+```{r}
+A<-rbind(c(1,1,2),c(2,4,-3),c(3,6,-5))   
+b=c(9,1,0)  
+AB=cbind(A,b) 
+```
+Podemos mostrar el sistema con la función showEqn(A,b) (show equation) 
+Es necesario tener previamente instalada la librería matlib
+```{r}
+
+library(matlib)
+showEqn(A,b)
+```
+Ahora comprobamos los rangos con la función R()
+```{r}
+R(A)
+R(AB)   # Como son iguales, nuestro sistema es compatible, y como además el rango coincide con el número de incógnitas sabemos que el sistema es compatible determinado
+#También podemos utilizar la función all.equal que permite precisamente comparar los rangos de la matriz de coeficientes y de la matriz ampliada.
+all.equal(R(A),R(AB))
+```
+Resolución del sistema: la función Solve(A,b)
+El parámetro lógico fractions permite expresar las soluciones en forma racional; por defecto es FALSE y por tanto la solución se obtiene en forma decimal
+```{r}
+Solve(A,b)
+```
+#Ejemplo 2
+2x+2y=1
+-x+y=2
+```{r}
+A=rbind(c(2,2),c(-1,1))
+b=c(1,2)
+AB=cbind(A,b)
+all.equal(R(A),R(AB))
+R(A)==2
+Solve(A,b)       #La función Solve es la correspondiente a la librería matlib
+Solve(A,b,fractions=TRUE)
+```
+===Representación de sistemas de ecuaciones lineales===
+Vamos a poder dibujar las ecuaciones del sistema con las funciones plotEqn (en R^2) y plotEqn3d (en R^3) 
+Esto nos permite visualizar las posiciones relativas de rectas y planos
+```{r}
+A=rbind(c(2,2),c(-1,1))
+b=c(1,2)
+AB=cbind(A,b)
+Solve(A,b, fractions=TRUE)
+plotEqn(A,b)
+# y para indicar el punto solución de forma más estética  pch(point character determina la forma del punto)
+points(-3/4,5/4, col="turquoise1", pch=19)
+```
+#Ejemplo 1: Representación gráfica de un sistema de 3 ecuaciones con 3 incógnitas
+x+y+2z=9
+2x+4y-3z=1
+3x+6y-5z=0
+```{r}
+A<-rbind(c(1,1,2),c(2,4,-3),c(3,6,-5))   
+b=c(9,1,0)  
+AB=cbind(A,b) 
+showEqn(A,b)
+```
+Ahora utilizamos la función plotEqn3d
+Incluimos los límites de representación gráfica (también podemos utilizarlos en R^2)
+```{r}
+plotEqn3d(A,b,xlim=c(-3,3), ylim=c(0,6))   #Son tres planos que se cortan en un punto
+#Obtenemos un gráfico interactivo que podemos ver desde diferentes ángulos y hacer rotaciones
+```
+===Método de Gauss con R===
+La librería matlib permite utilizar en R el método de Gauss
+La función echelon (escalón) permite obtener la matriz escalonada (triangular superior) equivalente a la inicial
+Existe un parámetro lógico: verbose que en TRUE permite comprobar las operaciones elementales que logran la triangularización
+```{r}
+A<-rbind(c(1,1,2),c(2,4,-3),c(3,6,-5))   #Consideramos el sistema del ejemplo 1  
+b=c(9,1,0)  
+AB=cbind(A,b)
+echelon(AB)   #permite leer que x=1, y=2, z=3
+```
+```{r}
+echelon(AB, verbose=TRUE, fractions=TRUE)
+```
+===Sistemas compatibles Indeterminados (SCI)
+La función solve no funciona para este tipo de sistemas
+#Ejemplo 2
+x+y-z=2
+x-y+z=1
+3x+y-z=5
+```{r}
+A=rbind(c(1,1,-1),c(1,-1,1),c(3,1,-1))
+b=c(2,1,5)
+AB=cbind(A,b)
+showEqn(A,b)
+```
+```{r}
+#Comprobamos los rangos de las matrices de coeficientes y ampliada (th. Rouché Frobenius)
+qr(A)$rank==qr(AB)$rank
+
+#o bien 
+c(R(A),R(AB))
+
+#o con la función all.equal
+all.equal(R(A), R(AB))
+
+# pero el rango no coincide con el número de incógnitas: n
+R(A)
+```
+```{r}
+#Solución del sistema compatible indeterminado: la función echelon
+echelon(A,b) #muestra la última fila completamente nula; eso indica que hay una variable que puede tomar todos los valores reales
+```
+```{r}
+#Otra forma de resolver el sistema
+Solve(A, b, fractions=TRUE)   #Vemos que 0=0 no nos permite obtener un solo punto, sino que hay infinitas soluciones dependientes de un parámetro. 
+```
+```{r}
+#Representación gráfica del sistema: Son tres planos que se cortan en una recta (Haz de planos)
+plotEqn3d(A,b,xlim=c(-10,10), ylim=c(-10,10), zlim=c(-10,10))
+```
+===Sistemas incompatibles con R===
+#Ejemplo 3
+x+y=2
+x-y=1
+2x+y=3
+```{r}
+A=cbind(c(1,1,2),c(1,-1,1))  #No hay diferencia en definir la función por filas o por columnas
+b=c(2,1,3)
+AB=cbind(A,b)
+showEqn(A,b)
+```
+```{r}
+#Comprobamos que los rangos en este caso son diferentes
+all.equal(R(A), R(AB))
+
+c(R(A), R(AB))   #El th de Rouché Frobenius nos asegura que este sistema es incompatible (SI)
+#No hay ningún punto que verifique simultáneamente las tres ecuaciones. No tiene solución
+```
+```{r}
+#¿Y si intentamos resolverlo?
+echelon(AB)    #muestra la última ecuación 0x+0y=1 es una contradicción
+
+#o bien con Solve (de la librería matlib)
+Solve(A, b, fractions=TRUE)   # Llega a una contradicción evidente en la última fila
+```
+```{r}
+#y si lo resolvemos de forma gráfica
+
+```
+===Ecuaciones matriciales en R===
+Son expresiones del tipo AX=B donde A y B son matrices
+#Ejemplo 4
+AX+3B=(C+D)X+3D+10I    se resuelve dejando (A-C-D)X=3D+10I-3B   o bien MX=N
+```{r}
+A=rbind(c(0,4),c(2,1))
+B=rbind(c(1,-1),c(2,3))
+C=rbind(c(1,2),c(3,-2))
+D=rbind(c(-2,1),c(-1,1))
+I=diag(1, nrow=2, ncol=2)
+
+M=A-C-D
+N=3*(D-B)+10*I
+
+#Y resolvemos
+solve(M,N)
+```
