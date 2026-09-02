@@ -1,0 +1,7 @@
+Nombre: Maria,Apellido: Gomez Martinez,Edad: 18
+Nombre: Carlos,Apellido: Gutierrez,Edad: 7
+Nombre: Jon,Apellido: Vitoria,Edad: 36
+Nombre: Juan,Apellido: Vitoria Gomez,Edad: 70
+Nombre: Jorge,Apellido: Gutierrez Gomez,Edad: 56
+Nombre: k,Apellido: k k,Edad: 17
+Nombre: Adri,Apellido: Martinez Jimenez,Edad: 17

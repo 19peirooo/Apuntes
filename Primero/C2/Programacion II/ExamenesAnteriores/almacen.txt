@@ -1,0 +1,3 @@
+Disco duro Samsung 2TB;50.00;5;10;20
+TarjetaSD 32GB;5.00;20;10;50
+Raton Logitech;12.00;1;10;15
