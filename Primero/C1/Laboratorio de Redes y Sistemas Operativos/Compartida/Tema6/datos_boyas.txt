@@ -1,0 +1,3 @@
+Boya: 1 - Hs: 80
+Boya: 2 - Hs: 60
+Boya: 3 - Hs: 66
