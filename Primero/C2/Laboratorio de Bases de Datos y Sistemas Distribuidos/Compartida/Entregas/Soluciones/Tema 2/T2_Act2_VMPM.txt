@@ -1,0 +1,23 @@
+#Tema 2 Actividad 2 - Víctor Manuel Peiró Martínez
+  1  ls /usr/bin/j*
+  2  ls /bin/*n 
+  3  ls -R /etc
+  4  mkdir Prueba2
+  5  cp /usr/bin/z* Prueba2
+  6  mv Prueba2 OtraPrueba
+  7  mkdir Prueba3
+  8  mv OtraPrueba/* Prueba3
+  9  rmdir OtraPrueba
+  10 cd Prueba3
+  11 mkdir multimedia_pruebas
+  12 cd multimedia_pruebas
+  13 mkdir video
+  14 cd
+  15 mkdir OtraPrueba
+  16 cd OtraPrueba
+  17 touch peliculas.txt
+  18 nano peliculas.txt
+  19 cd
+  20 cd Prueba3/multimedia_pruebas/video
+  21 ln -s /home/victor/OtraPrueba/peliculas.txt mis_peliculas.txt
+
